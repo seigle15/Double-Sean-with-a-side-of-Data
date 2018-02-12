@@ -541,52 +541,57 @@
                  </property>
                  <item>
                   <property name="text">
-                   <string>MacDonald's</string>
+                   <string>RESTAURANT LIST                           DISTANCE FROM SADDLEBACK</string>
                   </property>
                  </item>
                  <item>
                   <property name="text">
-                   <string>Chipotle</string>
+                   <string>MacDonald's                                                      8    Miles</string>
                   </property>
                  </item>
                  <item>
                   <property name="text">
-                   <string>Domino's Pizza</string>
+                   <string>Chipotle                                                            29   Miles</string>
                   </property>
                  </item>
                  <item>
                   <property name="text">
-                   <string>KFC</string>
+                   <string>Domino's Pizza                                                 41   Miles</string>
                   </property>
                  </item>
                  <item>
                   <property name="text">
-                   <string>Subway</string>
+                   <string>KFC                                                                    56   Miles</string>
                   </property>
                  </item>
                  <item>
                   <property name="text">
-                   <string>In-N-Out Burger</string>
+                   <string>Subway                                                             67   Miles</string>
                   </property>
                  </item>
                  <item>
                   <property name="text">
-                   <string>Wendy's</string>
+                   <string>In-N-Out Burger                                              94   Miles</string>
                   </property>
                  </item>
                  <item>
                   <property name="text">
-                   <string>Jack in the Box</string>
+                   <string>Wendy's                                                            44   Miles</string>
                   </property>
                  </item>
                  <item>
                   <property name="text">
-                   <string>El Pollo Loco</string>
+                   <string>Jack in the Box                                                 75   Miles</string>
                   </property>
                  </item>
                  <item>
                   <property name="text">
-                   <string>Papa John's Pizza</string>
+                   <string>El Pollo Loco                                                     19   Miles</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Papa John's Pizza                                             54   Miles</string>
                   </property>
                  </item>
                 </widget>
@@ -949,6 +954,85 @@
       <widget class="QWidget" name="page_6"/>
      </widget>
     </widget>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Admin Login</string>
+     </attribute>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>140</y>
+        <width>251</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Admin Login</string>
+      </property>
+      <widget class="QWidget" name="layoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>40</y>
+         <width>231</width>
+         <height>111</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_8">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>Username:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_Username">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="echoMode">
+             <enum>QLineEdit::Normal</enum>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QLabel" name="label_2">
+            <property name="text">
+             <string>Password: </string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_Password">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="echoMode">
+             <enum>QLineEdit::Password</enum>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_Login">
+          <property name="text">
+           <string>Login</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
@@ -957,7 +1041,7 @@
      <x>0</x>
      <y>0</y>
      <width>960</width>
-     <height>21</height>
+     <height>17</height>
     </rect>
    </property>
   </widget>

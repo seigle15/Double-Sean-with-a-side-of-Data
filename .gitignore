@@ -1,0 +1,13 @@
+
+RestaurantProject/RestaurantProject.pro.user
+*.user
+RestaurantProject/Makefile.Release
+RestaurantProject/Makefile.Debug
+*.o
+RestaurantProject/debug/moc_predefs.h
+RestaurantProject/.qmake.stash
+*.user
+RestaurantProject/RestaurantProject.pro.user
+*.user
+*.user
+RestaurantProject/Makefile
