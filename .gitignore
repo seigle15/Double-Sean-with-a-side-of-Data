@@ -1,13 +1,43 @@
-
-RestaurantProject/RestaurantProject.pro.user
-*.user
-RestaurantProject/Makefile.Release
-RestaurantProject/Makefile.Debug
+# C++ objects and libs
+*.slo
+*.lo
 *.o
-RestaurantProject/debug/moc_predefs.h
-RestaurantProject/.qmake.stash
-*.user
-RestaurantProject/RestaurantProject.pro.user
-*.user
-*.user
-RestaurantProject/Makefile
+*.a
+*.la
+*.lai
+*.so
+*.dll
+*.dylib
+
+# Qt-es
+object_script.*.Release
+object_script.*.Debug
+*_plugin_import.cpp
+/.qmake.cache
+/.qmake.stash
+*.pro.user
+*.pro.user.*
+*.qbs.user
+*.qbs.user.*
+*.moc
+moc_*.cpp
+moc_*.h
+qrc_*.cpp
+ui_*.h
+*.qmlc
+*.jsc
+Makefile*
+*build-*
+
+# Qt unit tests
+target_wrapper.*
+
+# QtCreator
+*.autosave
+
+# QtCreator Qml
+*.qmlproject.user
+*.qmlproject.user.*
+
+# QtCreator CMake
+CMakeLists.txt.user*
