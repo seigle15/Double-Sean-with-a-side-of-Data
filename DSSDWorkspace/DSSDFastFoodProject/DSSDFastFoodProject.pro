@@ -5,6 +5,7 @@
 #-------------------------------------------------
 
 QT       += core gui
+QT       += sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -25,10 +26,23 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    admin.cpp
+    admin.cpp \
+    dbmanager.cpp \
+    restaurant.cpp \
+    menuitem.cpp \
+    distance.cpp
 
 HEADERS  += mainwindow.h \
-    admin.h
+    admin.h \
+    dbmanager.h \
+    restaurant.h \
+    menuitem.h \
+    distance.h
 
 FORMS    += mainwindow.ui \
     admin.ui
+
+DISTFILES += \
+    restaurantDB.db
+
+RESOURCES += res.qrc

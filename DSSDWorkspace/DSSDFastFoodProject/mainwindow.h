@@ -4,6 +4,11 @@
 #include <QMainWindow>
 #include "admin.h"
 
+/**
+ * @brief
+ * This is the baseline UI
+ */
+
 namespace Ui {
 class MainWindow;
 }
