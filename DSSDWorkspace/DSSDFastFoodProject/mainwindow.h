@@ -2,7 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QListWidgetItem>
 #include "admin.h"
+#include "dbmanager.h"
 
 /**
  * @brief
@@ -24,6 +26,10 @@ public:
 private slots:
 
     void on_pushButton_Login_clicked();
+    void on_restaurantListWidget_itemActivated(QListWidgetItem*);
+    void on_addItemButton_clicked();
+    void on_menuListWidget_itemActivated(QListWidgetItem*);
+    void listRestaurants();
 
 private:
     Ui::MainWindow *ui;
