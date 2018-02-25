@@ -165,5 +165,100 @@ void DBManager::uploadFileToDatabase(const QString &filePath)
 
 void DBManager::databaseToRestaurants()
 {
+    QSqlQuery restaurantQuery;
+    QSqlQuery distanceQuery;
+    QSqlQuery menuQuery;
 
+    restaurantQuery.prepare("SELECT * FROM Restaurant");
+    if(!restaurantQuery.exec())
+    {
+        qDebug() << "Unable to execute query";
+        qDebug() << restaurantQuery.lastError();
+        qDebug() << restaurantQuery.executedQuery();
+    }
+
+    distanceQuery.prepare("SELECT * FROM Distance");
+    if(!distanceQuery.exec())
+    {
+        qDebug() << "Unable to execute query";
+        qDebug() << distanceQuery.lastError();
+        qDebug() << distanceQuery.executedQuery();
+    }
+
+    menuQuery.prepare("SELECT * FROM MenuItems");
+    if(!menuQuery.exec())
+    {
+        qDebug() << "Unable to execute query";
+        qDebug() << menuQuery.lastError();
+        qDebug() << menuQuery.executedQuery();
+    }
+
+    while(restaurantQuery.next())
+    {
+        Restaurant restaurant;
+
+        restaurant.setName(restaurantQuery.value(0).toString());
+        restaurant.setID(restaurantQuery.value(1).toInt());
+        restaurant.setDistanceFromSaddleback(restaurantQuery.value(2).toString().toDouble());
+        restaurant.setMenuSize(restaurantQuery.value(3).toInt());
+        restaurant.setTotalDistances(restaurantQuery.value(4).toInt());
+
+        int count = 0;
+        while(count < restaurant.getTotalDistances())
+        {
+            distanceQuery.next();
+            Distance distance;
+            distance.setDistanceInMiles(distanceQuery.value(0).toDouble());
+            distance.setRestaurantIDFrom(restaurant.getID());
+            distance.setRestaurantIDTo(distanceQuery.value(2).toInt());
+            restaurant.addDistance(distance);
+            count++;
+        }
+
+        count = 0;
+        while(count < restaurant.getMenuSize())
+        {
+            menuQuery.next();
+            MenuItem menuItem;
+            menuItem.setItemName(menuQuery.value(0).toString());
+            menuItem.setRestaurantID(menuQuery.value(1).toInt());
+            menuItem.setPrice(menuQuery.value(2).toDouble());
+            restaurant.addMenuItem(menuItem);
+            count++;
+        }
+        restaurants.push_back(restaurant);
+    }
+}
+
+void DBManager::testDB()
+{
+    for(int i = 0; i < restaurants.size(); i++)
+    {
+        qDebug() << restaurants.at(i).getName();
+        qDebug() << "Restaurant ID: " << restaurants.at(i).getID();
+        qDebug() << "Distances to other restaurants: " << restaurants.at(i).getTotalDistances();
+
+        int totalDistances = restaurants.at(i).getTotalDistances();
+        for(int j = 0; j < totalDistances; j++)
+        {
+            qDebug() << restaurants.at(i).getDistances().at(j).getRestaurantIDTo() << " " << restaurants.at(i).getDistances().at(j).getDistanceInMiles();
+        }
+
+        qDebug() << "Distance from saddleback: " << restaurants.at(i).getDistanceFromSaddleback();
+
+        int menuSize = restaurants.at(i).getMenuSize();
+        qDebug() << "Menu size: " << menuSize;
+        for(int k = 0; k < menuSize; k++)
+        {
+            qDebug() << restaurants.at(i).getMenu().at(k).getRestaurantID()
+                     << " " << restaurants.at(i).getMenu().at(k).getItemName()
+                     << " " << restaurants.at(i).getMenu().at(k).getPrice();
+        }
+        qDebug() << "";
+    }
+}
+
+std::vector<Restaurant> DBManager::getRestaurants()
+{
+    return restaurants;
 }

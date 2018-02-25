@@ -15,26 +15,19 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-//void MainWindow::on_pushButton_Login_clicked()
-//{
-//    QString username = ui->lineEdit_Username->text();
-//    QString password = ui->lineEdit_Password->text();
+void MainWindow::on_pushButton_Login_clicked()
+{
+    QString username = ui->lineEdit_Username->text();
+    QString password = ui->lineEdit_Password->text();
 
-//    if(username ==  "test" && password == "test")
-//    {
-//        AdminWindow = new Admin();
-//        //AdminWindow->show();
-//        openAdminWindow();
+    if(username == "test" && password == "test")
+    {
+        AdminWindow = new Admin();
+        AdminWindow->show();
 
-//        this->close();    }
-//    else
-//    {
-//        QMessageBox::warning(this,"Login", "Username and password is not correct");
-//    }
-
-//}
-
-//void MainWindow::openAdminWindow()
-//{
-//    AdminWindow->show();
-//}
+        this->close();    }
+    else
+    {
+        QMessageBox::warning(this,"Login", "Username and password is not correct");
+    }
+}

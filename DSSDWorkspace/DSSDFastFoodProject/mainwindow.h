@@ -23,8 +23,7 @@ public:
 
 private slots:
 
-    //void on_pushButton_Login_clicked();
-    //void openAdminWindow();
+    void on_pushButton_Login_clicked();
 
 private:
     Ui::MainWindow *ui;

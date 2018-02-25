@@ -11,6 +11,13 @@ class Distance
 public:
     Distance();
     Distance(double distanceInMiles, int restaurantIDFrom, int restaurantIDTo);
+    void setDistanceInMiles(double distanceInMiles);
+    void setRestaurantIDFrom(int restaurantIDFrom);
+    void setRestaurantIDTo(int restaurantIDTo);
+    double getDistanceInMiles();
+    int getRestaurantIDFrom();
+    int getRestaurantIDTo();
+
 
 private:
     double distanceInMiles;

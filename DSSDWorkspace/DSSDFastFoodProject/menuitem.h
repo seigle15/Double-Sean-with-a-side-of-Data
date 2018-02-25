@@ -13,6 +13,12 @@ class MenuItem
 public:
     MenuItem();
     MenuItem(QString itemName, int restaurantID, double price);
+    void setItemName(QString itemName);
+    void setRestaurantID(int restaurantID);
+    void setPrice(double price);
+    QString getItemName();
+    int getRestaurantID();
+    double getPrice();
 
 private:
     QString itemName;

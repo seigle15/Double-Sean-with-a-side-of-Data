@@ -10,6 +10,7 @@
 #include <QFile>
 #include <QTextStream>
 #include <vector>
+#include <string>
 
 #include "restaurant.h"
 
@@ -25,6 +26,8 @@ public:
     static DBManager* getInstance();
     void uploadFileToDatabase(const QString& filePath);
     void databaseToRestaurants();
+    std::vector<Restaurant> getRestaurants();
+    void testDB();
 
 private:
     static DBManager* database;
