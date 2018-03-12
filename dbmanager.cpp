@@ -22,8 +22,8 @@ DBManager* DBManager::getInstance()
     if(database == NULL)
     {
         // for now this will have to be the absolute path, im tired lol
-        database = new DBManager("D:\\CS1D Project #1\\Double-Sean-with-a-side-of-Data-master\\DSSDWorkspace\\DSSDFastFoodProject\\restaurantDB.db");
-        // database = new DBManager("restaurantDB.db"); // if instantiated in this manner, wont allow me to execute queries...but database opens
+         database = new DBManager("E:\\CS1D Project #1\\Double-Sean-with-a-side-of-Data-master\\DSSDWorkspace\\DSSDFastFoodProject\\restaurantDB.db");
+        // database = new DBManager("./restaurantDB.db"); // if instantiated in this manner, wont allow me to execute queries...but database opens
         // D:\\CS1D Project #1\\Double-Sean-with-a-side-of-Data-master\\DSSDWorkspace\\DSSDFastFoodProject\\restaurantDB.db
         return database;
     }
