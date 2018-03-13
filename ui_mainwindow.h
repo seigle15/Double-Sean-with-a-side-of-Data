@@ -1,7 +1,11 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
+<<<<<<< HEAD
 ** Created by: Qt User Interface Compiler version 5.6.2
+=======
+** Created by: Qt User Interface Compiler version 5.8.0
+>>>>>>> f927aab61692b0d48839e673500f6378ae1cc613
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -82,7 +86,50 @@ public:
     QLabel *label_6;
     QLineEdit *displayTotalLine;
     QWidget *page_6;
-    QWidget *tab;
+    QWidget *TripTab;
+    QStackedWidget *stackedWidget_3;
+    QWidget *page_7;
+    QWidget *layoutWidget_2;
+    QVBoxLayout *verticalLayout_12;
+    QLabel *label_11;
+    QHBoxLayout *horizontalLayout_11;
+    QVBoxLayout *verticalLayout_13;
+    QVBoxLayout *verticalLayout_14;
+    QLabel *label_12;
+    QListWidget *restaurantListWidget_2;
+    QHBoxLayout *horizontalLayout_12;
+    QLabel *label_19;
+    QLineEdit *lineEdit;
+    QPushButton *addItemButton_3;
+    QVBoxLayout *verticalLayout_15;
+    QVBoxLayout *verticalLayout_16;
+    QVBoxLayout *verticalLayout_17;
+    QLabel *label_13;
+    QListWidget *menuListWidget_2;
+    QHBoxLayout *horizontalLayout_13;
+    QVBoxLayout *verticalLayout_18;
+    QPushButton *addItemButton_2;
+    QVBoxLayout *verticalLayout_19;
+    QHBoxLayout *horizontalLayout_14;
+    QLabel *label_14;
+    QLineEdit *itemPrice_lineEdit_2;
+    QHBoxLayout *horizontalLayout_15;
+    QLabel *label_15;
+    QLineEdit *lineEdit_3;
+    QVBoxLayout *verticalLayout_20;
+    QPushButton *removeItemButton_2;
+    QVBoxLayout *verticalLayout_21;
+    QHBoxLayout *horizontalLayout_16;
+    QLabel *label_16;
+    QLineEdit *itemNameToRemove_lineEdit_2;
+    QHBoxLayout *horizontalLayout_17;
+    QLabel *label_17;
+    QLineEdit *lineEdit_5;
+    QHBoxLayout *horizontalLayout_18;
+    QLabel *label_18;
+    QLineEdit *displayTotalLine_2;
+    QWidget *page_8;
+    QWidget *AdminTab;
     QGroupBox *groupBox;
     QWidget *layoutWidget1;
     QVBoxLayout *verticalLayout_8;
@@ -263,6 +310,7 @@ public:
         Remove = new QPushButton(layoutWidget);
         Remove->setObjectName(QStringLiteral("Remove"));
         Remove->setFont(font);
+
 
         horizontalLayout_3->addWidget(Remove);
 
@@ -520,9 +568,366 @@ public:
         page_6->setObjectName(QStringLiteral("page_6"));
         stackedWidget_2->addWidget(page_6);
         MenuTabs->addTab(customTripTab, QString());
-        tab = new QWidget();
-        tab->setObjectName(QStringLiteral("tab"));
-        groupBox = new QGroupBox(tab);
+        TripTab = new QWidget();
+        TripTab->setObjectName(QStringLiteral("TripTab"));
+        stackedWidget_3 = new QStackedWidget(TripTab);
+        stackedWidget_3->setObjectName(QStringLiteral("stackedWidget_3"));
+        stackedWidget_3->setGeometry(QRect(0, 0, 1151, 601));
+        stackedWidget_3->setAutoFillBackground(true);
+        page_7 = new QWidget();
+        page_7->setObjectName(QStringLiteral("page_7"));
+        layoutWidget_2 = new QWidget(page_7);
+        layoutWidget_2->setObjectName(QStringLiteral("layoutWidget_2"));
+        layoutWidget_2->setGeometry(QRect(12, 12, 841, 501));
+        verticalLayout_12 = new QVBoxLayout(layoutWidget_2);
+        verticalLayout_12->setSpacing(6);
+        verticalLayout_12->setContentsMargins(11, 11, 11, 11);
+        verticalLayout_12->setObjectName(QStringLiteral("verticalLayout_12"));
+        verticalLayout_12->setContentsMargins(0, 0, 0, 0);
+        label_11 = new QLabel(layoutWidget_2);
+        label_11->setObjectName(QStringLiteral("label_11"));
+        QPalette palette10;
+        palette10.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette10.setBrush(QPalette::Active, QPalette::Base, brush1);
+        palette10.setBrush(QPalette::Active, QPalette::Window, brush1);
+        palette10.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette10.setBrush(QPalette::Inactive, QPalette::Base, brush1);
+        palette10.setBrush(QPalette::Inactive, QPalette::Window, brush1);
+        palette10.setBrush(QPalette::Disabled, QPalette::WindowText, brush3);
+        palette10.setBrush(QPalette::Disabled, QPalette::Base, brush1);
+        palette10.setBrush(QPalette::Disabled, QPalette::Window, brush1);
+        label_11->setPalette(palette10);
+        label_11->setFont(font1);
+        label_11->setAutoFillBackground(true);
+        label_11->setAlignment(Qt::AlignCenter);
+
+        verticalLayout_12->addWidget(label_11);
+
+        horizontalLayout_11 = new QHBoxLayout();
+        horizontalLayout_11->setSpacing(6);
+        horizontalLayout_11->setObjectName(QStringLiteral("horizontalLayout_11"));
+        verticalLayout_13 = new QVBoxLayout();
+        verticalLayout_13->setSpacing(6);
+        verticalLayout_13->setObjectName(QStringLiteral("verticalLayout_13"));
+        verticalLayout_14 = new QVBoxLayout();
+        verticalLayout_14->setSpacing(6);
+        verticalLayout_14->setObjectName(QStringLiteral("verticalLayout_14"));
+        label_12 = new QLabel(layoutWidget_2);
+        label_12->setObjectName(QStringLiteral("label_12"));
+        QPalette palette11;
+        palette11.setBrush(QPalette::Active, QPalette::WindowText, brush1);
+        palette11.setBrush(QPalette::Active, QPalette::Base, brush1);
+        palette11.setBrush(QPalette::Active, QPalette::Window, brush4);
+        palette11.setBrush(QPalette::Inactive, QPalette::WindowText, brush1);
+        palette11.setBrush(QPalette::Inactive, QPalette::Base, brush1);
+        palette11.setBrush(QPalette::Inactive, QPalette::Window, brush4);
+        palette11.setBrush(QPalette::Disabled, QPalette::WindowText, brush3);
+        palette11.setBrush(QPalette::Disabled, QPalette::Base, brush4);
+        palette11.setBrush(QPalette::Disabled, QPalette::Window, brush4);
+        label_12->setPalette(palette11);
+        label_12->setFont(font2);
+        label_12->setAutoFillBackground(true);
+        label_12->setAlignment(Qt::AlignCenter);
+
+        verticalLayout_14->addWidget(label_12);
+
+        restaurantListWidget_2 = new QListWidget(layoutWidget_2);
+        restaurantListWidget_2->setObjectName(QStringLiteral("restaurantListWidget_2"));
+        restaurantListWidget_2->setFont(font3);
+        restaurantListWidget_2->setFrameShape(QFrame::NoFrame);
+
+        verticalLayout_14->addWidget(restaurantListWidget_2);
+
+
+        verticalLayout_13->addLayout(verticalLayout_14);
+
+        horizontalLayout_12 = new QHBoxLayout();
+        horizontalLayout_12->setSpacing(6);
+        horizontalLayout_12->setObjectName(QStringLiteral("horizontalLayout_12"));
+        label_19 = new QLabel(layoutWidget_2);
+        label_19->setObjectName(QStringLiteral("label_19"));
+        QPalette palette12;
+        palette12.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette12.setBrush(QPalette::Active, QPalette::Base, brush1);
+        palette12.setBrush(QPalette::Active, QPalette::Window, brush5);
+        palette12.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette12.setBrush(QPalette::Inactive, QPalette::Base, brush1);
+        palette12.setBrush(QPalette::Inactive, QPalette::Window, brush5);
+        palette12.setBrush(QPalette::Disabled, QPalette::WindowText, brush3);
+        palette12.setBrush(QPalette::Disabled, QPalette::Base, brush5);
+        palette12.setBrush(QPalette::Disabled, QPalette::Window, brush5);
+        label_19->setPalette(palette12);
+        label_19->setAutoFillBackground(true);
+        label_19->setAlignment(Qt::AlignCenter);
+
+        horizontalLayout_12->addWidget(label_19);
+
+        lineEdit = new QLineEdit(layoutWidget_2);
+        lineEdit->setObjectName(QStringLiteral("lineEdit"));
+
+        horizontalLayout_12->addWidget(lineEdit);
+
+        addItemButton_3 = new QPushButton(layoutWidget_2);
+        addItemButton_3->setObjectName(QStringLiteral("addItemButton_3"));
+        addItemButton_3->setFont(font);
+
+        horizontalLayout_12->addWidget(addItemButton_3);
+
+
+        verticalLayout_13->addLayout(horizontalLayout_12);
+
+
+        horizontalLayout_11->addLayout(verticalLayout_13);
+
+        verticalLayout_15 = new QVBoxLayout();
+        verticalLayout_15->setSpacing(6);
+        verticalLayout_15->setObjectName(QStringLiteral("verticalLayout_15"));
+        verticalLayout_16 = new QVBoxLayout();
+        verticalLayout_16->setSpacing(6);
+        verticalLayout_16->setObjectName(QStringLiteral("verticalLayout_16"));
+        verticalLayout_17 = new QVBoxLayout();
+        verticalLayout_17->setSpacing(6);
+        verticalLayout_17->setObjectName(QStringLiteral("verticalLayout_17"));
+        label_13 = new QLabel(layoutWidget_2);
+        label_13->setObjectName(QStringLiteral("label_13"));
+        QPalette palette13;
+        palette13.setBrush(QPalette::Active, QPalette::WindowText, brush1);
+        palette13.setBrush(QPalette::Active, QPalette::Base, brush1);
+        palette13.setBrush(QPalette::Active, QPalette::Window, brush4);
+        palette13.setBrush(QPalette::Inactive, QPalette::WindowText, brush1);
+        palette13.setBrush(QPalette::Inactive, QPalette::Base, brush1);
+        palette13.setBrush(QPalette::Inactive, QPalette::Window, brush4);
+        palette13.setBrush(QPalette::Disabled, QPalette::WindowText, brush3);
+        palette13.setBrush(QPalette::Disabled, QPalette::Base, brush4);
+        palette13.setBrush(QPalette::Disabled, QPalette::Window, brush4);
+        label_13->setPalette(palette13);
+        label_13->setFont(font2);
+        label_13->setAutoFillBackground(true);
+        label_13->setAlignment(Qt::AlignCenter);
+
+        verticalLayout_17->addWidget(label_13);
+
+        menuListWidget_2 = new QListWidget(layoutWidget_2);
+        menuListWidget_2->setObjectName(QStringLiteral("menuListWidget_2"));
+        menuListWidget_2->setFont(font3);
+        menuListWidget_2->setFrameShape(QFrame::NoFrame);
+
+        verticalLayout_17->addWidget(menuListWidget_2);
+
+
+        verticalLayout_16->addLayout(verticalLayout_17);
+
+        horizontalLayout_13 = new QHBoxLayout();
+        horizontalLayout_13->setSpacing(6);
+        horizontalLayout_13->setObjectName(QStringLiteral("horizontalLayout_13"));
+        verticalLayout_18 = new QVBoxLayout();
+        verticalLayout_18->setSpacing(6);
+        verticalLayout_18->setObjectName(QStringLiteral("verticalLayout_18"));
+        addItemButton_2 = new QPushButton(layoutWidget_2);
+        addItemButton_2->setObjectName(QStringLiteral("addItemButton_2"));
+        addItemButton_2->setFont(font);
+
+        verticalLayout_18->addWidget(addItemButton_2);
+
+        verticalLayout_19 = new QVBoxLayout();
+        verticalLayout_19->setSpacing(6);
+        verticalLayout_19->setObjectName(QStringLiteral("verticalLayout_19"));
+        horizontalLayout_14 = new QHBoxLayout();
+        horizontalLayout_14->setSpacing(6);
+        horizontalLayout_14->setObjectName(QStringLiteral("horizontalLayout_14"));
+        label_14 = new QLabel(layoutWidget_2);
+        label_14->setObjectName(QStringLiteral("label_14"));
+        QPalette palette14;
+        palette14.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette14.setBrush(QPalette::Active, QPalette::Base, brush1);
+        palette14.setBrush(QPalette::Active, QPalette::Window, brush5);
+        palette14.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette14.setBrush(QPalette::Inactive, QPalette::Base, brush1);
+        palette14.setBrush(QPalette::Inactive, QPalette::Window, brush5);
+        palette14.setBrush(QPalette::Disabled, QPalette::WindowText, brush3);
+        palette14.setBrush(QPalette::Disabled, QPalette::Base, brush5);
+        palette14.setBrush(QPalette::Disabled, QPalette::Window, brush5);
+        label_14->setPalette(palette14);
+        label_14->setAutoFillBackground(true);
+        label_14->setAlignment(Qt::AlignCenter);
+
+        horizontalLayout_14->addWidget(label_14);
+
+        itemPrice_lineEdit_2 = new QLineEdit(layoutWidget_2);
+        itemPrice_lineEdit_2->setObjectName(QStringLiteral("itemPrice_lineEdit_2"));
+        itemPrice_lineEdit_2->setAlignment(Qt::AlignCenter);
+        itemPrice_lineEdit_2->setReadOnly(true);
+
+        horizontalLayout_14->addWidget(itemPrice_lineEdit_2);
+
+
+        verticalLayout_19->addLayout(horizontalLayout_14);
+
+        horizontalLayout_15 = new QHBoxLayout();
+        horizontalLayout_15->setSpacing(6);
+        horizontalLayout_15->setObjectName(QStringLiteral("horizontalLayout_15"));
+        label_15 = new QLabel(layoutWidget_2);
+        label_15->setObjectName(QStringLiteral("label_15"));
+        QPalette palette15;
+        palette15.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette15.setBrush(QPalette::Active, QPalette::Base, brush1);
+        palette15.setBrush(QPalette::Active, QPalette::Window, brush5);
+        palette15.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette15.setBrush(QPalette::Inactive, QPalette::Base, brush1);
+        palette15.setBrush(QPalette::Inactive, QPalette::Window, brush5);
+        palette15.setBrush(QPalette::Disabled, QPalette::WindowText, brush3);
+        palette15.setBrush(QPalette::Disabled, QPalette::Base, brush5);
+        palette15.setBrush(QPalette::Disabled, QPalette::Window, brush5);
+        label_15->setPalette(palette15);
+        label_15->setAutoFillBackground(true);
+        label_15->setAlignment(Qt::AlignCenter);
+
+        horizontalLayout_15->addWidget(label_15);
+
+        lineEdit_3 = new QLineEdit(layoutWidget_2);
+        lineEdit_3->setObjectName(QStringLiteral("lineEdit_3"));
+
+        horizontalLayout_15->addWidget(lineEdit_3);
+
+
+        verticalLayout_19->addLayout(horizontalLayout_15);
+
+
+        verticalLayout_18->addLayout(verticalLayout_19);
+
+
+        horizontalLayout_13->addLayout(verticalLayout_18);
+
+        verticalLayout_20 = new QVBoxLayout();
+        verticalLayout_20->setSpacing(6);
+        verticalLayout_20->setObjectName(QStringLiteral("verticalLayout_20"));
+        removeItemButton_2 = new QPushButton(layoutWidget_2);
+        removeItemButton_2->setObjectName(QStringLiteral("removeItemButton_2"));
+        removeItemButton_2->setFont(font);
+
+        verticalLayout_20->addWidget(removeItemButton_2);
+
+        verticalLayout_21 = new QVBoxLayout();
+        verticalLayout_21->setSpacing(6);
+        verticalLayout_21->setObjectName(QStringLiteral("verticalLayout_21"));
+        horizontalLayout_16 = new QHBoxLayout();
+        horizontalLayout_16->setSpacing(6);
+        horizontalLayout_16->setObjectName(QStringLiteral("horizontalLayout_16"));
+        label_16 = new QLabel(layoutWidget_2);
+        label_16->setObjectName(QStringLiteral("label_16"));
+        QPalette palette16;
+        palette16.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette16.setBrush(QPalette::Active, QPalette::Base, brush1);
+        palette16.setBrush(QPalette::Active, QPalette::Window, brush5);
+        palette16.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette16.setBrush(QPalette::Inactive, QPalette::Base, brush1);
+        palette16.setBrush(QPalette::Inactive, QPalette::Window, brush5);
+        palette16.setBrush(QPalette::Disabled, QPalette::WindowText, brush3);
+        palette16.setBrush(QPalette::Disabled, QPalette::Base, brush5);
+        palette16.setBrush(QPalette::Disabled, QPalette::Window, brush5);
+        label_16->setPalette(palette16);
+        label_16->setAutoFillBackground(true);
+        label_16->setAlignment(Qt::AlignCenter);
+
+        horizontalLayout_16->addWidget(label_16);
+
+        itemNameToRemove_lineEdit_2 = new QLineEdit(layoutWidget_2);
+        itemNameToRemove_lineEdit_2->setObjectName(QStringLiteral("itemNameToRemove_lineEdit_2"));
+        itemNameToRemove_lineEdit_2->setAlignment(Qt::AlignCenter);
+
+        horizontalLayout_16->addWidget(itemNameToRemove_lineEdit_2);
+
+
+        verticalLayout_21->addLayout(horizontalLayout_16);
+
+        horizontalLayout_17 = new QHBoxLayout();
+        horizontalLayout_17->setSpacing(6);
+        horizontalLayout_17->setObjectName(QStringLiteral("horizontalLayout_17"));
+        label_17 = new QLabel(layoutWidget_2);
+        label_17->setObjectName(QStringLiteral("label_17"));
+        QPalette palette17;
+        palette17.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette17.setBrush(QPalette::Active, QPalette::Base, brush1);
+        palette17.setBrush(QPalette::Active, QPalette::Window, brush5);
+        palette17.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette17.setBrush(QPalette::Inactive, QPalette::Base, brush1);
+        palette17.setBrush(QPalette::Inactive, QPalette::Window, brush5);
+        palette17.setBrush(QPalette::Disabled, QPalette::WindowText, brush3);
+        palette17.setBrush(QPalette::Disabled, QPalette::Base, brush5);
+        palette17.setBrush(QPalette::Disabled, QPalette::Window, brush5);
+        label_17->setPalette(palette17);
+        label_17->setAutoFillBackground(true);
+        label_17->setAlignment(Qt::AlignCenter);
+
+        horizontalLayout_17->addWidget(label_17);
+
+        lineEdit_5 = new QLineEdit(layoutWidget_2);
+        lineEdit_5->setObjectName(QStringLiteral("lineEdit_5"));
+
+        horizontalLayout_17->addWidget(lineEdit_5);
+
+
+        verticalLayout_21->addLayout(horizontalLayout_17);
+
+
+        verticalLayout_20->addLayout(verticalLayout_21);
+
+
+        horizontalLayout_13->addLayout(verticalLayout_20);
+
+
+        verticalLayout_16->addLayout(horizontalLayout_13);
+
+
+        verticalLayout_15->addLayout(verticalLayout_16);
+
+        horizontalLayout_18 = new QHBoxLayout();
+        horizontalLayout_18->setSpacing(6);
+        horizontalLayout_18->setObjectName(QStringLiteral("horizontalLayout_18"));
+        label_18 = new QLabel(layoutWidget_2);
+        label_18->setObjectName(QStringLiteral("label_18"));
+        QPalette palette18;
+        palette18.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette18.setBrush(QPalette::Active, QPalette::Base, brush1);
+        palette18.setBrush(QPalette::Active, QPalette::Window, brush5);
+        palette18.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette18.setBrush(QPalette::Inactive, QPalette::Base, brush1);
+        palette18.setBrush(QPalette::Inactive, QPalette::Window, brush5);
+        palette18.setBrush(QPalette::Disabled, QPalette::WindowText, brush3);
+        palette18.setBrush(QPalette::Disabled, QPalette::Base, brush5);
+        palette18.setBrush(QPalette::Disabled, QPalette::Window, brush5);
+        label_18->setPalette(palette18);
+        label_18->setFont(font);
+        label_18->setAutoFillBackground(true);
+        label_18->setAlignment(Qt::AlignCenter);
+
+        horizontalLayout_18->addWidget(label_18);
+
+        displayTotalLine_2 = new QLineEdit(layoutWidget_2);
+        displayTotalLine_2->setObjectName(QStringLiteral("displayTotalLine_2"));
+        displayTotalLine_2->setFont(font);
+        displayTotalLine_2->setAlignment(Qt::AlignCenter);
+        displayTotalLine_2->setReadOnly(true);
+
+        horizontalLayout_18->addWidget(displayTotalLine_2);
+
+
+        verticalLayout_15->addLayout(horizontalLayout_18);
+
+
+        horizontalLayout_11->addLayout(verticalLayout_15);
+
+
+        verticalLayout_12->addLayout(horizontalLayout_11);
+
+        stackedWidget_3->addWidget(page_7);
+        page_8 = new QWidget();
+        page_8->setObjectName(QStringLiteral("page_8"));
+        stackedWidget_3->addWidget(page_8);
+        MenuTabs->addTab(TripTab, QString());
+        AdminTab = new QWidget();
+        AdminTab->setObjectName(QStringLiteral("AdminTab"));
+        groupBox = new QGroupBox(AdminTab);
         groupBox->setObjectName(QStringLiteral("groupBox"));
         groupBox->setGeometry(QRect(100, 140, 251, 161));
         layoutWidget1 = new QWidget(groupBox);
@@ -572,7 +977,7 @@ public:
 
         verticalLayout_8->addWidget(pushButton_Login);
 
-        MenuTabs->addTab(tab, QString());
+        MenuTabs->addTab(AdminTab, QString());
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
@@ -587,7 +992,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        MenuTabs->setCurrentIndex(1);
+        MenuTabs->setCurrentIndex(2);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -595,34 +1000,53 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0));
-        MenuTabs->setTabText(MenuTabs->indexOf(homeTab), QApplication::translate("MainWindow", "Home", 0));
-        label_7->setText(QApplication::translate("MainWindow", "Plan Your Custom Trip Now!", 0));
-        label_4->setText(QApplication::translate("MainWindow", "Restaurants", 0));
+        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", Q_NULLPTR));
+        MenuTabs->setTabText(MenuTabs->indexOf(homeTab), QApplication::translate("MainWindow", "Home", Q_NULLPTR));
+        label_7->setText(QApplication::translate("MainWindow", "Plan Your Custom Trip Now!", Q_NULLPTR));
+        label_4->setText(QApplication::translate("MainWindow", "Restaurants", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        restaurantListWidget->setToolTip(QApplication::translate("MainWindow", "double-click to see menu", 0));
+        restaurantListWidget->setToolTip(QApplication::translate("MainWindow", "double-click to see menu", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
 #ifndef QT_NO_WHATSTHIS
         restaurantListWidget->setWhatsThis(QString());
 #endif // QT_NO_WHATSTHIS
-        AddRestaurant->setText(QApplication::translate("MainWindow", "Add", 0));
-        Remove->setText(QApplication::translate("MainWindow", "Remove", 0));
-        label_5->setText(QApplication::translate("MainWindow", "Menu", 0));
-        addItemButton->setText(QApplication::translate("MainWindow", "Add", 0));
-        label_3->setText(QApplication::translate("MainWindow", "    Price   ", 0));
-        label_8->setText(QApplication::translate("MainWindow", "     Qty     ", 0));
-        removeItemButton->setText(QApplication::translate("MainWindow", "Remove", 0));
-        label_9->setText(QApplication::translate("MainWindow", "   Item   ", 0));
-        label_10->setText(QApplication::translate("MainWindow", "    Qty    ", 0));
-        label_6->setText(QApplication::translate("MainWindow", "    Total    ", 0));
-        MenuTabs->setTabText(MenuTabs->indexOf(customTripTab), QApplication::translate("MainWindow", "Custom Trip", 0));
-        groupBox->setTitle(QApplication::translate("MainWindow", "Admin Login", 0));
-        label->setText(QApplication::translate("MainWindow", "Username:", 0));
+        AddRestaurant->setText(QApplication::translate("MainWindow", "Add", Q_NULLPTR));
+        Remove->setText(QApplication::translate("MainWindow", "Remove", Q_NULLPTR));
+        label_5->setText(QApplication::translate("MainWindow", "Menu", Q_NULLPTR));
+        addItemButton->setText(QApplication::translate("MainWindow", "Add", Q_NULLPTR));
+        label_3->setText(QApplication::translate("MainWindow", "    Price   ", Q_NULLPTR));
+        label_8->setText(QApplication::translate("MainWindow", "     Qty     ", Q_NULLPTR));
+        removeItemButton->setText(QApplication::translate("MainWindow", "Remove", Q_NULLPTR));
+        label_9->setText(QApplication::translate("MainWindow", "   Item   ", Q_NULLPTR));
+        label_10->setText(QApplication::translate("MainWindow", "    Qty    ", Q_NULLPTR));
+        label_6->setText(QApplication::translate("MainWindow", "    Total    ", Q_NULLPTR));
+        MenuTabs->setTabText(MenuTabs->indexOf(customTripTab), QApplication::translate("MainWindow", "Custom Trip", Q_NULLPTR));
+        label_11->setText(QApplication::translate("MainWindow", "Plan Your Trip Now!", Q_NULLPTR));
+        label_12->setText(QApplication::translate("MainWindow", "Locations", Q_NULLPTR));
+#ifndef QT_NO_TOOLTIP
+        restaurantListWidget_2->setToolTip(QApplication::translate("MainWindow", "double-click to see menu", Q_NULLPTR));
+#endif // QT_NO_TOOLTIP
+#ifndef QT_NO_WHATSTHIS
+        restaurantListWidget_2->setWhatsThis(QString());
+#endif // QT_NO_WHATSTHIS
+        label_19->setText(QApplication::translate("MainWindow", "Location", Q_NULLPTR));
+        addItemButton_3->setText(QApplication::translate("MainWindow", "Add", Q_NULLPTR));
+        label_13->setText(QApplication::translate("MainWindow", "Menu", Q_NULLPTR));
+        addItemButton_2->setText(QApplication::translate("MainWindow", "Add", Q_NULLPTR));
+        label_14->setText(QApplication::translate("MainWindow", "    Price   ", Q_NULLPTR));
+        label_15->setText(QApplication::translate("MainWindow", "     Qty     ", Q_NULLPTR));
+        removeItemButton_2->setText(QApplication::translate("MainWindow", "Remove", Q_NULLPTR));
+        label_16->setText(QApplication::translate("MainWindow", "   Item   ", Q_NULLPTR));
+        label_17->setText(QApplication::translate("MainWindow", "    Qty    ", Q_NULLPTR));
+        label_18->setText(QApplication::translate("MainWindow", "    Total    ", Q_NULLPTR));
+        MenuTabs->setTabText(MenuTabs->indexOf(TripTab), QApplication::translate("MainWindow", "Page", Q_NULLPTR));
+        groupBox->setTitle(QApplication::translate("MainWindow", "Admin Login", Q_NULLPTR));
+        label->setText(QApplication::translate("MainWindow", "Username:", Q_NULLPTR));
         lineEdit_Username->setText(QString());
-        label_2->setText(QApplication::translate("MainWindow", "Password: ", 0));
+        label_2->setText(QApplication::translate("MainWindow", "Password: ", Q_NULLPTR));
         lineEdit_Password->setText(QString());
-        pushButton_Login->setText(QApplication::translate("MainWindow", "Login", 0));
-        MenuTabs->setTabText(MenuTabs->indexOf(tab), QApplication::translate("MainWindow", "Admin Login", 0));
+        pushButton_Login->setText(QApplication::translate("MainWindow", "Login", Q_NULLPTR));
+        MenuTabs->setTabText(MenuTabs->indexOf(AdminTab), QApplication::translate("MainWindow", "Admin Login", Q_NULLPTR));
     } // retranslateUi
 
 };
