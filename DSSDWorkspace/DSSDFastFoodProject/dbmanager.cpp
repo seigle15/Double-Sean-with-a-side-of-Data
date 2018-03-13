@@ -22,8 +22,11 @@ DBManager* DBManager::getInstance()
     if(database == NULL)
     {
         // for now this will have to be the absolute path, im tired lol
-        database = new DBManager("C:\\Users\\Sean O'Hearn\\Desktop\\DSSDFastFoodProj\\Double-Sean-with-a-side-of-Data\\DSSDWorkspace\\DSSDFastFoodProject\\restaurantDB.db");
+//        database = new DBManager("C:\\Users\\sohearn1\\Desktop\\Project1\\Double-Sean-with-a-side-of-Data\\DSSDWorkspace\\DSSDFastFoodProject\\restaurantDB.db");
+        database = new DBManager("./restaurantDB.db");
+
         // database = new DBManager("restaurantDB.db"); // if instantiated in this manner, wont allow me to execute queries...but database opens
+        // D:\\CS1D Project #1\\Double-Sean-with-a-side-of-Data-master\\DSSDWorkspace\\DSSDFastFoodProject\\restaurantDB.db
         return database;
     }
     else
@@ -255,6 +258,29 @@ void DBManager::testDB()
                      << " " << restaurants.at(i).getMenu().at(k).getPrice();
         }
         qDebug() << "";
+    }
+}
+
+void DBManager::DeleteFromDb(QString name)
+{
+    QSqlQuery query;
+
+    query.prepare("DELETE FROM Restaurant Where Name = :Restaurant");
+
+    query.bindValue(":Restaurant", name);
+
+    query.exec();
+    qDebug() << query.lastError();
+    qDebug() << query.executedQuery();
+
+    std::vector<Restaurant>::iterator it;
+    for(it = restaurants.begin(); it != restaurants.end(); it++)
+    {
+        if(it->getName() == name)
+        {
+            restaurants.erase(it);
+            break;
+        }
     }
 }
 

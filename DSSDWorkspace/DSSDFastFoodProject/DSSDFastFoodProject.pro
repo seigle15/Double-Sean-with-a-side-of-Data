@@ -30,17 +30,20 @@ SOURCES += main.cpp\
     dbmanager.cpp \
     restaurant.cpp \
     menuitem.cpp \
-    distance.cpp
+    distance.cpp \
+    tripscreen.cpp
 
 HEADERS  += mainwindow.h \
     admin.h \
     dbmanager.h \
     restaurant.h \
     menuitem.h \
-    distance.h
+    distance.h \
+    tripscreen.h
 
 FORMS    += mainwindow.ui \
-    admin.ui
+    admin.ui \
+    tripscreen.ui
 
 DISTFILES += \
     restaurantDB.db
