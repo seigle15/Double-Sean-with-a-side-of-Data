@@ -173,34 +173,34 @@ void MainWindow::on_restaurantListWidget_itemActivated(QListWidgetItem* item)
 
 void MainWindow::on_AddRestaurant_clicked()
 {
-
+    qDebug() << "Add button clicked";
     //getting a restuarant name
-    QString restaurantName = ui->restaurantListWidget->currentItem()->text();
-    qDebug() << restaurantName;
-    Restaurant RestToAdd;
-    std::vector<Restaurant> fullList(DBManager::getInstance()->getRestaurants());
-    for(int i = 0; i < fullList.size(); i++){
-        if(restaurantName == fullList[i].getName()){
-            RestToAdd = fullList[i];
-        }
-    }
-    tripWindow->addRestaurant(RestToAdd);
-//    std::vector<Distance> distances = RestToAdd.getDistances();
-//    qDebug() << distances[0].getDistanceInMiles();
+//    QString restaurantName = ui->restaurantListWidget->currentItem()->text();
+//    qDebug() << restaurantName;
+//    Restaurant RestToAdd;
+//    std::vector<Restaurant> fullList(DBManager::getInstance()->getRestaurants());
+//    for(int i = 0; i < fullList.size(); i++){
+//        if(restaurantName == fullList[i].getName()){
+//            RestToAdd = fullList[i];
+//        }
+//    }
+//    tripWindow->addRestaurant(RestToAdd);
+////    std::vector<Distance> distances = RestToAdd.getDistances();
+////    qDebug() << distances[0].getDistanceInMiles();
 
-//    if(!ui->restaurantListWidget->is){
-//        qDebug() << "Please select an item";
+////    if(!ui->restaurantListWidget->is){
+////        qDebug() << "Please select an item";
+////    }
+////    else{
+////        QString restaurantName = ui->restaurantListWidget->currentItem()->text();
+////        qDebug() << restaurantName;
+////    }
+//    if(tripWindow->isHidden()){
+//        tripWindow->show();
 //    }
-//    else{
-//        QString restaurantName = ui->restaurantListWidget->currentItem()->text();
-//        qDebug() << restaurantName;
+//    if(!tripWindow->isActiveWindow()){
+//        tripWindow->activateWindow();
 //    }
-    if(tripWindow->isHidden()){
-        tripWindow->show();
-    }
-    if(!tripWindow->isActiveWindow()){
-        tripWindow->activateWindow();
-    }
 
 }
 

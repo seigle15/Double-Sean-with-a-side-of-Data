@@ -12,6 +12,7 @@ int main(int argc, char *argv[])
     * if there has already been an exection before uncommenting this code
     */
 
+//    !!Run Once!!
 //    DBManager::getInstance()->uploadFileToDatabase(":/res/CS1D Spring 2018 Fast Food Project.txt");
 //    DBManager::getInstance()->uploadFileToDatabase(":/res/CS1D Spring 2018 New Fast Food Project.txt");
 
