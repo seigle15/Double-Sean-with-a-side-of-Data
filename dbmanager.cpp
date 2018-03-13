@@ -259,6 +259,29 @@ void DBManager::testDB()
     }
 }
 
+void DBManager::DeleteFromDb(QString name)
+{
+    QSqlQuery query;
+
+    query.prepare("DELETE FROM Restaurant Where Name = :Restaurant");
+
+    query.bindValue(":Restaurant", name);
+
+    query.exec();
+    qDebug() << query.lastError();
+    qDebug() << query.executedQuery();
+
+    std::vector<Restaurant>::iterator it;
+    for(it = restaurants.begin(); it != restaurants.end(); it++)
+    {
+        if(it->getName() == name)
+        {
+            restaurants.erase(it);
+            break;
+        }
+    }
+}
+
 std::vector<Restaurant> DBManager::getRestaurants()
 {
     return restaurants;

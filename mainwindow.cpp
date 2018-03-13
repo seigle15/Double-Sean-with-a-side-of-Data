@@ -32,7 +32,6 @@ void MainWindow::on_pushButton_Login_clicked()
         AdminWindow->show();
 
         this->close();
-        tripWindow->close();
     }
     else
     {

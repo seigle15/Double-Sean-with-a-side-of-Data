@@ -247,6 +247,7 @@
      <bool>true</bool>
     </property>
     <property name="currentIndex">
+     <number>3</number>
     </property>
     <widget class="QWidget" name="homeTab">
      <attribute name="title">
@@ -1370,6 +1371,7 @@
       <widget class="QWidget" name="page_6"/>
      </widget>
     </widget>
+    <widget class="QWidget" name="TripTab">
      <attribute name="title">
       <string>Normal Trip</string>
      </attribute>

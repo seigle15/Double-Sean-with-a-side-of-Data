@@ -28,6 +28,7 @@ public:
     void databaseToRestaurants();
     std::vector<Restaurant> getRestaurants();
     void testDB();
+    void DeleteFromDb(QString name);
 
 private:
     static DBManager* database;

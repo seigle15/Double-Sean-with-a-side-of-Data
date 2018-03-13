@@ -1,11 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-<<<<<<< HEAD
 ** Created by: Qt User Interface Compiler version 5.6.2
-=======
-** Created by: Qt User Interface Compiler version 5.8.0
->>>>>>> f927aab61692b0d48839e673500f6378ae1cc613
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -310,7 +306,6 @@ public:
         Remove = new QPushButton(layoutWidget);
         Remove->setObjectName(QStringLiteral("Remove"));
         Remove->setFont(font);
-
 
         horizontalLayout_3->addWidget(Remove);
 
@@ -992,7 +987,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        MenuTabs->setCurrentIndex(2);
+        MenuTabs->setCurrentIndex(3);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -1000,53 +995,53 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", Q_NULLPTR));
-        MenuTabs->setTabText(MenuTabs->indexOf(homeTab), QApplication::translate("MainWindow", "Home", Q_NULLPTR));
-        label_7->setText(QApplication::translate("MainWindow", "Plan Your Custom Trip Now!", Q_NULLPTR));
-        label_4->setText(QApplication::translate("MainWindow", "Restaurants", Q_NULLPTR));
+        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0));
+        MenuTabs->setTabText(MenuTabs->indexOf(homeTab), QApplication::translate("MainWindow", "Home", 0));
+        label_7->setText(QApplication::translate("MainWindow", "Plan Your Custom Trip Now!", 0));
+        label_4->setText(QApplication::translate("MainWindow", "Restaurants", 0));
 #ifndef QT_NO_TOOLTIP
-        restaurantListWidget->setToolTip(QApplication::translate("MainWindow", "double-click to see menu", Q_NULLPTR));
+        restaurantListWidget->setToolTip(QApplication::translate("MainWindow", "double-click to see menu", 0));
 #endif // QT_NO_TOOLTIP
 #ifndef QT_NO_WHATSTHIS
         restaurantListWidget->setWhatsThis(QString());
 #endif // QT_NO_WHATSTHIS
-        AddRestaurant->setText(QApplication::translate("MainWindow", "Add", Q_NULLPTR));
-        Remove->setText(QApplication::translate("MainWindow", "Remove", Q_NULLPTR));
-        label_5->setText(QApplication::translate("MainWindow", "Menu", Q_NULLPTR));
-        addItemButton->setText(QApplication::translate("MainWindow", "Add", Q_NULLPTR));
-        label_3->setText(QApplication::translate("MainWindow", "    Price   ", Q_NULLPTR));
-        label_8->setText(QApplication::translate("MainWindow", "     Qty     ", Q_NULLPTR));
-        removeItemButton->setText(QApplication::translate("MainWindow", "Remove", Q_NULLPTR));
-        label_9->setText(QApplication::translate("MainWindow", "   Item   ", Q_NULLPTR));
-        label_10->setText(QApplication::translate("MainWindow", "    Qty    ", Q_NULLPTR));
-        label_6->setText(QApplication::translate("MainWindow", "    Total    ", Q_NULLPTR));
-        MenuTabs->setTabText(MenuTabs->indexOf(customTripTab), QApplication::translate("MainWindow", "Custom Trip", Q_NULLPTR));
-        label_11->setText(QApplication::translate("MainWindow", "Plan Your Trip Now!", Q_NULLPTR));
-        label_12->setText(QApplication::translate("MainWindow", "Locations", Q_NULLPTR));
+        AddRestaurant->setText(QApplication::translate("MainWindow", "Add", 0));
+        Remove->setText(QApplication::translate("MainWindow", "Remove", 0));
+        label_5->setText(QApplication::translate("MainWindow", "Menu", 0));
+        addItemButton->setText(QApplication::translate("MainWindow", "Add", 0));
+        label_3->setText(QApplication::translate("MainWindow", "    Price   ", 0));
+        label_8->setText(QApplication::translate("MainWindow", "     Qty     ", 0));
+        removeItemButton->setText(QApplication::translate("MainWindow", "Remove", 0));
+        label_9->setText(QApplication::translate("MainWindow", "   Item   ", 0));
+        label_10->setText(QApplication::translate("MainWindow", "    Qty    ", 0));
+        label_6->setText(QApplication::translate("MainWindow", "    Total    ", 0));
+        MenuTabs->setTabText(MenuTabs->indexOf(customTripTab), QApplication::translate("MainWindow", "Custom Trip", 0));
+        label_11->setText(QApplication::translate("MainWindow", "Plan Your Trip Now!", 0));
+        label_12->setText(QApplication::translate("MainWindow", "Locations", 0));
 #ifndef QT_NO_TOOLTIP
-        restaurantListWidget_2->setToolTip(QApplication::translate("MainWindow", "double-click to see menu", Q_NULLPTR));
+        restaurantListWidget_2->setToolTip(QApplication::translate("MainWindow", "double-click to see menu", 0));
 #endif // QT_NO_TOOLTIP
 #ifndef QT_NO_WHATSTHIS
         restaurantListWidget_2->setWhatsThis(QString());
 #endif // QT_NO_WHATSTHIS
-        label_19->setText(QApplication::translate("MainWindow", "Location", Q_NULLPTR));
-        addItemButton_3->setText(QApplication::translate("MainWindow", "Add", Q_NULLPTR));
-        label_13->setText(QApplication::translate("MainWindow", "Menu", Q_NULLPTR));
-        addItemButton_2->setText(QApplication::translate("MainWindow", "Add", Q_NULLPTR));
-        label_14->setText(QApplication::translate("MainWindow", "    Price   ", Q_NULLPTR));
-        label_15->setText(QApplication::translate("MainWindow", "     Qty     ", Q_NULLPTR));
-        removeItemButton_2->setText(QApplication::translate("MainWindow", "Remove", Q_NULLPTR));
-        label_16->setText(QApplication::translate("MainWindow", "   Item   ", Q_NULLPTR));
-        label_17->setText(QApplication::translate("MainWindow", "    Qty    ", Q_NULLPTR));
-        label_18->setText(QApplication::translate("MainWindow", "    Total    ", Q_NULLPTR));
-        MenuTabs->setTabText(MenuTabs->indexOf(TripTab), QApplication::translate("MainWindow", "Page", Q_NULLPTR));
-        groupBox->setTitle(QApplication::translate("MainWindow", "Admin Login", Q_NULLPTR));
-        label->setText(QApplication::translate("MainWindow", "Username:", Q_NULLPTR));
+        label_19->setText(QApplication::translate("MainWindow", "Location", 0));
+        addItemButton_3->setText(QApplication::translate("MainWindow", "Add", 0));
+        label_13->setText(QApplication::translate("MainWindow", "Menu", 0));
+        addItemButton_2->setText(QApplication::translate("MainWindow", "Add", 0));
+        label_14->setText(QApplication::translate("MainWindow", "    Price   ", 0));
+        label_15->setText(QApplication::translate("MainWindow", "     Qty     ", 0));
+        removeItemButton_2->setText(QApplication::translate("MainWindow", "Remove", 0));
+        label_16->setText(QApplication::translate("MainWindow", "   Item   ", 0));
+        label_17->setText(QApplication::translate("MainWindow", "    Qty    ", 0));
+        label_18->setText(QApplication::translate("MainWindow", "    Total    ", 0));
+        MenuTabs->setTabText(MenuTabs->indexOf(TripTab), QApplication::translate("MainWindow", "Normal Trip", 0));
+        groupBox->setTitle(QApplication::translate("MainWindow", "Admin Login", 0));
+        label->setText(QApplication::translate("MainWindow", "Username:", 0));
         lineEdit_Username->setText(QString());
-        label_2->setText(QApplication::translate("MainWindow", "Password: ", Q_NULLPTR));
+        label_2->setText(QApplication::translate("MainWindow", "Password: ", 0));
         lineEdit_Password->setText(QString());
-        pushButton_Login->setText(QApplication::translate("MainWindow", "Login", Q_NULLPTR));
-        MenuTabs->setTabText(MenuTabs->indexOf(AdminTab), QApplication::translate("MainWindow", "Admin Login", Q_NULLPTR));
+        pushButton_Login->setText(QApplication::translate("MainWindow", "Login", 0));
+        MenuTabs->setTabText(MenuTabs->indexOf(AdminTab), QApplication::translate("MainWindow", "Admin Login", 0));
     } // retranslateUi
 
 };
