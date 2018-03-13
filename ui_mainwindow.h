@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 5.6.1
+** Created by: Qt User Interface Compiler version 5.6.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -43,7 +43,7 @@ public:
     QWidget *customTripTab;
     QStackedWidget *stackedWidget_2;
     QWidget *page_5;
-    QWidget *widget;
+    QWidget *layoutWidget;
     QVBoxLayout *verticalLayout_11;
     QLabel *label_7;
     QHBoxLayout *horizontalLayout_10;
@@ -52,8 +52,8 @@ public:
     QLabel *label_4;
     QListWidget *restaurantListWidget;
     QHBoxLayout *horizontalLayout_3;
-    QPushButton *pushButton_2;
-    QPushButton *pushButton_3;
+    QPushButton *AddRestaurant;
+    QPushButton *Remove;
     QVBoxLayout *verticalLayout_10;
     QVBoxLayout *verticalLayout_9;
     QVBoxLayout *verticalLayout_3;
@@ -84,7 +84,7 @@ public:
     QWidget *page_6;
     QWidget *tab;
     QGroupBox *groupBox;
-    QWidget *layoutWidget;
+    QWidget *layoutWidget1;
     QVBoxLayout *verticalLayout_8;
     QHBoxLayout *horizontalLayout;
     QLabel *label;
@@ -169,15 +169,15 @@ public:
         stackedWidget_2->setAutoFillBackground(true);
         page_5 = new QWidget();
         page_5->setObjectName(QStringLiteral("page_5"));
-        widget = new QWidget(page_5);
-        widget->setObjectName(QStringLiteral("widget"));
-        widget->setGeometry(QRect(12, 12, 841, 501));
-        verticalLayout_11 = new QVBoxLayout(widget);
+        layoutWidget = new QWidget(page_5);
+        layoutWidget->setObjectName(QStringLiteral("layoutWidget"));
+        layoutWidget->setGeometry(QRect(12, 12, 841, 501));
+        verticalLayout_11 = new QVBoxLayout(layoutWidget);
         verticalLayout_11->setSpacing(6);
         verticalLayout_11->setContentsMargins(11, 11, 11, 11);
         verticalLayout_11->setObjectName(QStringLiteral("verticalLayout_11"));
         verticalLayout_11->setContentsMargins(0, 0, 0, 0);
-        label_7 = new QLabel(widget);
+        label_7 = new QLabel(layoutWidget);
         label_7->setObjectName(QStringLiteral("label_7"));
         QPalette palette2;
         palette2.setBrush(QPalette::Active, QPalette::WindowText, brush);
@@ -210,7 +210,7 @@ public:
         verticalLayout_2 = new QVBoxLayout();
         verticalLayout_2->setSpacing(6);
         verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
-        label_4 = new QLabel(widget);
+        label_4 = new QLabel(layoutWidget);
         label_4->setObjectName(QStringLiteral("label_4"));
         QPalette palette3;
         palette3.setBrush(QPalette::Active, QPalette::WindowText, brush1);
@@ -236,7 +236,7 @@ public:
 
         verticalLayout_2->addWidget(label_4);
 
-        restaurantListWidget = new QListWidget(widget);
+        restaurantListWidget = new QListWidget(layoutWidget);
         restaurantListWidget->setObjectName(QStringLiteral("restaurantListWidget"));
         QFont font3;
         font3.setFamily(QStringLiteral("Roboto"));
@@ -254,17 +254,17 @@ public:
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setSpacing(6);
         horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
-        pushButton_2 = new QPushButton(widget);
-        pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
-        pushButton_2->setFont(font);
+        AddRestaurant = new QPushButton(layoutWidget);
+        AddRestaurant->setObjectName(QStringLiteral("AddRestaurant"));
+        AddRestaurant->setFont(font);
 
-        horizontalLayout_3->addWidget(pushButton_2);
+        horizontalLayout_3->addWidget(AddRestaurant);
 
-        pushButton_3 = new QPushButton(widget);
-        pushButton_3->setObjectName(QStringLiteral("pushButton_3"));
-        pushButton_3->setFont(font);
+        Remove = new QPushButton(layoutWidget);
+        Remove->setObjectName(QStringLiteral("Remove"));
+        Remove->setFont(font);
 
-        horizontalLayout_3->addWidget(pushButton_3);
+        horizontalLayout_3->addWidget(Remove);
 
 
         verticalLayout_4->addLayout(horizontalLayout_3);
@@ -281,7 +281,7 @@ public:
         verticalLayout_3 = new QVBoxLayout();
         verticalLayout_3->setSpacing(6);
         verticalLayout_3->setObjectName(QStringLiteral("verticalLayout_3"));
-        label_5 = new QLabel(widget);
+        label_5 = new QLabel(layoutWidget);
         label_5->setObjectName(QStringLiteral("label_5"));
         QPalette palette4;
         palette4.setBrush(QPalette::Active, QPalette::WindowText, brush1);
@@ -300,7 +300,7 @@ public:
 
         verticalLayout_3->addWidget(label_5);
 
-        menuListWidget = new QListWidget(widget);
+        menuListWidget = new QListWidget(layoutWidget);
         menuListWidget->setObjectName(QStringLiteral("menuListWidget"));
         menuListWidget->setFont(font3);
         menuListWidget->setFrameShape(QFrame::NoFrame);
@@ -316,7 +316,7 @@ public:
         verticalLayout_5 = new QVBoxLayout();
         verticalLayout_5->setSpacing(6);
         verticalLayout_5->setObjectName(QStringLiteral("verticalLayout_5"));
-        addItemButton = new QPushButton(widget);
+        addItemButton = new QPushButton(layoutWidget);
         addItemButton->setObjectName(QStringLiteral("addItemButton"));
         addItemButton->setFont(font);
 
@@ -328,7 +328,7 @@ public:
         horizontalLayout_6 = new QHBoxLayout();
         horizontalLayout_6->setSpacing(6);
         horizontalLayout_6->setObjectName(QStringLiteral("horizontalLayout_6"));
-        label_3 = new QLabel(widget);
+        label_3 = new QLabel(layoutWidget);
         label_3->setObjectName(QStringLiteral("label_3"));
         QPalette palette5;
         palette5.setBrush(QPalette::Active, QPalette::WindowText, brush);
@@ -348,7 +348,7 @@ public:
 
         horizontalLayout_6->addWidget(label_3);
 
-        itemPrice_lineEdit = new QLineEdit(widget);
+        itemPrice_lineEdit = new QLineEdit(layoutWidget);
         itemPrice_lineEdit->setObjectName(QStringLiteral("itemPrice_lineEdit"));
         itemPrice_lineEdit->setAlignment(Qt::AlignCenter);
         itemPrice_lineEdit->setReadOnly(true);
@@ -361,7 +361,7 @@ public:
         horizontalLayout_5 = new QHBoxLayout();
         horizontalLayout_5->setSpacing(6);
         horizontalLayout_5->setObjectName(QStringLiteral("horizontalLayout_5"));
-        label_8 = new QLabel(widget);
+        label_8 = new QLabel(layoutWidget);
         label_8->setObjectName(QStringLiteral("label_8"));
         QPalette palette6;
         palette6.setBrush(QPalette::Active, QPalette::WindowText, brush);
@@ -379,7 +379,7 @@ public:
 
         horizontalLayout_5->addWidget(label_8);
 
-        lineEdit_2 = new QLineEdit(widget);
+        lineEdit_2 = new QLineEdit(layoutWidget);
         lineEdit_2->setObjectName(QStringLiteral("lineEdit_2"));
 
         horizontalLayout_5->addWidget(lineEdit_2);
@@ -396,7 +396,7 @@ public:
         verticalLayout_7 = new QVBoxLayout();
         verticalLayout_7->setSpacing(6);
         verticalLayout_7->setObjectName(QStringLiteral("verticalLayout_7"));
-        removeItemButton = new QPushButton(widget);
+        removeItemButton = new QPushButton(layoutWidget);
         removeItemButton->setObjectName(QStringLiteral("removeItemButton"));
         removeItemButton->setFont(font);
 
@@ -408,7 +408,7 @@ public:
         horizontalLayout_7 = new QHBoxLayout();
         horizontalLayout_7->setSpacing(6);
         horizontalLayout_7->setObjectName(QStringLiteral("horizontalLayout_7"));
-        label_9 = new QLabel(widget);
+        label_9 = new QLabel(layoutWidget);
         label_9->setObjectName(QStringLiteral("label_9"));
         QPalette palette7;
         palette7.setBrush(QPalette::Active, QPalette::WindowText, brush);
@@ -426,7 +426,7 @@ public:
 
         horizontalLayout_7->addWidget(label_9);
 
-        itemNameToRemove_lineEdit = new QLineEdit(widget);
+        itemNameToRemove_lineEdit = new QLineEdit(layoutWidget);
         itemNameToRemove_lineEdit->setObjectName(QStringLiteral("itemNameToRemove_lineEdit"));
         itemNameToRemove_lineEdit->setAlignment(Qt::AlignCenter);
 
@@ -438,7 +438,7 @@ public:
         horizontalLayout_8 = new QHBoxLayout();
         horizontalLayout_8->setSpacing(6);
         horizontalLayout_8->setObjectName(QStringLiteral("horizontalLayout_8"));
-        label_10 = new QLabel(widget);
+        label_10 = new QLabel(layoutWidget);
         label_10->setObjectName(QStringLiteral("label_10"));
         QPalette palette8;
         palette8.setBrush(QPalette::Active, QPalette::WindowText, brush);
@@ -456,7 +456,7 @@ public:
 
         horizontalLayout_8->addWidget(label_10);
 
-        lineEdit_4 = new QLineEdit(widget);
+        lineEdit_4 = new QLineEdit(layoutWidget);
         lineEdit_4->setObjectName(QStringLiteral("lineEdit_4"));
 
         horizontalLayout_8->addWidget(lineEdit_4);
@@ -479,7 +479,7 @@ public:
         horizontalLayout_4 = new QHBoxLayout();
         horizontalLayout_4->setSpacing(6);
         horizontalLayout_4->setObjectName(QStringLiteral("horizontalLayout_4"));
-        label_6 = new QLabel(widget);
+        label_6 = new QLabel(layoutWidget);
         label_6->setObjectName(QStringLiteral("label_6"));
         QPalette palette9;
         palette9.setBrush(QPalette::Active, QPalette::WindowText, brush);
@@ -498,7 +498,7 @@ public:
 
         horizontalLayout_4->addWidget(label_6);
 
-        displayTotalLine = new QLineEdit(widget);
+        displayTotalLine = new QLineEdit(layoutWidget);
         displayTotalLine->setObjectName(QStringLiteral("displayTotalLine"));
         displayTotalLine->setFont(font);
         displayTotalLine->setAlignment(Qt::AlignCenter);
@@ -525,10 +525,10 @@ public:
         groupBox = new QGroupBox(tab);
         groupBox->setObjectName(QStringLiteral("groupBox"));
         groupBox->setGeometry(QRect(100, 140, 251, 161));
-        layoutWidget = new QWidget(groupBox);
-        layoutWidget->setObjectName(QStringLiteral("layoutWidget"));
-        layoutWidget->setGeometry(QRect(10, 40, 231, 111));
-        verticalLayout_8 = new QVBoxLayout(layoutWidget);
+        layoutWidget1 = new QWidget(groupBox);
+        layoutWidget1->setObjectName(QStringLiteral("layoutWidget1"));
+        layoutWidget1->setGeometry(QRect(10, 40, 231, 111));
+        verticalLayout_8 = new QVBoxLayout(layoutWidget1);
         verticalLayout_8->setSpacing(6);
         verticalLayout_8->setContentsMargins(11, 11, 11, 11);
         verticalLayout_8->setObjectName(QStringLiteral("verticalLayout_8"));
@@ -536,12 +536,12 @@ public:
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setSpacing(6);
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
-        label = new QLabel(layoutWidget);
+        label = new QLabel(layoutWidget1);
         label->setObjectName(QStringLiteral("label"));
 
         horizontalLayout->addWidget(label);
 
-        lineEdit_Username = new QLineEdit(layoutWidget);
+        lineEdit_Username = new QLineEdit(layoutWidget1);
         lineEdit_Username->setObjectName(QStringLiteral("lineEdit_Username"));
         lineEdit_Username->setEchoMode(QLineEdit::Normal);
 
@@ -553,12 +553,12 @@ public:
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setSpacing(6);
         horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
-        label_2 = new QLabel(layoutWidget);
+        label_2 = new QLabel(layoutWidget1);
         label_2->setObjectName(QStringLiteral("label_2"));
 
         horizontalLayout_2->addWidget(label_2);
 
-        lineEdit_Password = new QLineEdit(layoutWidget);
+        lineEdit_Password = new QLineEdit(layoutWidget1);
         lineEdit_Password->setObjectName(QStringLiteral("lineEdit_Password"));
         lineEdit_Password->setEchoMode(QLineEdit::Password);
 
@@ -567,7 +567,7 @@ public:
 
         verticalLayout_8->addLayout(horizontalLayout_2);
 
-        pushButton_Login = new QPushButton(layoutWidget);
+        pushButton_Login = new QPushButton(layoutWidget1);
         pushButton_Login->setObjectName(QStringLiteral("pushButton_Login"));
 
         verticalLayout_8->addWidget(pushButton_Login);
@@ -605,8 +605,8 @@ public:
 #ifndef QT_NO_WHATSTHIS
         restaurantListWidget->setWhatsThis(QString());
 #endif // QT_NO_WHATSTHIS
-        pushButton_2->setText(QApplication::translate("MainWindow", "Add", 0));
-        pushButton_3->setText(QApplication::translate("MainWindow", "Remove", 0));
+        AddRestaurant->setText(QApplication::translate("MainWindow", "Add", 0));
+        Remove->setText(QApplication::translate("MainWindow", "Remove", 0));
         label_5->setText(QApplication::translate("MainWindow", "Menu", 0));
         addItemButton->setText(QApplication::translate("MainWindow", "Add", 0));
         label_3->setText(QApplication::translate("MainWindow", "    Price   ", 0));

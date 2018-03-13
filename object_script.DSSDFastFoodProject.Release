@@ -6,7 +6,9 @@ INPUT(
 ./release\restaurant.o
 ./release\menuitem.o
 ./release\distance.o
+./release\tripscreen.o
 ./release\qrc_res.o
 ./release\moc_mainwindow.o
 ./release\moc_admin.o
+./release\moc_tripscreen.o
 );

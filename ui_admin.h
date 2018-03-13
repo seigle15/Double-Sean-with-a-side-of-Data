@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'admin.ui'
 **
-** Created by: Qt User Interface Compiler version 5.6.1
+** Created by: Qt User Interface Compiler version 5.6.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -76,7 +76,7 @@ public:
         Admin->setCentralWidget(centralwidget);
         menubar = new QMenuBar(Admin);
         menubar->setObjectName(QStringLiteral("menubar"));
-        menubar->setGeometry(QRect(0, 0, 800, 17));
+        menubar->setGeometry(QRect(0, 0, 800, 21));
         Admin->setMenuBar(menubar);
         statusbar = new QStatusBar(Admin);
         statusbar->setObjectName(QStringLiteral("statusbar"));
@@ -84,7 +84,7 @@ public:
 
         retranslateUi(Admin);
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(2);
 
 
         QMetaObject::connectSlotsByName(Admin);

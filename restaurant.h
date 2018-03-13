@@ -22,15 +22,20 @@ public:
     void setDistanceFromSaddleback(double distanceFromSaddleback);
     void setMenuSize(int menuSize);
     void setTotalDistances(int totalDistances);
+    void setVisited(bool visited){this->visited = visited;}
     QString getName();
     int getID();
     double getDistanceFromSaddleback();
     int getMenuSize();
     int getTotalDistances();
+    bool getVisited(){return this->visited;}
     void addDistance(Distance distance);
     void addMenuItem(MenuItem menuItem);
     std::vector<Distance> getDistances();
     std::vector<MenuItem> getMenu();
+    bool operator==(Restaurant restaurantToCompare){
+        return (this->getID() == restaurantToCompare.getID());
+    }
 
 private:
     QString name;
@@ -40,6 +45,8 @@ private:
     int totalDistances;
     std::vector<MenuItem> menu;
     std::vector<Distance> distances;
+    bool visited;
+
 };
 
 #endif // RESTAURANT_H

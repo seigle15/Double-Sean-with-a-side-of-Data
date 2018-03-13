@@ -286,7 +286,7 @@
        <bool>true</bool>
       </property>
       <widget class="QWidget" name="page_5">
-       <widget class="QWidget" name="">
+       <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
           <x>12</x>
@@ -552,7 +552,7 @@
              <item>
               <layout class="QHBoxLayout" name="horizontalLayout_3">
                <item>
-                <widget class="QPushButton" name="pushButton_2">
+                <widget class="QPushButton" name="AddRestaurant">
                  <property name="font">
                   <font>
                    <family>Roboto</family>
@@ -567,7 +567,7 @@
                 </widget>
                </item>
                <item>
-                <widget class="QPushButton" name="pushButton_3">
+                <widget class="QPushButton" name="Remove">
                  <property name="font">
                   <font>
                    <family>Roboto</family>

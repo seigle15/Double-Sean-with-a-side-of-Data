@@ -12,6 +12,7 @@ MainWindow::MainWindow(QWidget *parent) :
 //            this, SLOT(on_restaurantListWidget_itemActivated(QListWidgetItem*)));
 
     listRestaurants();
+    tripWindow = new TripScreen();
 
 }
 
@@ -30,7 +31,9 @@ void MainWindow::on_pushButton_Login_clicked()
         AdminWindow = new Admin();
         AdminWindow->show();
 
-        this->close();    }
+        this->close();
+        tripWindow->close();
+    }
     else
     {
         QMessageBox::warning(this,"Login", "Username and password is not correct");
@@ -133,7 +136,7 @@ void MainWindow::on_removeItemButton_clicked()
 
 void MainWindow::on_menuListWidget_itemActivated(QListWidgetItem* item)
 {
-//    qDebug() << "Item clicked";
+    qDebug() << "Item clicked";
     ui->itemNameToRemove_lineEdit->setText(item->text());
     std::vector<Restaurant> myRestaurants(DBManager::getInstance()->getRestaurants());
     for(int i = 0; i < myRestaurants.size(); i++)
@@ -167,4 +170,43 @@ void MainWindow::on_restaurantListWidget_itemActivated(QListWidgetItem* item)
             }
         }
     }
+}
+
+void MainWindow::on_AddRestaurant_clicked()
+{
+
+    //getting a restuarant name
+    QString restaurantName = ui->restaurantListWidget->currentItem()->text();
+    qDebug() << restaurantName;
+    Restaurant RestToAdd;
+    std::vector<Restaurant> fullList(DBManager::getInstance()->getRestaurants());
+    for(int i = 0; i < fullList.size(); i++){
+        if(restaurantName == fullList[i].getName()){
+            RestToAdd = fullList[i];
+        }
+    }
+    tripWindow->addRestaurant(RestToAdd);
+//    std::vector<Distance> distances = RestToAdd.getDistances();
+//    qDebug() << distances[0].getDistanceInMiles();
+
+//    if(!ui->restaurantListWidget->is){
+//        qDebug() << "Please select an item";
+//    }
+//    else{
+//        QString restaurantName = ui->restaurantListWidget->currentItem()->text();
+//        qDebug() << restaurantName;
+//    }
+    if(tripWindow->isHidden()){
+        tripWindow->show();
+    }
+    if(!tripWindow->isActiveWindow()){
+        tripWindow->activateWindow();
+    }
+
+}
+
+
+void MainWindow::on_Remove_clicked()
+{
+    tripWindow->pushButton();
 }
