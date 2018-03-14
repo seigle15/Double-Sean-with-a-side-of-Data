@@ -64,9 +64,6 @@ private slots:
     Restaurant findClosestRestToSB();
     //to add: function to find starting location from saddleback
     Restaurant stringToRest(QString name);
-
-    void on_restaurantListWidget_2_doubleClicked(const QModelIndex &index);
-
     void on_restaurantListWidget_2_itemActivated(QListWidgetItem *item);
 
 private:
