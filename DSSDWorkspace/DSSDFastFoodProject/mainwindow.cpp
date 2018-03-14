@@ -490,9 +490,12 @@ int MainWindow::FindNextRestaurant(Restaurant current,
         qDebug() << "Next Closest distance" << currentDistances[IDs[i]-1].getDistanceInMiles();
         qDebug() << "Current ID" << IDs[i];
         //if(current.getID() == IDs[i])
+        if(currentDistances[IDs[i]-1].getDistanceInMiles() < 0){
+            currentDistances[IDs[i]-1].setDistanceInMiles(10.0);
+        }
         if(closest > currentDistances[IDs[i]-1].getDistanceInMiles()){
-            closest = currentDistances[IDs[i]-1].getDistanceInMiles();
-            next = i;
+        closest = currentDistances[IDs[i]-1].getDistanceInMiles();
+        next = i;
         }
 
     }
