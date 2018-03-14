@@ -8,12 +8,23 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-//    connect(ui->restaurantListWidget, SIGNAL(itemDoubleClicked(QListWidgetItem*)),
-//            this, SLOT(on_restaurantListWidget_itemActivated(QListWidgetItem*)));
-
     listRestaurants();
-    tripWindow = new TripScreen();
 
+    tripStarted = false;
+
+    ui->AddRestaurant->setEnabled(false);
+    ui->Remove->setEnabled(false);
+    ui->viewTripButton->setEnabled(false);
+
+    ui->addItemButton->hide();
+    ui->removeItemButton->hide();
+    ui->qtyToAddLabel->hide();
+    ui->qtyToAddLine->hide();
+    ui->qtyToRemoveLabel->hide();
+    ui->qtyToRemoveLine->hide();
+    ui->displayTotalLabel->hide();
+    ui->displayTotalLine->hide();
+    //tripWindow = new TripScreen();
 }
 
 MainWindow::~MainWindow()
@@ -133,7 +144,7 @@ void MainWindow::on_removeItemButton_clicked()
     qDebug() << "------------------------";
 }
 
-void MainWindow::on_menuListWidget_itemActivated(QListWidgetItem* item)
+void MainWindow::on_menuAndTripListWidget_itemActivated(QListWidgetItem* item)
 {
     qDebug() << "Item clicked";
     ui->itemNameToRemove_lineEdit->setText(item->text());
@@ -154,10 +165,28 @@ void MainWindow::on_menuListWidget_itemActivated(QListWidgetItem* item)
 
 void MainWindow::on_restaurantListWidget_itemActivated(QListWidgetItem* item)
 {
-    ui->menuListWidget->clear();
+    if(this->tripStarted)
+    {
+        ui->AddRestaurant->setEnabled(false);
+        ui->Remove->setEnabled(false);
+    }
+    else
+    {
+        ui->AddRestaurant->setEnabled(true);
+    }
+
+    ui->menuAndTripListLabel->setText("Menu");
+    ui->itemNameLabel->show();
+    ui->itemNameToRemove_lineEdit->show();
+    ui->itemPriceLabel->show();
+    ui->itemPrice_lineEdit->show();
+
+    ui->menuAndTripListWidget->clear();
     ui->itemPrice_lineEdit->clear();
     ui->itemNameToRemove_lineEdit->clear();
+
     std::vector<Restaurant> myRestaurants(DBManager::getInstance()->getRestaurants());
+
     for(int i = 0; i < myRestaurants.size(); i++)
     {
         if(item->text() == myRestaurants.at(i).getName())
@@ -165,7 +194,7 @@ void MainWindow::on_restaurantListWidget_itemActivated(QListWidgetItem* item)
             for(int j = 0; j < myRestaurants.at(i).getMenuSize(); j++)
             {
                 QString itemName = myRestaurants.at(i).getMenu().at(j).getItemName();
-                ui->menuListWidget->addItem(itemName);
+                ui->menuAndTripListWidget->addItem(itemName);
             }
         }
     }
@@ -174,38 +203,226 @@ void MainWindow::on_restaurantListWidget_itemActivated(QListWidgetItem* item)
 void MainWindow::on_AddRestaurant_clicked()
 {
     qDebug() << "Add button clicked";
+
     //getting a restuarant name
     QString restaurantName = ui->restaurantListWidget->currentItem()->text();
+
     qDebug() << restaurantName;
+
     Restaurant RestToAdd;
     std::vector<Restaurant> fullList(DBManager::getInstance()->getRestaurants());
-    for(int i = 0; i < fullList.size(); i++){
-        if(restaurantName == fullList[i].getName()){
+
+    for(int i = 0; i < fullList.size(); i++)
+    {
+        if(restaurantName == fullList[i].getName())
+        {
+            if(isDuplicateRestaurant(restaurantName))
+            {
+                qDebug() << "Error: Can not add more than one of the same restaurant to trip...";
+                return;
+            }
             RestToAdd = fullList[i];
+            break;
         }
     }
-    tripWindow->addRestaurant(RestToAdd);
+
+    addToMyTrip(RestToAdd);
+    if(ui->menuAndTripListLabel->text() == "My Trip")
+    {
+        listMyTrip();
+    }
+
+    ui->viewTripButton->setEnabled(true);
+
+
+//    tripWindow->addRestaurant(RestToAdd);
 //    std::vector<Distance> distances = RestToAdd.getDistances();
 //    qDebug() << distances[0].getDistanceInMiles();
 
-//    if(!ui->restaurantListWidget->is){
+//    if(!ui->restaurantListWidget->is())
+//    {
 //        qDebug() << "Please select an item";
 //    }
-//    else{
+//    else
+//    {
 //        QString restaurantName = ui->restaurantListWidget->currentItem()->text();
 //        qDebug() << restaurantName;
 //    }
-    if(tripWindow->isHidden()){
-        tripWindow->show();
-    }
-    if(!tripWindow->isActiveWindow()){
-        tripWindow->activateWindow();
-    }
+//    if(tripWindow->isHidden()){
+//        tripWindow->show();
+//    }
+//    if(!tripWindow->isActiveWindow()){
+//        tripWindow->activateWindow();
+//    }
+
 
 }
 
+bool MainWindow::isDuplicateRestaurant(QString restaurantName)
+{
+    for(int i = 0; i < myTrip.size(); i++)
+    {
+        if(restaurantName == myTrip[i].getName())
+        {
+            return true;
+        }
+    }
+    return false;
+}
+
+void MainWindow::addToMyTrip(Restaurant toAdd)
+{
+    myTrip.push_back(toAdd);
+}
 
 void MainWindow::on_Remove_clicked()
 {
-    tripWindow->pushButton();
+    //tripWindow->pushButton();
+
+    qDebug() << "Remove button clicked";
+
+    //getting a restuarant name
+    QString restaurantName = ui->restaurantListWidget->currentItem()->text();
+
+    qDebug() << restaurantName;
+
+    Restaurant restToDelete;
+    std::vector<Restaurant> fullList(DBManager::getInstance()->getRestaurants());
+
+    for(int i = 0; i < fullList.size(); i++)
+    {
+        if(restaurantName == fullList[i].getName())
+        {
+            restToDelete = fullList[i];
+
+            removeFromMyTrip(restToDelete);
+            if(ui->menuAndTripListLabel->text() == "My Trip")
+            {
+                listMyTrip();
+            }
+            break;
+        }
+    }
+}
+
+void MainWindow::removeFromMyTrip(Restaurant restToDelete)
+{
+    std::vector<Restaurant>::iterator it;
+    for(it = myTrip.begin(); it != myTrip.end(); it++)
+    {
+        if(restToDelete.getName() == it->getName())
+        {
+            myTrip.erase(it);
+            break;
+        }
+    }
+    qDebug() << "Destination not found. Exiting process...";
+}
+
+void MainWindow::on_viewTripButton_clicked()
+{
+    ui->menuAndTripListLabel->setText("My Trip");
+    ui->itemNameLabel->hide();
+    ui->itemNameToRemove_lineEdit->hide();
+    ui->itemPriceLabel->hide();
+    ui->itemPrice_lineEdit->hide();
+
+    ui->menuAndTripListWidget->clear();
+    listMyTrip();
+}
+
+void MainWindow::listMyTrip()
+{
+    ui->menuAndTripListWidget->clear();
+    for(int i = 0; i < myTrip.size(); i++)
+    {
+        ui->menuAndTripListWidget->addItem(myTrip.at(i).getName());
+    }
+}
+
+void MainWindow::on_restaurantListWidget_clicked(const QModelIndex &index)
+{
+    qDebug() << "valid index = " << index.isValid();
+
+    if(this->tripStarted)
+    {
+        ui->AddRestaurant->setEnabled(false);
+        ui->Remove->setEnabled(false);
+    }
+    else
+    {
+        ui->AddRestaurant->setEnabled(true);
+        ui->Remove->setEnabled(true);
+    }
+}
+
+void MainWindow::on_newTripButton_clicked()
+{
+    qDebug() << "New trip button pressed. Clearing previous trip...";
+
+    tripStarted = false;
+
+    myTrip.clear();
+
+    ui->restaurantListWidget->clear();
+
+    if(ui->menuAndTripListLabel->text() == "My Trip")
+    {
+        ui->menuAndTripListLabel->setText("Menu");
+        ui->menuAndTripListWidget->clear();
+        ui->itemPriceLabel->show();
+        ui->itemPrice_lineEdit->show();
+        ui->itemNameLabel->show();
+        ui->itemNameToRemove_lineEdit->show();
+    }
+
+    listRestaurants();
+
+    ui->AddRestaurant->setEnabled(false);
+    ui->Remove->setEnabled(false);
+    ui->viewTripButton->setEnabled(false);
+
+    ui->addItemButton->hide();
+    ui->removeItemButton->hide();
+    ui->qtyToAddLabel->hide();
+    ui->qtyToAddLine->hide();
+    ui->qtyToRemoveLabel->hide();
+    ui->qtyToRemoveLine->hide();
+    ui->displayTotalLabel->hide();
+    ui->displayTotalLine->hide();
+}
+
+void MainWindow::on_startTripButton_clicked()
+{
+    qDebug() << "Starting trip...";
+
+    this->tripStarted = true;
+
+    // disable the add and remove buttons since we are now allowing the customer to make orders for their trip, and changes to the list are locked
+    ui->AddRestaurant->setEnabled(false);
+    ui->Remove->setEnabled(false);
+    ui->viewTripButton->setEnabled(false);
+
+    // revealing order options on screen
+    ui->itemPriceLabel->show();
+    ui->itemPrice_lineEdit->show();
+    ui->itemNameLabel->show();
+    ui->itemNameToRemove_lineEdit->show();
+    ui->addItemButton->show();
+    ui->removeItemButton->show();
+    ui->qtyToAddLabel->show();
+    ui->qtyToAddLine->show();
+    ui->qtyToRemoveLabel->show();
+    ui->qtyToRemoveLine->show();
+    ui->displayTotalLabel->show();
+    ui->displayTotalLine->show();
+
+    ui->menuAndTripListLabel->setText("Menu");
+    ui->menuAndTripListWidget->clear();
+    ui->restaurantListWidget->clear();
+
+    for(int i = 0; i < myTrip.size(); i++)
+    {
+        ui->restaurantListWidget->addItem(myTrip[i].getName());
+    }
 }
