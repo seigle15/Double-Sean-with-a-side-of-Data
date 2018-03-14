@@ -33,6 +33,8 @@ public:
     void addMenuItem(MenuItem menuItem);
     std::vector<Distance> getDistances();
     std::vector<MenuItem> getMenu();
+    void setTotalAmountSpent(double amt);
+    double getTotalAmountSpent();
     bool operator==(Restaurant restaurantToCompare){
         return (this->getID() == restaurantToCompare.getID());
     }
@@ -46,6 +48,7 @@ private:
     std::vector<MenuItem> menu;
     std::vector<Distance> distances;
     bool visited;
+    double totalAmountSpent;
 };
 
 #endif // RESTAURANT_H

@@ -70,8 +70,10 @@ void MainWindow::listRestaurants()
 void MainWindow::on_addItemButton_clicked()
 {
     qDebug() << "button pushed";
-    std::vector<Restaurant> myRestaurants(DBManager::getInstance()->getRestaurants());
+    //std::vector<Restaurant> myRestaurants(DBManager::getInstance()->getRestaurants());
     QString foodName = ui->itemNameToRemove_lineEdit->text();
+    //ui->itemNameToRemove_lineEdit->setText(foodName);
+    QString restaurantName = ui->restaurantListWidget->currentItem()->text();
 
     if(foodName == NULL)
     {
@@ -79,27 +81,64 @@ void MainWindow::on_addItemButton_clicked()
     }
     else
     {
-        for(int i = 0; i < myRestaurants.size(); i++)
+        for(int i = 0; i < myTrip.size(); i++)
         {
-            for(int j = 0; j < myRestaurants.at(i).getMenu().size(); j++)
+            for(int j = 0; j < myTrip[i].getMenuSize(); j++)
             {
-                if(myRestaurants.at(i).getMenu().at(j).getItemName() == foodName)
+                if((myTrip[i].getMenu()).at(j).getItemName() == foodName)
                 {
-                    //--------------------------------------
-                    // This is where the error is occuring.
-                    //--------------------------------------
-                        qDebug() << "added item to shopping cart.";
-                        shoppingCart.push_back(MenuItem(foodName, myRestaurants.at(i).getID(), myRestaurants.at(i).getMenu().at(j).getPrice()));
-                        double price = myRestaurants.at(i).getMenu().at(j).getPrice();
-                        cartTotal += price;
-                        QString cartTotalStr = QString::number(cartTotal);
-                        ui->displayTotalLine->setText(cartTotalStr);
-                        //qDebug() << cartTotal;
-                }
+                    MenuItem item = myTrip[i].getMenu().at(j);
+                    shoppingCart.push_back(item);
+                    qDebug() << item.getItemName() << " " << item.getPrice();
+                    cartTotal += item.getPrice();
+                    double restTotal = item.getPrice() + myTrip[i].getTotalAmountSpent();
+                    myTrip[i].setTotalAmountSpent(restTotal);
 
+                    QString strTotal = QString::number(restTotal);
+                    ui->displayRestaurantTotal_lineEdit->setText(strTotal);
+                    ui->displayTotalLine->setText(QString::number(cartTotal));
+                }
             }
+
         }
+//        for(int i = 0; i < myRestaurants.size(); i++)
+//        {
+//            for(int j = 0; j < myRestaurants.at(i).getMenu().size(); j++)
+//            {
+//                if(myRestaurants.at(i).getMenu().at(j).getItemName() == foodName &&  myRestaurants.at(i).getName() == restaurantName)
+//                {
+//                        qDebug() << "added item to shopping cart.";
+//                        shoppingCart.push_back(MenuItem(foodName, myRestaurants.at(i).getID(), myRestaurants.at(i).getMenu().at(j).getPrice()));
+//                        double price = myRestaurants.at(i).getMenu().at(j).getPrice();
+//                        qDebug() << "ID of restaurant" << myRestaurants[i].getID();
+//                        qDebug() << cartTotal << " - " << price;
+//                        cartTotal += price;
+//                        qDebug() << cartTotal;
+//                        QString cartTotalStr = QString::number(cartTotal);
+//                        ui->displayTotalLine->setText(cartTotalStr);
+
+//                        if(isOnMyTrip(myRestaurants.at(i)))
+//                        {
+//                            for(int i = 0; i < myTrip.size(); i++)
+//                            {
+//                                if(myTrip[i].getID() == myRestaurants.at(i).getMenu().at(j).getRestaurantID())
+//                                {
+//                                    double currentTotal = myTrip[i].getTotalAmountSpent();
+//                                    currentTotal += myRestaurants.at(i).getMenu().at(j).getPrice();
+//                                    myTrip[i].setTotalAmountSpent(currentTotal);
+
+//                                    QString restTotal = QString::number(currentTotal);
+//                                    ui->displayRestaurantTotal_lineEdit->setText(restTotal);
+//                                    break;
+//                                }
+//                            }
+//                        }
+//                }
+//            }
+//        }
     }
+
+
 
     qDebug() << "---Shopping Cart List---";
     for(int i = 0; i < shoppingCart.size(); i++)
@@ -112,38 +151,90 @@ void MainWindow::on_addItemButton_clicked()
 
 void MainWindow::on_removeItemButton_clicked()
 {
+    QString foodName = ui->itemNameToRemove_lineEdit->text();
+    //ui->itemNameToRemove_lineEdit->setText(foodName);
+    QString restaurantName = ui->restaurantListWidget->currentItem()->text();
     qDebug() << "button pushed";
-    if(shoppingCart.size() == 0)
+    if(shoppingCart.isEmpty())
     {
         qDebug() << "ERROR---There are no items in the shopping cart.";
-        cartTotal = 0.00;
+        //cartTotal = 0.00;
     }
     else
     {
-        std::vector<Restaurant> myRestaurants(DBManager::getInstance()->getRestaurants());
-        //QString foodName = shoppingCart.at(shoppingCart.size() - 1);
-        QString foodName = ui->itemNameToRemove_lineEdit->text();
-        for(int i = 0; i < myRestaurants.size(); i++)
+        for(int i = 0; i < myTrip.size(); i++)
         {
-            for(int j = 0; j < myRestaurants.at(i).getMenu().size(); j++)
+            for(int j = 0; j < myTrip[i].getMenuSize(); j++)
             {
-                if(myRestaurants.at(i).getMenu().at(j).getItemName() == foodName)
+                if((myTrip[i].getMenu()).at(j).getItemName() == foodName)
                 {
-                    //--------------------------------------
-                    // This is where the error is occuring.
-                    //--------------------------------------
-                        qDebug() << "removed item from shopping cart.";
-                        int index = shoppingCart.indexOf(myRestaurants.at(i).getMenu().at(j));
-                        shoppingCart.remove(index);
-                        //shoppingCart.pop_back();
-                        double price = myRestaurants.at(i).getMenu().at(j).getPrice();
-                        cartTotal -= price;
-                        QString cartTotalStr = QString::number(cartTotal);
-                        ui->displayTotalLine->setText(cartTotalStr);
-                        //qDebug() << cartTotal;
-                }
+                    MenuItem item = myTrip[i].getMenu().at(j);
+                    qDebug() << item.getItemName() << " " << item.getPrice();
+                    if(!shoppingCart.isEmpty())
+                    {
+                            cartTotal -= item.getPrice();
+                            QString cartTotalStr = QString::number(cartTotal);
+                            ui->displayTotalLine->setText(cartTotalStr);
+                    }
+                    else
+                    {
+                        cartTotal = 0.0;
+                        ui->displayTotalLine->clear();
+                    }
+                    double restTotal = myTrip[i].getTotalAmountSpent() - item.getPrice();
 
+                    if(restTotal >= 0)
+                    {
+                        myTrip[i].setTotalAmountSpent(restTotal);
+                    }
+
+                    QString strTotal = QString::number(restTotal);
+                    ui->displayRestaurantTotal_lineEdit->setText(strTotal);
+                    ui->displayTotalLine->setText(QString::number(cartTotal));
+                }
             }
+//        std::vector<Restaurant> myRestaurants(DBManager::getInstance()->getRestaurants());
+//        QString restaurantName = ui->restaurantListWidget->currentItem()->text();
+//        QString foodName = ui->itemNameToRemove_lineEdit->text();
+//        for(int i = 0; i < myRestaurants.size(); i++)
+//        {
+//            for(int j = 0; j < myRestaurants.at(i).getMenu().size(); j++)
+//            {
+//                if(myRestaurants.at(i).getMenu().at(j).getItemName() == foodName && myRestaurants.at(i).getName() == restaurantName)
+//                {
+//                        qDebug() << "removed item from shopping cart.";
+
+//                        // This will get the index of the currently selected item within the shopping cart and remove that specific item from the cart.
+//                        // There needs to be a ui change for this to happen.
+//                        //int index = ui->removeItemCartList->currentRow();
+//                        if(isInCart(myRestaurants.at(i).getMenu().at(j)))
+//                        {
+//                            int index =shoppingCart.indexOf(myRestaurants.at(i).getMenu().at(j));
+//                            shoppingCart.remove(index);
+//                            double price = myRestaurants.at(i).getMenu().at(j).getPrice();
+//                            qDebug() << cartTotal << " - " << price;
+//                            if(!shoppingCart.isEmpty())
+//                            {
+//                                cartTotal -= price;
+//                                QString cartTotalStr = QString::number(cartTotal);
+//                                ui->displayTotalLine->setText(cartTotalStr);
+//                            }
+//                            else
+//                            {
+//                                cartTotal = 0.00;
+//                                ui->displayTotalLine->clear();
+//                            }
+//                        }
+
+//                        //shoppingCart.pop_back();
+
+
+//                        qDebug() << cartTotal;
+
+
+//                }
+
+//            }
         }
     }
 
@@ -153,6 +244,19 @@ void MainWindow::on_removeItemButton_clicked()
         qDebug() << "food item #" << i + 1 << ": " << shoppingCart[i].getItemName();
     }
     qDebug() << "------------------------";
+}
+
+bool MainWindow::isInCart(MenuItem itemToDelete)
+{
+    for(int i = 0; i < shoppingCart.size(); i++)
+    {
+        if(shoppingCart[i].getItemName() == itemToDelete.getItemName())
+        {
+            return true;
+        }
+    }
+    qDebug() << "Error: menu item isn't in cart...";
+    return false;
 }
 
 void MainWindow::on_menuAndTripListWidget_itemActivated(QListWidgetItem* item)
@@ -174,12 +278,75 @@ void MainWindow::on_menuAndTripListWidget_itemActivated(QListWidgetItem* item)
     }
 }
 
+
+
+void MainWindow::on_restaurantListWidget_2_itemActivated(QListWidgetItem* item)
+{
+    //    if(this->tripStarted)
+    //    {
+    //        ui->AddRestaurant->setEnabled(false);
+    //        ui->Remove->setEnabled(false);
+
+    //        qDebug() << "Double clicked and trip started";
+    //        for(int i = 0; i < myTrip.size(); i++)
+    //        {
+    //            if(myTrip[i].getName() == item->text())
+    //            {
+    //                QString strRestTotal = QString::number(myTrip[i].getTotalAmountSpent());
+    //                ui->displayRestaurantTotal_lineEdit->setText(strRestTotal);
+    //            }
+    //        }
+    //    }
+    //    else
+    //    {
+    //        ui->AddRestaurant->setEnabled(true);
+    //    }
+
+    //ui->label_13->setText("Menu");
+    //ui->item->show();
+//    ui->itemNameToRemove_lineEdit_2->show();
+//    ui->itemPriceLabel->show();
+//    ui->itemPrice_lineEdit->show();
+
+    ui->menuListWidget_2->clear();
+    ui->itemPrice_lineEdit_2->clear();
+    ui->itemNameToRemove_lineEdit_2->clear();
+
+    std::vector<Restaurant> myRestaurants(DBManager::getInstance()->getRestaurants());
+
+    for(int i = 0; i < myRestaurants.size(); i++)
+    {
+        if(item->text() == myRestaurants.at(i).getName())
+        {
+            for(int j = 0; j < myRestaurants.at(i).getMenuSize(); j++)
+            {
+                QString itemName = myRestaurants.at(i).getMenu().at(j).getItemName();
+                ui->menuListWidget_2->addItem(itemName);
+            }
+        }
+    }
+    Restaurant current = stringToRest(item->text());
+    QString strDistanceToSaddleback = QString::number(current.getDistanceFromSaddleback());
+    strDistanceToSaddleback.append(" miles");
+   // ui->distanceFromSaddleback_lineEdit->setText(strDistanceToSaddleback);
+}
+
 void MainWindow::on_restaurantListWidget_itemActivated(QListWidgetItem* item)
 {
     if(this->tripStarted)
     {
         ui->AddRestaurant->setEnabled(false);
         ui->Remove->setEnabled(false);
+
+        qDebug() << "Double clicked and trip started";
+        for(int i = 0; i < myTrip.size(); i++)
+        {
+            if(myTrip[i].getName() == item->text())
+            {
+                QString strRestTotal = QString::number(myTrip[i].getTotalAmountSpent());
+                ui->displayRestaurantTotal_lineEdit->setText(strRestTotal);
+            }
+        }
     }
     else
     {
@@ -618,23 +785,201 @@ Restaurant MainWindow::stringToRest(QString name){
     return toFind;
 }
 
-void MainWindow::on_restaurantListWidget_2_itemActivated(QListWidgetItem *item)
+//void MainWindow::on_restaurantListWidget_2_itemActivated(QListWidgetItem *item)
+//{
+//    ui->menuListWidget_2->clear();
+//    ui->itemPrice_lineEdit_2->clear();
+//    ui->itemNameToRemove_lineEdit_2->clear();
+
+//    std::vector<Restaurant> myRestaurants(DBManager::getInstance()->getRestaurants());
+
+//    for(int i = 0; i < myRestaurants.size(); i++)
+//    {
+//        if(item->text() == myRestaurants.at(i).getName())
+//        {
+//            for(int j = 0; j < myRestaurants.at(i).getMenuSize(); j++)
+//            {
+//                QString itemName = myRestaurants.at(i).getMenu().at(j).getItemName();
+//                ui->menuListWidget_2->addItem(itemName);
+//            }
+//        }
+//    }
+//}
+
+void MainWindow::on_addItemButton_2_clicked()
 {
-    ui->menuListWidget_2->clear();
-    ui->itemPrice_lineEdit_2->clear();
-    ui->itemNameToRemove_lineEdit_2->clear();
+    qDebug() << "button pushed";
+    //std::vector<Restaurant> myRestaurants(DBManager::getInstance()->getRestaurants());
+    QString foodName = ui->itemNameToRemove_lineEdit_2->text();
+    //ui->itemNameToRemove_lineEdit->setText(foodName);
+    QString restaurantName = ui->restaurantListWidget_2->currentItem()->text();
 
-    std::vector<Restaurant> myRestaurants(DBManager::getInstance()->getRestaurants());
-
-    for(int i = 0; i < myRestaurants.size(); i++)
+    if(foodName == NULL)
     {
-        if(item->text() == myRestaurants.at(i).getName())
+        qDebug() << "ERROR----Must select item to be added to cart.";
+    }
+    else
+    {
+        for(int i = 0; i < myTrip.size(); i++)
         {
-            for(int j = 0; j < myRestaurants.at(i).getMenuSize(); j++)
+            for(int j = 0; j < myTrip[i].getMenuSize(); j++)
             {
-                QString itemName = myRestaurants.at(i).getMenu().at(j).getItemName();
-                ui->menuListWidget_2->addItem(itemName);
+                if((myTrip[i].getMenu()).at(j).getItemName() == foodName)
+                {
+                    MenuItem item = myTrip[i].getMenu().at(j);
+                    shoppingCart.push_back(item);
+                    qDebug() << item.getItemName() << " " << item.getPrice();
+                    cartTotal += item.getPrice();
+                    double restTotal = item.getPrice() + myTrip[i].getTotalAmountSpent();
+                    myTrip[i].setTotalAmountSpent(restTotal);
+
+                    QString strTotal = QString::number(restTotal);
+                    //ui->display->setText(strTotal);
+                    ui->displayTotalLine_2->setText(QString::number(cartTotal));
+                }
             }
+
+        }
+//        for(int i = 0; i < myRestaurants.size(); i++)
+//        {
+//            for(int j = 0; j < myRestaurants.at(i).getMenu().size(); j++)
+//            {
+//                if(myRestaurants.at(i).getMenu().at(j).getItemName() == foodName &&  myRestaurants.at(i).getName() == restaurantName)
+//                {
+//                        qDebug() << "added item to shopping cart.";
+//                        shoppingCart.push_back(MenuItem(foodName, myRestaurants.at(i).getID(), myRestaurants.at(i).getMenu().at(j).getPrice()));
+//                        double price = myRestaurants.at(i).getMenu().at(j).getPrice();
+//                        qDebug() << "ID of restaurant" << myRestaurants[i].getID();
+//                        qDebug() << cartTotal << " - " << price;
+//                        cartTotal += price;
+//                        qDebug() << cartTotal;
+//                        QString cartTotalStr = QString::number(cartTotal);
+//                        ui->displayTotalLine->setText(cartTotalStr);
+
+//                        if(isOnMyTrip(myRestaurants.at(i)))
+//                        {
+//                            for(int i = 0; i < myTrip.size(); i++)
+//                            {
+//                                if(myTrip[i].getID() == myRestaurants.at(i).getMenu().at(j).getRestaurantID())
+//                                {
+//                                    double currentTotal = myTrip[i].getTotalAmountSpent();
+//                                    currentTotal += myRestaurants.at(i).getMenu().at(j).getPrice();
+//                                    myTrip[i].setTotalAmountSpent(currentTotal);
+
+//                                    QString restTotal = QString::number(currentTotal);
+//                                    ui->displayRestaurantTotal_lineEdit->setText(restTotal);
+//                                    break;
+//                                }
+//                            }
+//                        }
+//                }
+//            }
+//        }
+    }
+
+
+
+    qDebug() << "---Shopping Cart List---";
+    for(int i = 0; i < shoppingCart.size(); i++)
+    {
+        qDebug() << "food item #" << i + 1 << ": " << shoppingCart[i].getItemName();
+    }
+    qDebug() << "------------------------";
+}
+
+void MainWindow::on_removeItemButton_2_clicked()
+{
+    QString foodName = ui->itemNameToRemove_lineEdit->text();
+    //ui->itemNameToRemove_lineEdit->setText(foodName);
+    QString restaurantName = ui->restaurantListWidget->currentItem()->text();
+    qDebug() << "button pushed";
+    if(shoppingCart.isEmpty())
+    {
+        qDebug() << "ERROR---There are no items in the shopping cart.";
+        //cartTotal = 0.00;
+    }
+    else
+    {
+        for(int i = 0; i < myTrip.size(); i++)
+        {
+            for(int j = 0; j < myTrip[i].getMenuSize(); j++)
+            {
+                if((myTrip[i].getMenu()).at(j).getItemName() == foodName)
+                {
+                    MenuItem item = myTrip[i].getMenu().at(j);
+                    qDebug() << item.getItemName() << " " << item.getPrice();
+                    if(!shoppingCart.isEmpty())
+                    {
+                            cartTotal -= item.getPrice();
+                            QString cartTotalStr = QString::number(cartTotal);
+                            ui->displayTotalLine->setText(cartTotalStr);
+                    }
+                    else
+                    {
+                        cartTotal = 0.0;
+                        ui->displayTotalLine->clear();
+                    }
+                    double restTotal = myTrip[i].getTotalAmountSpent() - item.getPrice();
+
+                    if(restTotal >= 0)
+                    {
+                        myTrip[i].setTotalAmountSpent(restTotal);
+                    }
+
+                    QString strTotal = QString::number(restTotal);
+                    ui->displayRestaurantTotal_lineEdit->setText(strTotal);
+                    ui->displayTotalLine->setText(QString::number(cartTotal));
+                }
+            }
+//        std::vector<Restaurant> myRestaurants(DBManager::getInstance()->getRestaurants());
+//        QString restaurantName = ui->restaurantListWidget->currentItem()->text();
+//        QString foodName = ui->itemNameToRemove_lineEdit->text();
+//        for(int i = 0; i < myRestaurants.size(); i++)
+//        {
+//            for(int j = 0; j < myRestaurants.at(i).getMenu().size(); j++)
+//            {
+//                if(myRestaurants.at(i).getMenu().at(j).getItemName() == foodName && myRestaurants.at(i).getName() == restaurantName)
+//                {
+//                        qDebug() << "removed item from shopping cart.";
+
+//                        // This will get the index of the currently selected item within the shopping cart and remove that specific item from the cart.
+//                        // There needs to be a ui change for this to happen.
+//                        //int index = ui->removeItemCartList->currentRow();
+//                        if(isInCart(myRestaurants.at(i).getMenu().at(j)))
+//                        {
+//                            int index =shoppingCart.indexOf(myRestaurants.at(i).getMenu().at(j));
+//                            shoppingCart.remove(index);
+//                            double price = myRestaurants.at(i).getMenu().at(j).getPrice();
+//                            qDebug() << cartTotal << " - " << price;
+//                            if(!shoppingCart.isEmpty())
+//                            {
+//                                cartTotal -= price;
+//                                QString cartTotalStr = QString::number(cartTotal);
+//                                ui->displayTotalLine->setText(cartTotalStr);
+//                            }
+//                            else
+//                            {
+//                                cartTotal = 0.00;
+//                                ui->displayTotalLine->clear();
+//                            }
+//                        }
+
+//                        //shoppingCart.pop_back();
+
+
+//                        qDebug() << cartTotal;
+
+
+//                }
+
+//            }
         }
     }
+
+    qDebug() << "---Shopping Cart List---";
+    for(int i = 0; i < shoppingCart.size(); i++)
+    {
+        qDebug() << "food item #" << i + 1 << ": " << shoppingCart[i].getItemName();
+    }
+    qDebug() << "------------------------";
 }

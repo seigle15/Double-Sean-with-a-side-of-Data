@@ -35,6 +35,8 @@ private slots:
     void on_AddRestaurant_clicked();
     bool isDuplicateRestaurant(QString restaurantName);
     void addToMyTrip(Restaurant toAdd);
+    bool isInCart(MenuItem itemToDelete);
+
 
     void on_Remove_clicked();
     void removeFromMyTrip(Restaurant RestToDelete);
@@ -65,6 +67,14 @@ private slots:
     //to add: function to find starting location from saddleback
     Restaurant stringToRest(QString name);
     void on_restaurantListWidget_2_itemActivated(QListWidgetItem *item);
+
+    void on_addItemButton_2_clicked();
+
+    void on_removeItemButton_2_clicked();
+
+    void on_restaurantListWidget_2_activated(const QModelIndex &index);
+
+   // void on_restaurantListWidget_activated(const QModelIndex &index);
 
 private:
     Ui::MainWindow *ui;

@@ -2,7 +2,7 @@
 
 Restaurant::Restaurant() : name(""), id(0),
                            distanceFromSaddleback(0), menuSize(0),
-                           totalDistances(0), menu(NULL), distances(NULL)
+                           totalDistances(0), menu(NULL), distances(NULL), totalAmountSpent(0)
 {
 
 }
@@ -82,4 +82,14 @@ std::vector<Distance> Restaurant::getDistances()
 std::vector<MenuItem> Restaurant::getMenu()
 {
     return menu;
+}
+
+void Restaurant::setTotalAmountSpent(double amt)
+{
+    this->totalAmountSpent = amt;
+}
+
+double Restaurant::getTotalAmountSpent()
+{
+    return totalAmountSpent;
 }
