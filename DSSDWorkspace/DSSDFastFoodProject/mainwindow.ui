@@ -247,7 +247,7 @@
      <bool>true</bool>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="homeTab">
      <attribute name="title">
@@ -286,7 +286,7 @@
        <bool>true</bool>
       </property>
       <widget class="QWidget" name="page_5">
-       <widget class="QWidget" name="">
+       <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
           <x>8</x>
@@ -2373,7 +2373,7 @@
              <item>
               <layout class="QHBoxLayout" name="horizontalLayout_12">
                <item>
-                <widget class="QLabel" name="label_19">
+                <widget class="QLabel" name="Location">
                  <property name="palette">
                   <palette>
                    <active>
@@ -2477,7 +2477,7 @@
                 </widget>
                </item>
                <item>
-                <widget class="QLineEdit" name="lineEdit"/>
+                <widget class="QComboBox" name="StartingLocation"/>
                </item>
                <item>
                 <widget class="QPushButton" name="addItemButton_3">

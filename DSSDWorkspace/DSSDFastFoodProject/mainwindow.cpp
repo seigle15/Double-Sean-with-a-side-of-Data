@@ -104,7 +104,7 @@ void MainWindow::on_addItemButton_clicked()
     qDebug() << "---Shopping Cart List---";
     for(int i = 0; i < shoppingCart.size(); i++)
     {
-        qDebug() << "food item #" << i + 1 << ": " << shoppingCart[i];
+        qDebug() << "food item #" << i + 1 << ": " << shoppingCart[i].getItemName();
     }
     qDebug() << "------------------------";
 
@@ -150,7 +150,7 @@ void MainWindow::on_removeItemButton_clicked()
     qDebug() << "---Shopping Cart List---";
     for(int i = 0; i < shoppingCart.size(); i++)
     {
-        qDebug() << "food item #" << i + 1 << ": " << shoppingCart[i];
+        qDebug() << "food item #" << i + 1 << ": " << shoppingCart[i].getItemName();
     }
     qDebug() << "------------------------";
 }
