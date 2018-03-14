@@ -15,6 +15,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->AddRestaurant->setEnabled(false);
     ui->Remove->setEnabled(false);
     ui->viewTripButton->setEnabled(false);
+    ui->startTripButton->setEnabled(false);
 
     ui->addItemButton->hide();
     ui->removeItemButton->hide();
@@ -235,6 +236,7 @@ void MainWindow::on_AddRestaurant_clicked()
     }
 
     ui->viewTripButton->setEnabled(true);
+    ui->startTripButton->setEnabled(true);
 
 }
 
@@ -287,8 +289,24 @@ void MainWindow::on_Remove_clicked()
 
 void MainWindow::removeFromMyTrip(Restaurant restToDelete)
 {
-    int index = myTrip.indexOf(restToDelete);
-    myTrip.remove(index);
+    if(isOnMyTrip(restToDelete))
+    {
+        int index = myTrip.indexOf(restToDelete);
+        myTrip.remove(index);
+    }
+}
+
+bool MainWindow::isOnMyTrip(Restaurant restToDelete)
+{
+    for(int i = 0; i < myTrip.size(); i++)
+    {
+        if(myTrip[i].getName() == restToDelete.getName())
+        {
+            return true;
+        }
+    }
+    qDebug() << "Error: restaurant isn't in list...";
+    return false;
 }
 
 void MainWindow::on_viewTripButton_clicked()
@@ -324,7 +342,10 @@ void MainWindow::on_restaurantListWidget_clicked(const QModelIndex &index)
     else
     {
         ui->AddRestaurant->setEnabled(true);
-        ui->Remove->setEnabled(true);
+        if(!myTrip.empty())
+        {
+            ui->Remove->setEnabled(true);
+        }
     }
 }
 
@@ -376,6 +397,7 @@ void MainWindow::on_startTripButton_clicked()
     ui->AddRestaurant->setEnabled(false);
     ui->Remove->setEnabled(false);
     ui->viewTripButton->setEnabled(false);
+    ui->startTripButton->setEnabled(false);
 
     // revealing order options on screen
     ui->itemPriceLabel->show();
@@ -461,7 +483,8 @@ std::vector<int> MainWindow::LoadIDs(QVector<Restaurant> list){
     return getIDs;
 }
 
-Restaurant MainWindow::convertIDToRest(int ID, QVector<Restaurant> list){
+Restaurant MainWindow::convertIDToRest(int ID, QVector<Restaurant> list)
+{
     Restaurant found;
     for(int i = 0; i < list.size(); i++){
         qDebug() << list[i].getName();
@@ -472,7 +495,8 @@ Restaurant MainWindow::convertIDToRest(int ID, QVector<Restaurant> list){
     }
     return found;
 }
-void MainWindow::PrintOrder(){
+void MainWindow::PrintOrder()
+{
     qDebug() << "Printing order";
 
     for(int i = 0; i < efficientOrder.size(); i++){

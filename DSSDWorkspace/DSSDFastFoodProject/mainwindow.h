@@ -39,6 +39,8 @@ private slots:
 
     void on_Remove_clicked();
     void removeFromMyTrip(Restaurant RestToDelete);
+    bool isOnMyTrip(Restaurant restToDelete);
+
 
     void on_viewTripButton_clicked();
     void listMyTrip();
