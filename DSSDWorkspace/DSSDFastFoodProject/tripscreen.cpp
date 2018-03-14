@@ -102,11 +102,11 @@ std::vector<int> TripScreen::LoadIDs(QVector<Restaurant> list){
 
 void TripScreen::on_pushButton_clicked()
 {
-    //LoadIDs(restaurantList);
     TripCreator(restaurantList[0], restaurantList.size(), restaurantList, totalMiles);
+
 }
 void TripScreen::pushButton(){
-    //LoadIDs(restaurantList);
+
     TripCreator(restaurantList[0], restaurantList.size(), restaurantList, totalMiles);
 }
 
