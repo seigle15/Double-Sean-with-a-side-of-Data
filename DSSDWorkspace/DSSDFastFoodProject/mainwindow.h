@@ -49,11 +49,27 @@ private slots:
 
     void on_startTripButton_clicked();
 
+    //All Recusive algorithm functions
+    void TripCreator(Restaurant current,
+                     int numOfRest,
+                     QVector<Restaurant> restaurants,
+                     double &totalMiles);
+    int FindNextRestaurant(Restaurant current,
+                            double &totalMiles,
+                           std::vector<int> IDs);
+    std::vector<int> LoadIDs(QVector<Restaurant> list);
+    Restaurant convertIDToRest(int ID, QVector<Restaurant> list);
+    void PrintOrder();
+    //to add: function to find starting location from saddleback
+
 private:
     Ui::MainWindow *ui;
     Admin *AdminWindow;
     std::vector<QString> shoppingCart;
     QVector<Restaurant> myTrip;
+    QVector<Restaurant> efficientOrder;
+    QVector<double> allDistances;
+    double totalDistance;
     double cartTotal;
     TripScreen *tripWindow;
     bool tripStarted;
