@@ -31,6 +31,10 @@ private slots:
 
     void on_pushButton_AddFromFile_clicked();
 
+    void on_pushButton_AddMenuItem_clicked();
+
+    void on_pushButton_ChangePrice_clicked();
+
 private:
     Ui::Admin *ui;
 };

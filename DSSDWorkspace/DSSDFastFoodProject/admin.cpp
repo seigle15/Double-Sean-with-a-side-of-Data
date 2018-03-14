@@ -2,6 +2,8 @@
 #include "ui_admin.h"
 #include "mainwindow.h"
 #include <qmessagebox.h>
+#include "addmenuitem.h"
+#include "changeprice.h"
 
 Admin::Admin(QWidget *parent) :
     QMainWindow(parent),
@@ -27,11 +29,12 @@ void Admin::on_pushButton_Logout_clicked()
     //DBManager::getInstance()->databaseToRestaurants();
     MainWindow *main = new MainWindow();
     main->show();
-    this->close();
+    this->close();   
 }
 
 void Admin::listRestaurants()
 {
+	ui->restaurantListWidget->clear();
     std::vector<Restaurant> myRestaurants(DBManager::getInstance()->getRestaurants());
     for(int i = 0; i < myRestaurants.size(); i++)
     {
@@ -136,4 +139,25 @@ void Admin::on_pushButton_RemoveMenuItem_clicked()
 void Admin::on_pushButton_AddFromFile_clicked()
 {
     DBManager::getInstance()->uploadFileToDatabase(":/res/CS1D Spring 2018 New Fast Food Project.txt");
+	
+	listRestaurants();
+	ui->pushButton_AddFromFile->setEnabled(false);
+}
+
+void Admin::on_pushButton_AddMenuItem_clicked()
+{
+    addMenuItem *addMenuItemWindow = new addMenuItem();
+    addMenuItemWindow->show();
+
+    QString restaurant;
+    QString item;
+    double price;
+
+    std::vector<Restaurant>::iterator it;
+}
+
+void Admin::on_pushButton_ChangePrice_clicked()
+{
+    changePrice *priceWindow = new changePrice();
+    priceWindow->show();
 }

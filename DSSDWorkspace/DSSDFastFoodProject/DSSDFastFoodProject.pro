@@ -30,17 +30,23 @@ SOURCES += main.cpp\
     dbmanager.cpp \
     restaurant.cpp \
     menuitem.cpp \
-    distance.cpp
+    distance.cpp \
+    addmenuitem.cpp \
+    changeprice.cpp
 
 HEADERS  += mainwindow.h \
     admin.h \
     dbmanager.h \
     restaurant.h \
     menuitem.h \
-    distance.h
+    distance.h \
+    addmenuitem.h \
+    changeprice.h
 
 FORMS    += mainwindow.ui \
-    admin.ui
+    admin.ui \
+    addmenuitem.ui \
+    changeprice.ui
 
 DISTFILES += \
     restaurantDB.db

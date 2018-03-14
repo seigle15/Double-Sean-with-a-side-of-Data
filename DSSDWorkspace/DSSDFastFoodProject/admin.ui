@@ -748,14 +748,11 @@
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_2">
          <item>
-          <widget class="QPushButton" name="pushButton_AddRestaurant">
+          <widget class="QPushButton" name="pushButton_AddFromFile">
            <property name="text">
-            <string>Add Restaurant</string>
+            <string>Add  Restaurants</string>
            </property>
           </widget>
-         </item>
-         <item>
-          <widget class="QLineEdit" name="lineEdit"/>
          </item>
         </layout>
        </item>
@@ -775,9 +772,6 @@
            </property>
           </widget>
          </item>
-         <item>
-          <widget class="QLineEdit" name="lineEdit_2"/>
-         </item>
         </layout>
        </item>
        <item>
@@ -795,9 +789,6 @@
             <string>Change Item Price</string>
            </property>
           </widget>
-         </item>
-         <item>
-          <widget class="QLineEdit" name="lineEdit_3"/>
          </item>
         </layout>
        </item>
@@ -822,19 +813,6 @@
      <string>Logout</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_AddFromFile">
-    <property name="geometry">
-     <rect>
-      <x>700</x>
-      <y>470</y>
-      <width>101</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Add File Restaurants</string>
-    </property>
-   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -842,7 +820,7 @@
      <x>0</x>
      <y>0</y>
      <width>810</width>
-     <height>17</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>
