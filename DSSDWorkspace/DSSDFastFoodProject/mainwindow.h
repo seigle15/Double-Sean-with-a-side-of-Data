@@ -5,7 +5,6 @@
 #include <QListWidgetItem>
 #include "admin.h"
 #include "dbmanager.h"
-#include "tripscreen.h"
 #include "restaurant.h"
 /**
  * @brief
@@ -64,16 +63,17 @@ private slots:
     void PrintOrder();
     //to add: function to find starting location from saddleback
 
+    Restaurant stringToRest(QString name);
+
 private:
     Ui::MainWindow *ui;
     Admin *AdminWindow;
-    std::vector<QString> shoppingCart;
+    QVector<MenuItem> shoppingCart;
     QVector<Restaurant> myTrip;
     QVector<Restaurant> efficientOrder;
     QVector<double> allDistances;
     double totalDistance;
     double cartTotal;
-    TripScreen *tripWindow;
     bool tripStarted;
 };
 

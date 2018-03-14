@@ -11,11 +11,18 @@ MainWindow::MainWindow(QWidget *parent) :
     listRestaurants();
 
     tripStarted = false;
+    totalDistance = 0.0;
 
     ui->AddRestaurant->setEnabled(false);
     ui->Remove->setEnabled(false);
     ui->viewTripButton->setEnabled(false);
     ui->startTripButton->setEnabled(false);
+
+    ui->totalDistanceLabel->hide();
+    ui->totalDistance_lineEdit->hide();
+
+    ui->displayRestaurantTotal_Label->hide();
+    ui->displayRestaurantTotal_lineEdit->hide();
 
     ui->addItemButton->hide();
     ui->removeItemButton->hide();
@@ -25,9 +32,6 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->qtyToRemoveLine->hide();
     ui->displayTotalLabel->hide();
     ui->displayTotalLine->hide();
-    //tripWindow = new TripScreen();
-    totalDistance = 0.0;
-
 }
 
 MainWindow::~MainWindow()
@@ -84,7 +88,7 @@ void MainWindow::on_addItemButton_clicked()
                     // This is where the error is occuring.
                     //--------------------------------------
                         qDebug() << "added item to shopping cart.";
-                        shoppingCart.push_back(foodName);
+                        shoppingCart.push_back(MenuItem(foodName, myRestaurants.at(i).getID(), myRestaurants.at(i).getMenu().at(j).getPrice()));
                         double price = myRestaurants.at(i).getMenu().at(j).getPrice();
                         cartTotal += price;
                         QString cartTotalStr = QString::number(cartTotal);
@@ -99,7 +103,7 @@ void MainWindow::on_addItemButton_clicked()
     qDebug() << "---Shopping Cart List---";
     for(int i = 0; i < shoppingCart.size(); i++)
     {
-        qDebug() << "food item #" << i + 1 << ": " << shoppingCart[i];
+        qDebug() << "food item #" << i + 1 << ": " << shoppingCart[i].getItemName();
     }
     qDebug() << "------------------------";
 
@@ -116,7 +120,8 @@ void MainWindow::on_removeItemButton_clicked()
     else
     {
         std::vector<Restaurant> myRestaurants(DBManager::getInstance()->getRestaurants());
-        QString foodName = shoppingCart.at(shoppingCart.size() - 1);
+        //QString foodName = shoppingCart.at(shoppingCart.size() - 1).getItemName();
+        QString foodName = ui->itemNameToRemove_lineEdit->text();
         for(int i = 0; i < myRestaurants.size(); i++)
         {
             for(int j = 0; j < myRestaurants.at(i).getMenu().size(); j++)
@@ -127,7 +132,9 @@ void MainWindow::on_removeItemButton_clicked()
                     // This is where the error is occuring.
                     //--------------------------------------
                         qDebug() << "removed item from shopping cart.";
-                        shoppingCart.pop_back();
+                        int index = shoppingCart.indexOf(myRestaurants.at(i).getMenu().at(j));
+                        shoppingCart.remove(index);
+                        //shoppingCart.pop_back();
                         double price = myRestaurants.at(i).getMenu().at(j).getPrice();
                         cartTotal -= price;
                         QString cartTotalStr = QString::number(cartTotal);
@@ -142,7 +149,7 @@ void MainWindow::on_removeItemButton_clicked()
     qDebug() << "---Shopping Cart List---";
     for(int i = 0; i < shoppingCart.size(); i++)
     {
-        qDebug() << "food item #" << i + 1 << ": " << shoppingCart[i];
+        qDebug() << "food item #" << i + 1 << ": " << shoppingCart[i].getItemName();
     }
     qDebug() << "------------------------";
 }
@@ -201,6 +208,11 @@ void MainWindow::on_restaurantListWidget_itemActivated(QListWidgetItem* item)
             }
         }
     }
+
+    Restaurant current = stringToRest(item->text());
+    QString strDistanceToSaddleback = QString::number(current.getDistanceFromSaddleback());
+    strDistanceToSaddleback.append(" miles");
+    ui->distanceFromSaddleback_lineEdit->setText(strDistanceToSaddleback);
 }
 
 void MainWindow::on_AddRestaurant_clicked()
@@ -361,6 +373,12 @@ void MainWindow::on_newTripButton_clicked()
     totalDistance = 0.0;
     ui->restaurantListWidget->clear();
 
+    ui->totalDistanceLabel->hide();
+    ui->totalDistance_lineEdit->hide();
+
+    ui->distanceFromSaddleback_label->show();
+    ui->distanceFromSaddleback_lineEdit->show();
+
     if(ui->menuAndTripListLabel->text() == "My Trip")
     {
         ui->menuAndTripListLabel->setText("Menu");
@@ -393,6 +411,12 @@ void MainWindow::on_startTripButton_clicked()
 
     this->tripStarted = true;
 
+    ui->distanceFromSaddleback_label->hide();
+    ui->distanceFromSaddleback_lineEdit->hide();
+
+    ui->displayRestaurantTotal_Label->show();
+    ui->displayRestaurantTotal_lineEdit->show();
+
     // disable the add and remove buttons since we are now allowing the customer to make orders for their trip, and changes to the list are locked
     ui->AddRestaurant->setEnabled(false);
     ui->Remove->setEnabled(false);
@@ -422,6 +446,13 @@ void MainWindow::on_startTripButton_clicked()
     {
         ui->restaurantListWidget->addItem(efficientOrder[i].getName());
     }
+
+    // revealing total distance travelled
+    ui->totalDistanceLabel->show();
+    QString strTotalDistance = QString::number(totalDistance);
+    strTotalDistance.append(" miles");
+    ui->totalDistance_lineEdit->setText(strTotalDistance);
+    ui->totalDistance_lineEdit->show();
 }
 
 void MainWindow::TripCreator(Restaurant current,
@@ -495,6 +526,7 @@ Restaurant MainWindow::convertIDToRest(int ID, QVector<Restaurant> list)
     }
     return found;
 }
+
 void MainWindow::PrintOrder()
 {
     qDebug() << "Printing order";
@@ -515,4 +547,16 @@ void MainWindow::PrintOrder()
 
     }
     qDebug() << "Total Distance" << totalDistance;
+}
+
+Restaurant MainWindow::stringToRest(QString name)
+{
+    std::vector<Restaurant> allRestaurants(DBManager::getInstance()->getRestaurants());
+    Restaurant toFind = allRestaurants[0];
+    for(int i = 0; i < allRestaurants.size(); i++){
+        if(name == allRestaurants[i].getName()){
+            toFind = allRestaurants[i];
+        }
+    }
+    return toFind;
 }
