@@ -575,6 +575,9 @@ void MainWindow::on_StartNormalTrip_clicked()
         TripCreator(stringToRest(startingLocation), completeTrip.size(),
                     completeTrip, totalDistance);
     }
+    QString distance = QString::number(totalDistance);
+    distance = distance + " miles";
+    ui->totalDistance->setText(distance);
     listNormalRestView();
     efficientOrder.clear();
     allDistances.clear();
