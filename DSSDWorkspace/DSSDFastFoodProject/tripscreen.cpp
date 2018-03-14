@@ -34,11 +34,11 @@ void TripScreen::TripCreator(Restaurant current,
                              QVector<Restaurant> restaurants,
                              double &totalMiles){
     qDebug() << "\nComplete Run";
-    qDebug() << restaurants.size();
+//    qDebug() << restaurants.size();
     qDebug() << current.getName();
+
     if(numOfRest == 1){
         //exits the function when all of the restaurants have been visited
-
         efficientOrder.push_back(current);
         PrintOrder();
         return;
@@ -51,8 +51,6 @@ void TripScreen::TripCreator(Restaurant current,
         restaurants.remove(index);
         std::vector<int> IDs = LoadIDs(restaurants);
         ID = FindNextRestaurant(current, totalMiles, IDs);
-        qDebug() << "Just before the convert Function";
-
         TripCreator(convertIDToRest(ID, restaurants), restaurants.size(), restaurants, totalMiles);
     }
 }
@@ -62,21 +60,23 @@ int TripScreen::FindNextRestaurant(Restaurant current,
                                    std::vector<int> IDs){
 
     int next = 0;
-    qDebug() << "next = currentID " << next;
-
     std::vector<Distance> currentDistances = current.getDistances();
-    double closest = currentDistances[IDs[0]].getDistanceInMiles();
+    qDebug() << "Starting ID" << IDs[0];
+    double closest = currentDistances[IDs[next]-1].getDistanceInMiles();
+    qDebug() << "Starting Closest distance " << closest;
     for(int i = 0; i < IDs.size(); i++){
-        //qDebug() << "ID[i]: " << IDs[i];
-        if(closest > currentDistances[IDs[i]].getDistanceInMiles()){
-            closest = currentDistances[IDs[i]].getDistanceInMiles();
+        qDebug() << "Next Closest distance" << currentDistances[IDs[i]-1].getDistanceInMiles();
+        qDebug() << "Current ID" << IDs[i];
+        //if(current.getID() == IDs[i])
+        if(closest > currentDistances[IDs[i]-1].getDistanceInMiles()){
+            closest = currentDistances[IDs[i]-1].getDistanceInMiles();
             next = i;
         }
 
     }
     qDebug() << "returning ID " << IDs[next];
-    totalMiles += currentDistances[IDs[next]].getDistanceInMiles();
-    allDistances.push_back(currentDistances[IDs[next]].getDistanceInMiles());
+    totalMiles += currentDistances[IDs[next]-1].getDistanceInMiles();
+    allDistances.push_back(currentDistances[IDs[next]-1].getDistanceInMiles());
     return IDs[next];
 }
 
@@ -94,12 +94,8 @@ std::vector<int> TripScreen::LoadIDs(QVector<Restaurant> list){
     std::vector<int> getIDs;
     for(int i = 0; i < list.size(); i++){
         getIDs.push_back(list[i].getID());
-        //qDebug() << getIDs[i];
+        qDebug() << "getID Values" << i << " " << getIDs[i];
     }
-    for(int i = 0; i < getIDs.size(); i++){
-        //qDebug() << "getID Values: " << getIDs[i];
-    }
-    //qDebug() << "IDs.size() " <<getIDs.size();
     return getIDs;
 }
 
@@ -116,7 +112,6 @@ void TripScreen::pushButton(){
 
 Restaurant TripScreen::convertIDToRest(int ID, QVector<Restaurant> list){
     Restaurant found;
-    qDebug() << "In the convertID funtion";
     for(int i = 0; i < list.size(); i++){
         qDebug() << list[i].getName();
         if(ID == list[i].getID()){
@@ -124,7 +119,6 @@ Restaurant TripScreen::convertIDToRest(int ID, QVector<Restaurant> list){
            found = list[i];
         }
     }
-    qDebug() << "returning " << found.getName();
     return found;
 }
 
