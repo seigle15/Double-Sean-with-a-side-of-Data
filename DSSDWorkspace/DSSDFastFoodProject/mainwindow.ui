@@ -2480,7 +2480,7 @@
                 <widget class="QComboBox" name="StartingLocation"/>
                </item>
                <item>
-                <widget class="QPushButton" name="addItemButton_3">
+                <widget class="QPushButton" name="StartNormalTrip">
                  <property name="font">
                   <font>
                    <family>Roboto</family>
@@ -2490,7 +2490,7 @@
                   </font>
                  </property>
                  <property name="text">
-                  <string>Add</string>
+                  <string>Start Trip</string>
                  </property>
                 </widget>
                </item>

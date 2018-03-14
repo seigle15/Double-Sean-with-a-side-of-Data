@@ -23,7 +23,7 @@ DBManager* DBManager::getInstance()
     {
         // for now this will have to be the absolute path, im tired lol
 //        database = new DBManager("C:\\Users\\sohearn1\\Desktop\\Project1\\Double-Sean-with-a-side-of-Data\\DSSDWorkspace\\DSSDFastFoodProject\\restaurantDB.db");
-        database = new DBManager("./restaurantDB.db");
+        database = new DBManager("C:\\Users\\Sean\\Desktop\\Double-Sean-with-a-side-of-Data\\DSSDWorkspace\\DSSDFastFoodProject\\restaurantDB.db");
 
         // database = new DBManager("restaurantDB.db"); // if instantiated in this manner, wont allow me to execute queries...but database opens
         // D:\\CS1D Project #1\\Double-Sean-with-a-side-of-Data-master\\DSSDWorkspace\\DSSDFastFoodProject\\restaurantDB.db

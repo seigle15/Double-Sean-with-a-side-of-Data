@@ -557,6 +557,7 @@ void MainWindow::on_StartNormalTrip_clicked()
 {
     ui->restaurantListWidget_2->clear();
     efficientOrder.clear();
+    allDistances.clear();
     totalDistance = 0.0;
     std::vector<Restaurant> allRestaurants(DBManager::getInstance()->getRestaurants());
     QVector<Restaurant> completeTrip;
@@ -575,6 +576,9 @@ void MainWindow::on_StartNormalTrip_clicked()
                     completeTrip, totalDistance);
     }
     listNormalRestView();
+    efficientOrder.clear();
+    allDistances.clear();
+    totalDistance = 0.0;
 
 }
 Restaurant MainWindow::findClosestRestToSB(){
