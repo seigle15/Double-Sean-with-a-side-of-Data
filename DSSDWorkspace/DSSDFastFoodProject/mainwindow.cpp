@@ -587,7 +587,9 @@ Restaurant MainWindow::findClosestRestToSB(){
             closest = allRestaurants[i];
         }
     }
+    return closest;
 }
+
 void MainWindow::listNormalRestView(){
     for(int i = 0; i < efficientOrder.size(); i++)
     {
