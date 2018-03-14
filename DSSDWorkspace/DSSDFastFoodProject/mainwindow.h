@@ -39,7 +39,6 @@ private slots:
     void on_Remove_clicked();
     void removeFromMyTrip(Restaurant RestToDelete);
     bool isOnMyTrip(Restaurant restToDelete);
-
     void on_viewTripButton_clicked();
     void listMyTrip();
 
@@ -73,7 +72,7 @@ private slots:
 private:
     Ui::MainWindow *ui;
     Admin *AdminWindow;
-    std::vector<QString> shoppingCart;
+    QVector<MenuItem> shoppingCart;
     QVector<Restaurant> myTrip;
     QVector<Restaurant> efficientOrder;
     QVector<double> allDistances;

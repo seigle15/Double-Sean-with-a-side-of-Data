@@ -19,7 +19,9 @@ public:
     QString getItemName();
     int getRestaurantID();
     double getPrice();
-
+    bool operator==(MenuItem itemToCompare){
+        return (this->getItemName() == itemToCompare.getItemName());
+    }
 private:
     QString itemName;
     int restaurantID;
