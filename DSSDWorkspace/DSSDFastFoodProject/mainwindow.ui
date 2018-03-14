@@ -247,7 +247,7 @@
      <bool>true</bool>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="homeTab">
      <attribute name="title">
@@ -286,16 +286,16 @@
        <bool>true</bool>
       </property>
       <widget class="QWidget" name="page_5">
-       <widget class="QWidget" name="">
+       <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
-          <x>15</x>
-          <y>15</y>
+          <x>12</x>
+          <y>12</y>
           <width>841</width>
-          <height>491</height>
+          <height>501</height>
          </rect>
         </property>
-        <layout class="QVBoxLayout" name="verticalLayout_24">
+        <layout class="QVBoxLayout" name="verticalLayout_11">
          <item>
           <widget class="QLabel" name="label_7">
            <property name="palette">
@@ -411,7 +411,7 @@
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout_10">
            <item>
-            <layout class="QVBoxLayout" name="verticalLayout_23">
+            <layout class="QVBoxLayout" name="verticalLayout_4">
              <item>
               <layout class="QVBoxLayout" name="verticalLayout_2">
                <item>
@@ -550,67 +550,34 @@
               </layout>
              </item>
              <item>
-              <layout class="QVBoxLayout" name="verticalLayout_22">
+              <layout class="QHBoxLayout" name="horizontalLayout_3">
                <item>
-                <layout class="QVBoxLayout" name="verticalLayout_11">
-                 <item>
-                  <layout class="QVBoxLayout" name="verticalLayout_4">
-                   <item>
-                    <layout class="QHBoxLayout" name="horizontalLayout_3">
-                     <item>
-                      <widget class="QPushButton" name="AddRestaurant">
-                       <property name="font">
-                        <font>
-                         <family>Roboto</family>
-                         <pointsize>10</pointsize>
-                         <weight>75</weight>
-                         <bold>true</bold>
-                        </font>
-                       </property>
-                       <property name="text">
-                        <string>Add</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QPushButton" name="Remove">
-                       <property name="font">
-                        <font>
-                         <family>Roboto</family>
-                         <pointsize>10</pointsize>
-                         <weight>75</weight>
-                         <bold>true</bold>
-                        </font>
-                       </property>
-                       <property name="text">
-                        <string>Remove</string>
-                       </property>
-                      </widget>
-                     </item>
-                    </layout>
-                   </item>
-                   <item>
-                    <widget class="QPushButton" name="startTripButton">
-                     <property name="text">
-                      <string>Start Trip</string>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
-                 </item>
-                 <item>
-                  <widget class="QPushButton" name="viewTripButton">
-                   <property name="text">
-                    <string>View Trip</string>
-                   </property>
-                  </widget>
-                 </item>
-                </layout>
+                <widget class="QPushButton" name="AddRestaurant">
+                 <property name="font">
+                  <font>
+                   <family>Roboto</family>
+                   <pointsize>10</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Add</string>
+                 </property>
+                </widget>
                </item>
                <item>
-                <widget class="QPushButton" name="newTripButton">
+                <widget class="QPushButton" name="Remove">
+                 <property name="font">
+                  <font>
+                   <family>Roboto</family>
+                   <pointsize>10</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
                  <property name="text">
-                  <string>New Trip</string>
+                  <string>Remove</string>
                  </property>
                 </widget>
                </item>
@@ -625,7 +592,7 @@
                <item>
                 <layout class="QVBoxLayout" name="verticalLayout_3">
                  <item>
-                  <widget class="QLabel" name="menuAndTripListLabel">
+                  <widget class="QLabel" name="label_5">
                    <property name="palette">
                     <palette>
                      <active>
@@ -737,7 +704,7 @@
                   </widget>
                  </item>
                  <item>
-                  <widget class="QListWidget" name="menuAndTripListWidget">
+                  <widget class="QListWidget" name="menuListWidget">
                    <property name="font">
                     <font>
                      <family>Roboto</family>
@@ -777,7 +744,7 @@
                      <item>
                       <layout class="QHBoxLayout" name="horizontalLayout_6">
                        <item>
-                        <widget class="QLabel" name="itemPriceLabel">
+                        <widget class="QLabel" name="label_3">
                          <property name="palette">
                           <palette>
                            <active>
@@ -882,43 +849,6 @@
                        </item>
                        <item>
                         <widget class="QLineEdit" name="itemPrice_lineEdit">
-                         <property name="palette">
-                          <palette>
-                           <active>
-                            <colorrole role="Text">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>0</red>
-                               <green>0</green>
-                               <blue>0</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                           </active>
-                           <inactive>
-                            <colorrole role="Text">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>0</red>
-                               <green>0</green>
-                               <blue>0</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                           </inactive>
-                           <disabled>
-                            <colorrole role="Text">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>120</red>
-                               <green>120</green>
-                               <blue>120</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                           </disabled>
-                          </palette>
-                         </property>
                          <property name="alignment">
                           <set>Qt::AlignCenter</set>
                          </property>
@@ -932,7 +862,7 @@
                      <item>
                       <layout class="QHBoxLayout" name="horizontalLayout_5">
                        <item>
-                        <widget class="QLabel" name="qtyToAddLabel">
+                        <widget class="QLabel" name="label_8">
                          <property name="palette">
                           <palette>
                            <active>
@@ -1036,45 +966,7 @@
                         </widget>
                        </item>
                        <item>
-                        <widget class="QLineEdit" name="qtyToAddLine">
-                         <property name="palette">
-                          <palette>
-                           <active>
-                            <colorrole role="Text">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>0</red>
-                               <green>0</green>
-                               <blue>0</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                           </active>
-                           <inactive>
-                            <colorrole role="Text">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>0</red>
-                               <green>0</green>
-                               <blue>0</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                           </inactive>
-                           <disabled>
-                            <colorrole role="Text">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>120</red>
-                               <green>120</green>
-                               <blue>120</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                           </disabled>
-                          </palette>
-                         </property>
-                        </widget>
+                        <widget class="QLineEdit" name="lineEdit_2"/>
                        </item>
                       </layout>
                      </item>
@@ -1104,7 +996,7 @@
                      <item>
                       <layout class="QHBoxLayout" name="horizontalLayout_7">
                        <item>
-                        <widget class="QLabel" name="itemNameLabel">
+                        <widget class="QLabel" name="label_9">
                          <property name="palette">
                           <palette>
                            <active>
@@ -1209,45 +1101,8 @@
                        </item>
                        <item>
                         <widget class="QLineEdit" name="itemNameToRemove_lineEdit">
-                         <property name="palette">
-                          <palette>
-                           <active>
-                            <colorrole role="Text">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>0</red>
-                               <green>0</green>
-                               <blue>0</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                           </active>
-                           <inactive>
-                            <colorrole role="Text">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>0</red>
-                               <green>0</green>
-                               <blue>0</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                           </inactive>
-                           <disabled>
-                            <colorrole role="Text">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>120</red>
-                               <green>120</green>
-                               <blue>120</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                           </disabled>
-                          </palette>
-                         </property>
                          <property name="alignment">
-                          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                          <set>Qt::AlignCenter</set>
                          </property>
                         </widget>
                        </item>
@@ -1256,7 +1111,7 @@
                      <item>
                       <layout class="QHBoxLayout" name="horizontalLayout_8">
                        <item>
-                        <widget class="QLabel" name="qtyToRemoveLabel">
+                        <widget class="QLabel" name="label_10">
                          <property name="palette">
                           <palette>
                            <active>
@@ -1360,45 +1215,7 @@
                         </widget>
                        </item>
                        <item>
-                        <widget class="QLineEdit" name="qtyToRemoveLine">
-                         <property name="palette">
-                          <palette>
-                           <active>
-                            <colorrole role="Text">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>0</red>
-                               <green>0</green>
-                               <blue>0</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                           </active>
-                           <inactive>
-                            <colorrole role="Text">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>0</red>
-                               <green>0</green>
-                               <blue>0</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                           </inactive>
-                           <disabled>
-                            <colorrole role="Text">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>120</red>
-                               <green>120</green>
-                               <blue>120</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                           </disabled>
-                          </palette>
-                         </property>
-                        </widget>
+                        <widget class="QLineEdit" name="lineEdit_4"/>
                        </item>
                       </layout>
                      </item>
@@ -1413,7 +1230,7 @@
              <item>
               <layout class="QHBoxLayout" name="horizontalLayout_4">
                <item>
-                <widget class="QLabel" name="displayTotalLabel">
+                <widget class="QLabel" name="label_6">
                  <property name="palette">
                   <palette>
                    <active>
@@ -1517,7 +1334,7 @@
                   <bool>true</bool>
                  </property>
                  <property name="text">
-                  <string>    Total     </string>
+                  <string>    Total    </string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
@@ -1526,43 +1343,6 @@
                </item>
                <item>
                 <widget class="QLineEdit" name="displayTotalLine">
-                 <property name="palette">
-                  <palette>
-                   <active>
-                    <colorrole role="Text">
-                     <brush brushstyle="SolidPattern">
-                      <color alpha="255">
-                       <red>0</red>
-                       <green>0</green>
-                       <blue>0</blue>
-                      </color>
-                     </brush>
-                    </colorrole>
-                   </active>
-                   <inactive>
-                    <colorrole role="Text">
-                     <brush brushstyle="SolidPattern">
-                      <color alpha="255">
-                       <red>0</red>
-                       <green>0</green>
-                       <blue>0</blue>
-                      </color>
-                     </brush>
-                    </colorrole>
-                   </inactive>
-                   <disabled>
-                    <colorrole role="Text">
-                     <brush brushstyle="SolidPattern">
-                      <color alpha="255">
-                       <red>120</red>
-                       <green>120</green>
-                       <blue>120</blue>
-                      </color>
-                     </brush>
-                    </colorrole>
-                   </disabled>
-                  </palette>
-                 </property>
                  <property name="font">
                   <font>
                    <family>Roboto</family>
