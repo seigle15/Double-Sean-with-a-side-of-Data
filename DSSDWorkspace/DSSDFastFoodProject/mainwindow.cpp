@@ -27,6 +27,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->displayTotalLine->hide();
     //tripWindow = new TripScreen();
     totalDistance = 0.0;
+    populateStartLocCB();
 
 }
 
@@ -515,4 +516,86 @@ void MainWindow::PrintOrder()
 
     }
     qDebug() << "Total Distance" << totalDistance;
+}
+
+void MainWindow::populateStartLocCB(){
+    ui->StartingLocation->addItem("Sadddleback");
+    std::vector<Restaurant> allRestaurants(DBManager::getInstance()->getRestaurants());
+    for(int i = 0; i < allRestaurants.size(); i++){
+        ui->StartingLocation->addItem(allRestaurants[i].getName());
+    }
+}
+
+void MainWindow::on_StartNormalTrip_clicked()
+{
+    ui->restaurantListWidget_2->clear();
+    efficientOrder.clear();
+    totalDistance = 0.0;
+    std::vector<Restaurant> allRestaurants(DBManager::getInstance()->getRestaurants());
+    QVector<Restaurant> completeTrip;
+    for(int i = 0; i < allRestaurants.size(); i++){
+        completeTrip.push_front(allRestaurants[i]);
+    }
+    QString startingLocation = ui->StartingLocation->currentText();
+    if(startingLocation == "Saddleback"){
+        Restaurant closestToSB = findClosestRestToSB();
+        totalDistance = closestToSB.getDistanceFromSaddleback();
+        TripCreator(closestToSB, completeTrip.size(),
+                    completeTrip, totalDistance);
+    }
+    else{
+        TripCreator(stringToRest(startingLocation), completeTrip.size(),
+                    completeTrip, totalDistance);
+    }
+    listNormalRestView();
+
+}
+Restaurant MainWindow::findClosestRestToSB(){
+    std::vector<Restaurant> allRestaurants(DBManager::getInstance()->getRestaurants());
+    Restaurant closest;
+    closest = allRestaurants[0];
+    for(int i = 0; i < allRestaurants.size(); i++){
+        if(closest.getDistanceFromSaddleback() >
+           allRestaurants[i].getDistanceFromSaddleback()){
+            closest = allRestaurants[i];
+        }
+    }
+}
+void MainWindow::listNormalRestView(){
+    for(int i = 0; i < efficientOrder.size(); i++)
+    {
+        ui->restaurantListWidget_2->addItem(efficientOrder[i].getName());
+    }
+}
+
+Restaurant MainWindow::stringToRest(QString name){
+    std::vector<Restaurant> allRestaurants(DBManager::getInstance()->getRestaurants());
+    Restaurant toFind = allRestaurants[0];
+    for(int i = 0; i < allRestaurants.size(); i++){
+        if(name == allRestaurants[i].getName()){
+            toFind = allRestaurants[i];
+        }
+    }
+    return toFind;
+}
+
+void MainWindow::on_restaurantListWidget_2_itemActivated(QListWidgetItem *item)
+{
+    ui->menuListWidget_2->clear();
+    ui->itemPrice_lineEdit_2->clear();
+    ui->itemNameToRemove_lineEdit_2->clear();
+
+    std::vector<Restaurant> myRestaurants(DBManager::getInstance()->getRestaurants());
+
+    for(int i = 0; i < myRestaurants.size(); i++)
+    {
+        if(item->text() == myRestaurants.at(i).getName())
+        {
+            for(int j = 0; j < myRestaurants.at(i).getMenuSize(); j++)
+            {
+                QString itemName = myRestaurants.at(i).getMenu().at(j).getItemName();
+                ui->menuListWidget_2->addItem(itemName);
+            }
+        }
+    }
 }

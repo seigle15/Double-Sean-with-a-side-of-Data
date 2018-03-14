@@ -46,7 +46,6 @@ private:
     std::vector<MenuItem> menu;
     std::vector<Distance> distances;
     bool visited;
-
 };
 
 #endif // RESTAURANT_H
