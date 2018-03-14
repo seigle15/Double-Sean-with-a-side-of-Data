@@ -6,7 +6,6 @@
 #include "admin.h"
 #include "dbmanager.h"
 #include "tripscreen.h"
-#include "restaurant.h"
 /**
  * @brief
  * This is the baseline UI
@@ -30,33 +29,19 @@ private slots:
     void on_restaurantListWidget_itemActivated(QListWidgetItem*);
     void on_addItemButton_clicked();
     void on_removeItemButton_clicked();
-    void on_menuAndTripListWidget_itemActivated(QListWidgetItem*);
+    void on_menuListWidget_itemActivated(QListWidgetItem*);
     void listRestaurants();
 
     void on_AddRestaurant_clicked();
-    bool isDuplicateRestaurant(QString restaurantName);
-    void addToMyTrip(Restaurant toAdd);
 
     void on_Remove_clicked();
-    void removeFromMyTrip(Restaurant RestToDelete);
-
-    void on_viewTripButton_clicked();
-    void listMyTrip();
-
-    void on_restaurantListWidget_clicked(const QModelIndex &index);
-
-    void on_newTripButton_clicked();
-
-    void on_startTripButton_clicked();
 
 private:
     Ui::MainWindow *ui;
     Admin *AdminWindow;
     std::vector<QString> shoppingCart;
-    std::vector<Restaurant> myTrip;
     double cartTotal;
     TripScreen *tripWindow;
-    bool tripStarted;
 };
 
 #endif // MAINWINDOW_H
