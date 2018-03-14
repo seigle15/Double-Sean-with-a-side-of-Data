@@ -72,7 +72,6 @@ int TripScreen::FindNextRestaurant(Restaurant current,
             closest = currentDistances[IDs[i]-1].getDistanceInMiles();
             next = i;
         }
-
     }
     qDebug() << "returning ID " << IDs[next];
     totalMiles += currentDistances[IDs[next]-1].getDistanceInMiles();

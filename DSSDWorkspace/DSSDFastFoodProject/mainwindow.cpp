@@ -307,16 +307,8 @@ void MainWindow::on_Remove_clicked()
 
 void MainWindow::removeFromMyTrip(Restaurant restToDelete)
 {
-    std::vector<Restaurant>::iterator it;
-    for(it = myTrip.begin(); it != myTrip.end(); it++)
-    {
-        if(restToDelete.getName() == it->getName())
-        {
-            myTrip.erase(it);
-            break;
-        }
-    }
-    qDebug() << "Destination not found. Exiting process...";
+    int index = myTrip.indexOf(restToDelete);
+    myTrip.remove(index);
 }
 
 void MainWindow::on_viewTripButton_clicked()
@@ -336,7 +328,7 @@ void MainWindow::listMyTrip()
     ui->menuAndTripListWidget->clear();
     for(int i = 0; i < myTrip.size(); i++)
     {
-        ui->menuAndTripListWidget->addItem(myTrip.at(i).getName());
+        ui->menuAndTripListWidget->addItem(myTrip[i].getName());
     }
 }
 

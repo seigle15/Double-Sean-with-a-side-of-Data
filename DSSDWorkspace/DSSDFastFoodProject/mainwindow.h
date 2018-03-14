@@ -53,7 +53,7 @@ private:
     Ui::MainWindow *ui;
     Admin *AdminWindow;
     std::vector<QString> shoppingCart;
-    std::vector<Restaurant> myTrip;
+    QVector<Restaurant> myTrip;
     double cartTotal;
     TripScreen *tripWindow;
     bool tripStarted;
