@@ -25,6 +25,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->displayTotalLabel->hide();
     ui->displayTotalLine->hide();
     //tripWindow = new TripScreen();
+    totalDistance = 0.0;
+
 }
 
 MainWindow::~MainWindow()
@@ -234,28 +236,6 @@ void MainWindow::on_AddRestaurant_clicked()
 
     ui->viewTripButton->setEnabled(true);
 
-
-//    tripWindow->addRestaurant(RestToAdd);
-//    std::vector<Distance> distances = RestToAdd.getDistances();
-//    qDebug() << distances[0].getDistanceInMiles();
-
-//    if(!ui->restaurantListWidget->is())
-//    {
-//        qDebug() << "Please select an item";
-//    }
-//    else
-//    {
-//        QString restaurantName = ui->restaurantListWidget->currentItem()->text();
-//        qDebug() << restaurantName;
-//    }
-//    if(tripWindow->isHidden()){
-//        tripWindow->show();
-//    }
-//    if(!tripWindow->isActiveWindow()){
-//        tripWindow->activateWindow();
-//    }
-
-
 }
 
 bool MainWindow::isDuplicateRestaurant(QString restaurantName)
@@ -357,6 +337,7 @@ void MainWindow::on_newTripButton_clicked()
     myTrip.clear();
     efficientOrder.clear();
     allDistances.clear();
+    totalDistance = 0.0;
     ui->restaurantListWidget->clear();
 
     if(ui->menuAndTripListLabel->text() == "My Trip")
@@ -509,4 +490,5 @@ void MainWindow::PrintOrder(){
         }
 
     }
+    qDebug() << "Total Distance" << totalDistance;
 }
