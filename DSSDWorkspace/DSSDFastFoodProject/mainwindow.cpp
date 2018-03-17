@@ -70,37 +70,50 @@ void MainWindow::listRestaurants()
 void MainWindow::on_addItemButton_clicked()
 {
     qDebug() << "button pushed";
-    //std::vector<Restaurant> myRestaurants(DBManager::getInstance()->getRestaurants());
     QString foodName = ui->itemNameToRemove_lineEdit->text();
-    //ui->itemNameToRemove_lineEdit->setText(foodName);
     QString restaurantName = ui->restaurantListWidget->currentItem()->text();
+    QString strItemPrice = ui->itemPrice_lineEdit->text();
 
-    if(foodName == NULL)
+    bool* ok;
+    double dItemPrice = strItemPrice.toDouble(ok);
+
+    if(ui->menuAndTripListWidget->currentItem() == NULL || ui->itemPrice_lineEdit->text() == NULL)
     {
         qDebug() << "ERROR----Must select item to be added to cart.";
+        return;
     }
     else
     {
         for(int i = 0; i < myTrip.size(); i++)
         {
-            for(int j = 0; j < myTrip[i].getMenuSize(); j++)
+            if(myTrip[i].getName() == restaurantName)
             {
-                if((myTrip[i].getMenu()).at(j).getItemName() == foodName)
-                {
-                    MenuItem item = myTrip[i].getMenu().at(j);
-                    shoppingCart.push_back(item);
-                    qDebug() << item.getItemName() << " " << item.getPrice();
-                    cartTotal += item.getPrice();
-                    double restTotal = item.getPrice() + myTrip[i].getTotalAmountSpent();
-                    myTrip[i].setTotalAmountSpent(restTotal);
-
-                    QString strTotal = QString::number(restTotal);
-                    ui->displayRestaurantTotal_lineEdit->setText(strTotal);
-                    ui->displayTotalLine->setText(QString::number(cartTotal));
-                }
+                double newTotal = myTrip[i].getTotalAmountSpent() + dItemPrice;
+                qDebug() << "New Total: " << newTotal;
+                myTrip[i].setTotalAmountSpent(newTotal);
+                cartTotal += dItemPrice;
+                ui->displayRestaurantTotal_lineEdit->setText(QString::number(myTrip[i].getTotalAmountSpent()));
+                ui->displayTotalLine->setText(QString::number(cartTotal));
             }
-
         }
+//            for(int j = 0; j < myTrip[i].getMenuSize(); j++)
+//            {
+//                if((myTrip[i].getMenu()).at(j).getItemName() == foodName)
+//                {
+//                    MenuItem item = myTrip[i].getMenu().at(j);
+//                    shoppingCart.push_back(item);
+//                    qDebug() << item.getItemName() << " " << item.getPrice();
+//                    cartTotal += item.getPrice();
+//                    double restTotal = item.getPrice() + myTrip[i].getTotalAmountSpent();
+//                    myTrip[i].setTotalAmountSpent(restTotal);
+
+//                    QString strTotal = QString::number(restTotal);
+//                    ui->displayRestaurantTotal_lineEdit->setText(strTotal);
+//                    ui->displayTotalLine->setText(QString::number(cartTotal));
+//                }
+//            }
+
+
 //        for(int i = 0; i < myRestaurants.size(); i++)
 //        {
 //            for(int j = 0; j < myRestaurants.at(i).getMenu().size(); j++)
@@ -138,8 +151,7 @@ void MainWindow::on_addItemButton_clicked()
 //        }
     }
 
-
-
+    shoppingCart.push_back(addToCart(foodName, restaurantName));
     qDebug() << "---Shopping Cart List---";
     for(int i = 0; i < shoppingCart.size(); i++)
     {
@@ -147,6 +159,20 @@ void MainWindow::on_addItemButton_clicked()
     }
     qDebug() << "------------------------";
 
+}
+
+MenuItem MainWindow::addToCart(QString foodName, QString restaurantName)
+{
+    for(int i = 0; i < myTrip.size(); i++)
+    {
+        for(int j = 0; j < myTrip[i].getMenuSize(); j++)
+        {
+            if(myTrip[i].getName() == restaurantName && myTrip[i].getMenu().at(j).getItemName() == foodName)
+            {
+                return myTrip[i].getMenu().at(j);
+            }
+        }
+    }
 }
 
 void MainWindow::on_removeItemButton_clicked()
@@ -264,11 +290,27 @@ void MainWindow::on_menuAndTripListWidget_itemActivated(QListWidgetItem* item)
     qDebug() << "Item clicked";
     ui->itemNameToRemove_lineEdit->setText(item->text());
     std::vector<Restaurant> myRestaurants(DBManager::getInstance()->getRestaurants());
+//    QList<QListWidgetItem*> selectedRestaurant = ui->restaurantListWidget->selectedItems();
+//    QListWidgetItem* currentRestaurantSelection = selectedRestaurant.at(0);
+    QString currentRestaurantSelectionName = ui->restaurantListWidget->currentItem()->text();
+    Restaurant currenctlySelectedRestaurant;
+
+    for(int i = 0; i < myRestaurants.size(); i++)
+    {
+        if(myRestaurants.at(i).getName() == currentRestaurantSelectionName)
+        {
+            currenctlySelectedRestaurant = myRestaurants.at(i);
+            break;
+        }
+    }
+
     for(int i = 0; i < myRestaurants.size(); i++)
     {
         for(int j = 0; j < myRestaurants.at(i).getMenu().size(); j++)
         {
-            if(myRestaurants.at(i).getMenu().at(j).getItemName() == item->text())
+            QString currentItemName = myRestaurants.at(i).getMenu().at(j).getItemName();
+            int currentRestaurantID = myRestaurants.at(i).getMenu().at(j).getRestaurantID();
+            if(currentItemName == item->text() && currentRestaurantID == currenctlySelectedRestaurant.getID())
             {
                 double price = myRestaurants.at(i).getMenu().at(j).getPrice();
                 QString priceStr = QString::number(price);
@@ -277,8 +319,6 @@ void MainWindow::on_menuAndTripListWidget_itemActivated(QListWidgetItem* item)
         }
     }
 }
-
-
 
 void MainWindow::on_restaurantListWidget_2_itemActivated(QListWidgetItem* item)
 {
@@ -533,6 +573,14 @@ void MainWindow::on_newTripButton_clicked()
     qDebug() << "New trip button pressed. Clearing previous trip...";
 
     tripStarted = false;
+
+    ui->displayRestaurantTotal_lineEdit->clear();
+    ui->distanceFromSaddleback_lineEdit->clear();
+    ui->totalDistance_lineEdit->clear();
+    ui->itemNameToRemove_lineEdit->clear();
+    ui->itemPrice_lineEdit->clear();
+    ui->restaurantListWidget->clear();
+    ui->menuAndTripListWidget->clear();
 
     myTrip.clear();
     efficientOrder.clear();

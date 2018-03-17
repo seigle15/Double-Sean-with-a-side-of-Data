@@ -28,6 +28,7 @@ private slots:
     void on_pushButton_Login_clicked();
     void on_restaurantListWidget_itemActivated(QListWidgetItem*);
     void on_addItemButton_clicked();
+    MenuItem addToCart(QString foodName, QString restaurantName);
     void on_removeItemButton_clicked();
     void on_menuAndTripListWidget_itemActivated(QListWidgetItem*);
     void listRestaurants();
