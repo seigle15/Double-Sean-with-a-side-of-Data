@@ -1,0 +1,251 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_menu_item" kind="class" language="C++" prot="public">
+    <compoundname>MenuItem</compoundname>
+    <includes refid="menuitem_8h" local="no">menuitem.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_menu_item_1a6a4806bb7230b9b40b88804dec81dffb" prot="private" static="no" mutable="no">
+        <type>QString</type>
+        <definition>QString MenuItem::itemName</definition>
+        <argsstring></argsstring>
+        <name>itemName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="menuitem.h" line="56" column="1" bodyfile="menuitem.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_menu_item_1ae711d58645ba1e1364874c411d26e08c" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MenuItem::restaurantID</definition>
+        <argsstring></argsstring>
+        <name>restaurantID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="menuitem.h" line="57" column="1" bodyfile="menuitem.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_menu_item_1a05ed0defbede1c8398b3f3a610c1c732" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double MenuItem::price</definition>
+        <argsstring></argsstring>
+        <name>price</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="menuitem.h" line="58" column="1" bodyfile="menuitem.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_menu_item_1ae081df191fc4e9e84721f5ce9323132f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MenuItem::MenuItem</definition>
+        <argsstring>()</argsstring>
+        <name>MenuItem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="menuitem.h" line="15" column="1" bodyfile="menuitem.cpp" bodystart="3" bodyend="6"/>
+      </memberdef>
+      <memberdef kind="function" id="class_menu_item_1ace4fef81d61df85c799b17027b83f3ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MenuItem::MenuItem</definition>
+        <argsstring>(QString itemName, int restaurantID, double price)</argsstring>
+        <name>MenuItem</name>
+        <param>
+          <type>QString</type>
+          <declname>itemName</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>restaurantID</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>price</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="menuitem.h" line="16" column="1" bodyfile="menuitem.cpp" bodystart="8" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_menu_item_1abc651e3a5656b7fbb0e72085b8adab0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MenuItem::setItemName</definition>
+        <argsstring>(QString itemName)</argsstring>
+        <name>setItemName</name>
+        <param>
+          <type>QString</type>
+          <declname>itemName</declname>
+        </param>
+        <briefdescription>
+<para>setItemName </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>itemName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="menuitem.h" line="21" column="1" bodyfile="menuitem.cpp" bodystart="15" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_menu_item_1a046acac8a4f20c6d3589ac34bb53ea71" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MenuItem::setRestaurantID</definition>
+        <argsstring>(int restaurantID)</argsstring>
+        <name>setRestaurantID</name>
+        <param>
+          <type>int</type>
+          <declname>restaurantID</declname>
+        </param>
+        <briefdescription>
+<para>setRestaurantID </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>restaurantID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="menuitem.h" line="26" column="1" bodyfile="menuitem.cpp" bodystart="20" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_menu_item_1ae2ebb751e94c46e5bbe32dc2f8003919" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MenuItem::setPrice</definition>
+        <argsstring>(double price)</argsstring>
+        <name>setPrice</name>
+        <param>
+          <type>double</type>
+          <declname>price</declname>
+        </param>
+        <briefdescription>
+<para>setPrice </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>price</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="menuitem.h" line="31" column="1" bodyfile="menuitem.cpp" bodystart="25" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_menu_item_1a4d6f0c0ce06292a95521c2f01c360393" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>QString</type>
+        <definition>QString MenuItem::getItemName</definition>
+        <argsstring>()</argsstring>
+        <name>getItemName</name>
+        <briefdescription>
+<para>getItemName </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>itemName </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="menuitem.h" line="36" column="1" bodyfile="menuitem.cpp" bodystart="30" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_menu_item_1acb28f30d43a514d5f4e9598b5c6f3f60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int MenuItem::getRestaurantID</definition>
+        <argsstring>()</argsstring>
+        <name>getRestaurantID</name>
+        <briefdescription>
+<para>getRestaurantID </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>restaurantID </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="menuitem.h" line="41" column="1" bodyfile="menuitem.cpp" bodystart="35" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_menu_item_1a5b9bbfe9c37ff669a5e3b21c171e28a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double MenuItem::getPrice</definition>
+        <argsstring>()</argsstring>
+        <name>getPrice</name>
+        <briefdescription>
+<para>getPrice </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>price </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="menuitem.h" line="46" column="1" bodyfile="menuitem.cpp" bodystart="40" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="class_menu_item_1a32972e702a424fc12cf96c561dbc5698" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MenuItem::operator==</definition>
+        <argsstring>(MenuItem itemToCompare)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type><ref refid="class_menu_item" kindref="compound">MenuItem</ref></type>
+          <declname>itemToCompare</declname>
+        </param>
+        <briefdescription>
+<para>operator == </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>itemToCompare</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool value </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="menuitem.h" line="52" column="1" bodyfile="menuitem.h" bodystart="52" bodyend="54"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="class_menu_item" kindref="compound">MenuItem</ref> class. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Sean O&apos;Hearn Container for menu items that will be stored in a restaurant object </para></simplesect>
+</para>    </detaileddescription>
+    <location file="menuitem.h" line="13" column="1" bodyfile="menuitem.h" bodystart="12" bodyend="59"/>
+    <listofallmembers>
+      <member refid="class_menu_item_1a4d6f0c0ce06292a95521c2f01c360393" prot="public" virt="non-virtual"><scope>MenuItem</scope><name>getItemName</name></member>
+      <member refid="class_menu_item_1a5b9bbfe9c37ff669a5e3b21c171e28a0" prot="public" virt="non-virtual"><scope>MenuItem</scope><name>getPrice</name></member>
+      <member refid="class_menu_item_1acb28f30d43a514d5f4e9598b5c6f3f60" prot="public" virt="non-virtual"><scope>MenuItem</scope><name>getRestaurantID</name></member>
+      <member refid="class_menu_item_1a6a4806bb7230b9b40b88804dec81dffb" prot="private" virt="non-virtual"><scope>MenuItem</scope><name>itemName</name></member>
+      <member refid="class_menu_item_1ae081df191fc4e9e84721f5ce9323132f" prot="public" virt="non-virtual"><scope>MenuItem</scope><name>MenuItem</name></member>
+      <member refid="class_menu_item_1ace4fef81d61df85c799b17027b83f3ab" prot="public" virt="non-virtual"><scope>MenuItem</scope><name>MenuItem</name></member>
+      <member refid="class_menu_item_1a32972e702a424fc12cf96c561dbc5698" prot="public" virt="non-virtual"><scope>MenuItem</scope><name>operator==</name></member>
+      <member refid="class_menu_item_1a05ed0defbede1c8398b3f3a610c1c732" prot="private" virt="non-virtual"><scope>MenuItem</scope><name>price</name></member>
+      <member refid="class_menu_item_1ae711d58645ba1e1364874c411d26e08c" prot="private" virt="non-virtual"><scope>MenuItem</scope><name>restaurantID</name></member>
+      <member refid="class_menu_item_1abc651e3a5656b7fbb0e72085b8adab0e" prot="public" virt="non-virtual"><scope>MenuItem</scope><name>setItemName</name></member>
+      <member refid="class_menu_item_1ae2ebb751e94c46e5bbe32dc2f8003919" prot="public" virt="non-virtual"><scope>MenuItem</scope><name>setPrice</name></member>
+      <member refid="class_menu_item_1a046acac8a4f20c6d3589ac34bb53ea71" prot="public" virt="non-virtual"><scope>MenuItem</scope><name>setRestaurantID</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

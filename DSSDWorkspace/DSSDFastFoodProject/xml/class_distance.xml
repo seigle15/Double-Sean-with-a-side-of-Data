@@ -1,0 +1,224 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_distance" kind="class" language="C++" prot="public">
+    <compoundname>Distance</compoundname>
+    <includes refid="distance_8h" local="no">distance.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_distance_1a9a1c62e58903bb6091d4c8e2c8037939" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Distance::distanceInMiles</definition>
+        <argsstring></argsstring>
+        <name>distanceInMiles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="distance.h" line="47" column="1" bodyfile="distance.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_distance_1ad659bbee66a28d97e370ab86fa231f81" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Distance::restaurantIDFrom</definition>
+        <argsstring></argsstring>
+        <name>restaurantIDFrom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="distance.h" line="48" column="1" bodyfile="distance.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_distance_1acea86aa46b77f6fe884d23c4d26d81d6" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Distance::restaurantIDTo</definition>
+        <argsstring></argsstring>
+        <name>restaurantIDTo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="distance.h" line="49" column="1" bodyfile="distance.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_distance_1a10c71cb57a2a8f5c66b2e91f63e3595a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Distance::Distance</definition>
+        <argsstring>()</argsstring>
+        <name>Distance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="distance.h" line="13" column="1" bodyfile="distance.cpp" bodystart="3" bodyend="6"/>
+      </memberdef>
+      <memberdef kind="function" id="class_distance_1a32421795b03aa6284476000229aa1c17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Distance::Distance</definition>
+        <argsstring>(double distanceInMiles, int restaurantIDFrom, int restaurantIDTo)</argsstring>
+        <name>Distance</name>
+        <param>
+          <type>double</type>
+          <declname>distanceInMiles</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>restaurantIDFrom</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>restaurantIDTo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="distance.h" line="14" column="1" bodyfile="distance.cpp" bodystart="8" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_distance_1a2bbd9bef5a6f0692aa1b4d8b5ce9344f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Distance::setDistanceInMiles</definition>
+        <argsstring>(double distanceInMiles)</argsstring>
+        <name>setDistanceInMiles</name>
+        <param>
+          <type>double</type>
+          <declname>distanceInMiles</declname>
+        </param>
+        <briefdescription>
+<para>setDistanceInMiles </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>distanceInMiles</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="distance.h" line="19" column="1" bodyfile="distance.cpp" bodystart="15" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_distance_1ae91858d0705925be8f96d586844697ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Distance::setRestaurantIDFrom</definition>
+        <argsstring>(int restaurantIDFrom)</argsstring>
+        <name>setRestaurantIDFrom</name>
+        <param>
+          <type>int</type>
+          <declname>restaurantIDFrom</declname>
+        </param>
+        <briefdescription>
+<para>setRestaurantIDFrom </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>restaurantIDFrom</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="distance.h" line="24" column="1" bodyfile="distance.cpp" bodystart="20" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_distance_1a3fc24cd557605c2731ed9f379da3bb94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Distance::setRestaurantIDTo</definition>
+        <argsstring>(int restaurantIDTo)</argsstring>
+        <name>setRestaurantIDTo</name>
+        <param>
+          <type>int</type>
+          <declname>restaurantIDTo</declname>
+        </param>
+        <briefdescription>
+<para>setRestaurantIDTo </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>restaurantIDTo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="distance.h" line="29" column="1" bodyfile="distance.cpp" bodystart="25" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_distance_1acc0170b8899fed2a86e4487e12b1ebe9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Distance::getDistanceInMiles</definition>
+        <argsstring>()</argsstring>
+        <name>getDistanceInMiles</name>
+        <briefdescription>
+<para>getDistanceInMiles </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>distanceInMiles </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="distance.h" line="34" column="1" bodyfile="distance.cpp" bodystart="30" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_distance_1a6aad4761255f0a1dafafab7e98283a81" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Distance::getRestaurantIDFrom</definition>
+        <argsstring>()</argsstring>
+        <name>getRestaurantIDFrom</name>
+        <briefdescription>
+<para>getRestaurantIDFrom </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>restaurantIDFrom </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="distance.h" line="39" column="1" bodyfile="distance.cpp" bodystart="35" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_distance_1ad523bb34afe88d178a1cb494220244bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Distance::getRestaurantIDTo</definition>
+        <argsstring>()</argsstring>
+        <name>getRestaurantIDTo</name>
+        <briefdescription>
+<para>getRestaurantIDTo </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>restaurantIDTo </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="distance.h" line="44" column="1" bodyfile="distance.cpp" bodystart="40" bodyend="43"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="class_distance" kindref="compound">Distance</ref> class. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Sean O&apos;Hearn Container for distances between restaurants </para></simplesect>
+</para>    </detaileddescription>
+    <location file="distance.h" line="11" column="1" bodyfile="distance.h" bodystart="10" bodyend="50"/>
+    <listofallmembers>
+      <member refid="class_distance_1a10c71cb57a2a8f5c66b2e91f63e3595a" prot="public" virt="non-virtual"><scope>Distance</scope><name>Distance</name></member>
+      <member refid="class_distance_1a32421795b03aa6284476000229aa1c17" prot="public" virt="non-virtual"><scope>Distance</scope><name>Distance</name></member>
+      <member refid="class_distance_1a9a1c62e58903bb6091d4c8e2c8037939" prot="private" virt="non-virtual"><scope>Distance</scope><name>distanceInMiles</name></member>
+      <member refid="class_distance_1acc0170b8899fed2a86e4487e12b1ebe9" prot="public" virt="non-virtual"><scope>Distance</scope><name>getDistanceInMiles</name></member>
+      <member refid="class_distance_1a6aad4761255f0a1dafafab7e98283a81" prot="public" virt="non-virtual"><scope>Distance</scope><name>getRestaurantIDFrom</name></member>
+      <member refid="class_distance_1ad523bb34afe88d178a1cb494220244bb" prot="public" virt="non-virtual"><scope>Distance</scope><name>getRestaurantIDTo</name></member>
+      <member refid="class_distance_1ad659bbee66a28d97e370ab86fa231f81" prot="private" virt="non-virtual"><scope>Distance</scope><name>restaurantIDFrom</name></member>
+      <member refid="class_distance_1acea86aa46b77f6fe884d23c4d26d81d6" prot="private" virt="non-virtual"><scope>Distance</scope><name>restaurantIDTo</name></member>
+      <member refid="class_distance_1a2bbd9bef5a6f0692aa1b4d8b5ce9344f" prot="public" virt="non-virtual"><scope>Distance</scope><name>setDistanceInMiles</name></member>
+      <member refid="class_distance_1ae91858d0705925be8f96d586844697ec" prot="public" virt="non-virtual"><scope>Distance</scope><name>setRestaurantIDFrom</name></member>
+      <member refid="class_distance_1a3fc24cd557605c2731ed9f379da3bb94" prot="public" virt="non-virtual"><scope>Distance</scope><name>setRestaurantIDTo</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

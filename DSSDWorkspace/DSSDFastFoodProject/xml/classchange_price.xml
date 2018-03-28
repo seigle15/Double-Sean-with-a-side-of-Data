@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classchange_price" kind="class" language="C++" prot="public">
+    <compoundname>changePrice</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">QDialog</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classchange_price_1a53b3bcdf930807003858bc146028db0d" prot="private" static="no" mutable="no">
+        <type>Ui::changePrice *</type>
+        <definition>Ui::changePrice* changePrice::ui</definition>
+        <argsstring></argsstring>
+        <name>ui</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="changeprice.h" line="22" column="1" bodyfile="changeprice.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classchange_price_1a7bd9c2db0a96fc215d5d1ff7bbe404db" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>changePrice::changePrice</definition>
+        <argsstring>(QWidget *parent=0)</argsstring>
+        <name>changePrice</name>
+        <param>
+          <type>QWidget *</type>
+          <declname>parent</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="changeprice.h" line="15" column="1" bodyfile="changeprice.cpp" bodystart="6" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classchange_price_1a87c9deee2c598ac8a032e1e163c18977" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>changePrice::~changePrice</definition>
+        <argsstring>()</argsstring>
+        <name>~changePrice</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="changeprice.h" line="16" column="1" bodyfile="changeprice.cpp" bodystart="13" bodyend="16"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-slot">
+      <memberdef kind="slot" id="classchange_price_1aeb83dac7b25ff364d8c0520246d72b9f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void changePrice::on_pushButton_Price_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_pushButton_Price_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="changeprice.h" line="19" column="1" bodyfile="changeprice.cpp" bodystart="18" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="9">
+        <label>QDialog</label>
+      </node>
+      <node id="8">
+        <label>changePrice</label>
+        <link refid="classchange_price"/>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="11">
+        <label>QDialog</label>
+      </node>
+      <node id="10">
+        <label>changePrice</label>
+        <link refid="classchange_price"/>
+        <childnode refid="11" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="changeprice.h" line="11" column="1" bodyfile="changeprice.h" bodystart="10" bodyend="23"/>
+    <listofallmembers>
+      <member refid="classchange_price_1a7bd9c2db0a96fc215d5d1ff7bbe404db" prot="public" virt="non-virtual"><scope>changePrice</scope><name>changePrice</name></member>
+      <member refid="classchange_price_1aeb83dac7b25ff364d8c0520246d72b9f" prot="private" virt="non-virtual"><scope>changePrice</scope><name>on_pushButton_Price_clicked</name></member>
+      <member refid="classchange_price_1a53b3bcdf930807003858bc146028db0d" prot="private" virt="non-virtual"><scope>changePrice</scope><name>ui</name></member>
+      <member refid="classchange_price_1a87c9deee2c598ac8a032e1e163c18977" prot="public" virt="non-virtual"><scope>changePrice</scope><name>~changePrice</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

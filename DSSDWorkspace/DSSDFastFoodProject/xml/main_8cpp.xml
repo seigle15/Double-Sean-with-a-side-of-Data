@@ -1,0 +1,199 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="main_8cpp" kind="file" language="C++">
+    <compoundname>main.cpp</compoundname>
+    <includes refid="mainwindow_8h" local="yes">mainwindow.h</includes>
+    <includes refid="dbmanager_8h" local="yes">dbmanager.h</includes>
+    <includes refid="restaurant_8h" local="yes">restaurant.h</includes>
+    <includes local="no">QApplication</includes>
+    <incdepgraph>
+      <node id="142">
+        <label>dbmanager.h</label>
+        <link refid="dbmanager_8h_source"/>
+        <childnode refid="143" relation="include">
+        </childnode>
+        <childnode refid="144" relation="include">
+        </childnode>
+        <childnode refid="145" relation="include">
+        </childnode>
+        <childnode refid="146" relation="include">
+        </childnode>
+        <childnode refid="147" relation="include">
+        </childnode>
+        <childnode refid="148" relation="include">
+        </childnode>
+        <childnode refid="149" relation="include">
+        </childnode>
+        <childnode refid="150" relation="include">
+        </childnode>
+        <childnode refid="151" relation="include">
+        </childnode>
+        <childnode refid="152" relation="include">
+        </childnode>
+        <childnode refid="153" relation="include">
+        </childnode>
+      </node>
+      <node id="152">
+        <label>string</label>
+      </node>
+      <node id="139">
+        <label>QMainWindow</label>
+      </node>
+      <node id="141">
+        <label>admin.h</label>
+        <link refid="admin_8h_source"/>
+        <childnode refid="139" relation="include">
+        </childnode>
+        <childnode refid="140" relation="include">
+        </childnode>
+        <childnode refid="142" relation="include">
+        </childnode>
+      </node>
+      <node id="144">
+        <label>QSqlDatabase</label>
+      </node>
+      <node id="157">
+        <label>QApplication</label>
+      </node>
+      <node id="155">
+        <label>distance.h</label>
+        <link refid="distance_8h_source"/>
+      </node>
+      <node id="148">
+        <label>QDebug</label>
+      </node>
+      <node id="151">
+        <label>vector</label>
+      </node>
+      <node id="156">
+        <label>menuitem.h</label>
+        <link refid="menuitem_8h_source"/>
+        <childnode refid="154" relation="include">
+        </childnode>
+      </node>
+      <node id="154">
+        <label>QString</label>
+      </node>
+      <node id="146">
+        <label>QSqlError</label>
+      </node>
+      <node id="149">
+        <label>QFile</label>
+      </node>
+      <node id="147">
+        <label>QSqlDriver</label>
+      </node>
+      <node id="145">
+        <label>QSqlQuery</label>
+      </node>
+      <node id="137">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+        <childnode refid="138" relation="include">
+        </childnode>
+        <childnode refid="142" relation="include">
+        </childnode>
+        <childnode refid="153" relation="include">
+        </childnode>
+        <childnode refid="157" relation="include">
+        </childnode>
+      </node>
+      <node id="150">
+        <label>QTextStream</label>
+      </node>
+      <node id="140">
+        <label>QListWidgetItem</label>
+      </node>
+      <node id="153">
+        <label>restaurant.h</label>
+        <link refid="restaurant_8h_source"/>
+        <childnode refid="154" relation="include">
+        </childnode>
+        <childnode refid="151" relation="include">
+        </childnode>
+        <childnode refid="152" relation="include">
+        </childnode>
+        <childnode refid="155" relation="include">
+        </childnode>
+        <childnode refid="156" relation="include">
+        </childnode>
+      </node>
+      <node id="143">
+        <label>QtSql</label>
+      </node>
+      <node id="138">
+        <label>mainwindow.h</label>
+        <link refid="mainwindow_8h_source"/>
+        <childnode refid="139" relation="include">
+        </childnode>
+        <childnode refid="140" relation="include">
+        </childnode>
+        <childnode refid="141" relation="include">
+        </childnode>
+        <childnode refid="142" relation="include">
+        </childnode>
+        <childnode refid="153" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char *argv[])</argsstring>
+        <name>main</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>argv</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main.cpp" line="6" column="1" bodyfile="main.cpp" bodystart="6" bodyend="28"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;mainwindow.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;dbmanager.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;restaurant.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QApplication&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>main(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*argv[])</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>QApplication<sp/>a(argc,<sp/>argv);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>The<sp/>following<sp/>code<sp/>has<sp/>already<sp/>ran<sp/>once,<sp/>it<sp/>will<sp/>just<sp/>add<sp/>more</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/><sp/><sp/><sp/>*<sp/>entries<sp/>if<sp/>you<sp/>run<sp/>it<sp/>again.<sp/>Wait<sp/>until<sp/>we<sp/>have<sp/>a<sp/>way<sp/>to<sp/>determine</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/><sp/><sp/><sp/>*<sp/>if<sp/>there<sp/>has<sp/>already<sp/>been<sp/>an<sp/>exection<sp/>before<sp/>uncommenting<sp/>this<sp/>code</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>!!Run<sp/>Once!!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>DBManager::getInstance()-&gt;<ref refid="class_d_b_manager_1a2d29cb558fdbf54d17b180088bd8651e" kindref="member">uploadFileToDatabase</ref>(</highlight><highlight class="stringliteral">&quot;:/res/CS1D<sp/>Spring<sp/>2018<sp/>Fast<sp/>Food<sp/>Project.txt&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>DBManager::getInstance()-&gt;uploadFileToDatabase(&quot;:/res/CS1D<sp/>Spring<sp/>2018<sp/>New<sp/>Fast<sp/>Food<sp/>Project.txt&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>DBManager::getInstance()-&gt;<ref refid="class_d_b_manager_1a914d5a2d66ddff2b0a39c545966540e9" kindref="member">databaseToRestaurants</ref>();<sp/><sp/></highlight><highlight class="comment">//<sp/>this<sp/>line<sp/>of<sp/>code<sp/>fills<sp/>our<sp/>class<sp/>objects<sp/>with<sp/>the<sp/>data<sp/>from<sp/>our<sp/>database<sp/>to<sp/>be<sp/>worked<sp/>with<sp/>in<sp/>our<sp/>project</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>Uncomment<sp/>testDB()<sp/>to<sp/>see<sp/>how<sp/>the<sp/>objects<sp/>are<sp/>filled<sp/>the<sp/>same<sp/>as<sp/>the<sp/>data<sp/>files</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>DBManager::getInstance()-&gt;testDB();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window" kindref="compound">MainWindow</ref><sp/>w;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>w.show();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>a.exec();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="main.cpp"/>
+  </compounddef>
+</doxygen>

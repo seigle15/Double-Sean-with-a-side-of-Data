@@ -1,0 +1,212 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.13">
+  <compound refid="classadd_menu_item" kind="class"><name>addMenuItem</name>
+    <member refid="classadd_menu_item_1ac283568497860e3413e71b7a386e596d" kind="variable"><name>ui</name></member>
+    <member refid="classadd_menu_item_1a516e0cb12135a23a4378d1f0c69b3166" kind="function"><name>addMenuItem</name></member>
+    <member refid="classadd_menu_item_1a8f92de964eddbc9e54f006687ac37f9b" kind="function"><name>~addMenuItem</name></member>
+    <member refid="classadd_menu_item_1a5f6df977020bfb44e910577d646ba6b2" kind="slot"><name>on_pushButton_clicked</name></member>
+  </compound>
+  <compound refid="class_admin" kind="class"><name>Admin</name>
+    <member refid="class_admin_1ae819a4bc4e533dac8c19d3263c94c3a9" kind="variable"><name>ui</name></member>
+    <member refid="class_admin_1a5e67a0ecb1fc8cd09c0f340b03be4016" kind="function"><name>Admin</name></member>
+    <member refid="class_admin_1a8fb5fe72fb4e05d50980c13cdf3b779c" kind="function"><name>~Admin</name></member>
+    <member refid="class_admin_1a473af119650f3e90645187edd2927fc5" kind="slot"><name>on_pushButton_Logout_clicked</name></member>
+    <member refid="class_admin_1acfda80a4063501587ab663e56f89e497" kind="slot"><name>listRestaurants</name></member>
+    <member refid="class_admin_1ace87bd3f13913c25a9fb7266987e34d0" kind="slot"><name>on_itemsListWidget_itemActivated</name></member>
+    <member refid="class_admin_1a69f77dea33631175f5837edf29eecab2" kind="slot"><name>on_priceListWidget_itemActivated</name></member>
+    <member refid="class_admin_1a09ffcd13426b29b632b4f9361ff7bd91" kind="slot"><name>on_restaurantListWidget_itemActivated</name></member>
+    <member refid="class_admin_1a29b5e8066637a6bbd6347944be14bb62" kind="slot"><name>on_pushButton_RemoveRestaurant_clicked</name></member>
+    <member refid="class_admin_1a9c2c5a3effa30a8d80d80a7b7e3e1c25" kind="slot"><name>on_pushButton_RemoveMenuItem_clicked</name></member>
+    <member refid="class_admin_1a6d71a6ae370a3c4cf2f3402ac2de6d4d" kind="slot"><name>on_pushButton_AddFromFile_clicked</name></member>
+    <member refid="class_admin_1a737215cdb56d3e1b6643b857a59cb384" kind="slot"><name>on_pushButton_AddMenuItem_clicked</name></member>
+    <member refid="class_admin_1a3b3ede2a6b0c376caf1123bed2b718cd" kind="slot"><name>on_pushButton_ChangePrice_clicked</name></member>
+  </compound>
+  <compound refid="classchange_price" kind="class"><name>changePrice</name>
+    <member refid="classchange_price_1a53b3bcdf930807003858bc146028db0d" kind="variable"><name>ui</name></member>
+    <member refid="classchange_price_1a7bd9c2db0a96fc215d5d1ff7bbe404db" kind="function"><name>changePrice</name></member>
+    <member refid="classchange_price_1a87c9deee2c598ac8a032e1e163c18977" kind="function"><name>~changePrice</name></member>
+    <member refid="classchange_price_1aeb83dac7b25ff364d8c0520246d72b9f" kind="slot"><name>on_pushButton_Price_clicked</name></member>
+  </compound>
+  <compound refid="class_d_b_manager" kind="class"><name>DBManager</name>
+    <member refid="class_d_b_manager_1a9605862b1aac4dbe3637313810571bd0" kind="variable"><name>database</name></member>
+    <member refid="class_d_b_manager_1aecf8f1f39b898c88ad9ca54f5d249329" kind="variable"><name>restaurantDatabase</name></member>
+    <member refid="class_d_b_manager_1aa666e27344b87ad01ac7cb57c18fba72" kind="variable"><name>restaurants</name></member>
+    <member refid="class_d_b_manager_1ad386a91c5c54a9e34e793b35ec0957c8" kind="function"><name>getInstance</name></member>
+    <member refid="class_d_b_manager_1a2d29cb558fdbf54d17b180088bd8651e" kind="function"><name>uploadFileToDatabase</name></member>
+    <member refid="class_d_b_manager_1a914d5a2d66ddff2b0a39c545966540e9" kind="function"><name>databaseToRestaurants</name></member>
+    <member refid="class_d_b_manager_1ab726a1be7b797085723623f5497946e6" kind="function"><name>getRestaurants</name></member>
+    <member refid="class_d_b_manager_1aa90cd2919d5e288ec5656e4d0abfdbe4" kind="function"><name>testDB</name></member>
+    <member refid="class_d_b_manager_1ac2f9bedac3778197de1301775ef8d42f" kind="function"><name>DeleteFromDb</name></member>
+    <member refid="class_d_b_manager_1a65847c084724991c95778f6f1c9ef8b7" kind="function"><name>DBManager</name></member>
+  </compound>
+  <compound refid="class_distance" kind="class"><name>Distance</name>
+    <member refid="class_distance_1a9a1c62e58903bb6091d4c8e2c8037939" kind="variable"><name>distanceInMiles</name></member>
+    <member refid="class_distance_1ad659bbee66a28d97e370ab86fa231f81" kind="variable"><name>restaurantIDFrom</name></member>
+    <member refid="class_distance_1acea86aa46b77f6fe884d23c4d26d81d6" kind="variable"><name>restaurantIDTo</name></member>
+    <member refid="class_distance_1a10c71cb57a2a8f5c66b2e91f63e3595a" kind="function"><name>Distance</name></member>
+    <member refid="class_distance_1a32421795b03aa6284476000229aa1c17" kind="function"><name>Distance</name></member>
+    <member refid="class_distance_1a2bbd9bef5a6f0692aa1b4d8b5ce9344f" kind="function"><name>setDistanceInMiles</name></member>
+    <member refid="class_distance_1ae91858d0705925be8f96d586844697ec" kind="function"><name>setRestaurantIDFrom</name></member>
+    <member refid="class_distance_1a3fc24cd557605c2731ed9f379da3bb94" kind="function"><name>setRestaurantIDTo</name></member>
+    <member refid="class_distance_1acc0170b8899fed2a86e4487e12b1ebe9" kind="function"><name>getDistanceInMiles</name></member>
+    <member refid="class_distance_1a6aad4761255f0a1dafafab7e98283a81" kind="function"><name>getRestaurantIDFrom</name></member>
+    <member refid="class_distance_1ad523bb34afe88d178a1cb494220244bb" kind="function"><name>getRestaurantIDTo</name></member>
+  </compound>
+  <compound refid="class_main_window" kind="class"><name>MainWindow</name>
+    <member refid="class_main_window_1a35466a70ed47252a0191168126a352a5" kind="variable"><name>ui</name></member>
+    <member refid="class_main_window_1aebfe2953f1352d721af9974ce353d214" kind="variable"><name>AdminWindow</name></member>
+    <member refid="class_main_window_1a8ffc430fd251353b6e1b5a7549496c36" kind="variable"><name>shoppingCart</name></member>
+    <member refid="class_main_window_1a8d4dae331b63fddd84ba8de56f59cfab" kind="variable"><name>myTrip</name></member>
+    <member refid="class_main_window_1a765dc49742644fdc45a182c412229220" kind="variable"><name>efficientOrder</name></member>
+    <member refid="class_main_window_1a9b402254fbede7327f566b0cc60c08bc" kind="variable"><name>allDistances</name></member>
+    <member refid="class_main_window_1a7c4a0d2c9502a6f5f1130c7b91391e4c" kind="variable"><name>totalDistance</name></member>
+    <member refid="class_main_window_1afba94fe54e09e1e72d0b1ea26cd28e5d" kind="variable"><name>cartTotal</name></member>
+    <member refid="class_main_window_1abd548ec5f19fb065e66448df563c59b2" kind="variable"><name>tripStarted</name></member>
+    <member refid="class_main_window_1a8b244be8b7b7db1b08de2a2acb9409db" kind="function"><name>MainWindow</name></member>
+    <member refid="class_main_window_1ae98d00a93bc118200eeef9f9bba1dba7" kind="function"><name>~MainWindow</name></member>
+    <member refid="class_main_window_1abce0f407c6637b1e0bc296b46caf94c7" kind="slot"><name>on_pushButton_Login_clicked</name></member>
+    <member refid="class_main_window_1a0b2ab2f280184b3ae1f308670782064e" kind="slot"><name>on_restaurantListWidget_itemActivated</name></member>
+    <member refid="class_main_window_1a3449edcfbb49d35f8299b1affc2bf04f" kind="slot"><name>on_addItemButton_clicked</name></member>
+    <member refid="class_main_window_1a6b360c726d30905c7a3ca95b38829d9b" kind="slot"><name>addToCart</name></member>
+    <member refid="class_main_window_1a37847aaf2fa2e640af8650fb433e2b6f" kind="slot"><name>on_removeItemButton_clicked</name></member>
+    <member refid="class_main_window_1af58b8844f188cbbce354a6e4bdab8dd7" kind="slot"><name>on_menuAndTripListWidget_itemActivated</name></member>
+    <member refid="class_main_window_1a1336b9f0e1722bf5021adbf2a84ac48d" kind="slot"><name>listRestaurants</name></member>
+    <member refid="class_main_window_1add2f1b2a9d5ded9874f51cb1da072415" kind="slot"><name>listNormalRestView</name></member>
+    <member refid="class_main_window_1abbf567d3eb3497b730cf25dd6c5d0f7f" kind="slot"><name>on_AddRestaurant_clicked</name></member>
+    <member refid="class_main_window_1a8ccaabcd23120d20e24f73770e1b42c0" kind="slot"><name>isDuplicateRestaurant</name></member>
+    <member refid="class_main_window_1ac3471962a7a278e58df940ad926f8d72" kind="slot"><name>addToMyTrip</name></member>
+    <member refid="class_main_window_1a14fd897de7bb3b3d551aec1e611ca705" kind="slot"><name>isInCart</name></member>
+    <member refid="class_main_window_1aace37a6869fce961f4e0990fbc8ccff6" kind="slot"><name>on_Remove_clicked</name></member>
+    <member refid="class_main_window_1aad72364929309544e5aa7fea62189c29" kind="slot"><name>removeFromMyTrip</name></member>
+    <member refid="class_main_window_1a8ec0294635213f005ebd6b12cb739d97" kind="slot"><name>isOnMyTrip</name></member>
+    <member refid="class_main_window_1a0bc7ba4f12c2d78622f547c6c85b3b5a" kind="slot"><name>on_viewTripButton_clicked</name></member>
+    <member refid="class_main_window_1ad93afd725ede0ccae5a086ea648b541f" kind="slot"><name>listMyTrip</name></member>
+    <member refid="class_main_window_1a904d28599b4188b8e89f903b1ca5aad8" kind="slot"><name>on_restaurantListWidget_clicked</name></member>
+    <member refid="class_main_window_1a39f32f0e74c1417b15daa22431087015" kind="slot"><name>on_newTripButton_clicked</name></member>
+    <member refid="class_main_window_1a1b0a71532f0f5e71a92907ecc66276ba" kind="slot"><name>on_startTripButton_clicked</name></member>
+    <member refid="class_main_window_1aae0601dd589493683e34edb15252e1a1" kind="slot"><name>on_StartNormalTrip_clicked</name></member>
+    <member refid="class_main_window_1ae1553d6c1f170a92410f635b28e484f3" kind="slot"><name>TripCreator</name></member>
+    <member refid="class_main_window_1a72c87d326823d1638f8c3235975a5ef8" kind="slot"><name>FindNextRestaurant</name></member>
+    <member refid="class_main_window_1a4b60ea0f28e221698901a0f60bef606b" kind="slot"><name>LoadIDs</name></member>
+    <member refid="class_main_window_1a90404968271c4198a5c95b673d1f51a0" kind="slot"><name>convertIDToRest</name></member>
+    <member refid="class_main_window_1a168ffdcef262cffa72d50e1145e60123" kind="slot"><name>PrintOrder</name></member>
+    <member refid="class_main_window_1a206004696c2fd45c267a24a8d9024f56" kind="slot"><name>populateStartLocCB</name></member>
+    <member refid="class_main_window_1ac2e035c2e295019ac00ddc249acbf4a5" kind="slot"><name>findClosestRestToSB</name></member>
+    <member refid="class_main_window_1a16378d7fb4c0c1d0324213aec5cfb8e3" kind="slot"><name>stringToRest</name></member>
+    <member refid="class_main_window_1a5511517253406a8b4d3ef200622bd923" kind="slot"><name>on_restaurantListWidget_2_itemActivated</name></member>
+    <member refid="class_main_window_1a66e17d04e5ba4a552e8dfc17afcd1081" kind="slot"><name>on_addItemButton_2_clicked</name></member>
+    <member refid="class_main_window_1a3fde8d5219f58b14348d580f5dd4825f" kind="slot"><name>on_removeItemButton_2_clicked</name></member>
+    <member refid="class_main_window_1aa7c24493c511ee986349292357491bdf" kind="slot"><name>on_restaurantListWidget_2_activated</name></member>
+  </compound>
+  <compound refid="class_menu_item" kind="class"><name>MenuItem</name>
+    <member refid="class_menu_item_1a6a4806bb7230b9b40b88804dec81dffb" kind="variable"><name>itemName</name></member>
+    <member refid="class_menu_item_1ae711d58645ba1e1364874c411d26e08c" kind="variable"><name>restaurantID</name></member>
+    <member refid="class_menu_item_1a05ed0defbede1c8398b3f3a610c1c732" kind="variable"><name>price</name></member>
+    <member refid="class_menu_item_1ae081df191fc4e9e84721f5ce9323132f" kind="function"><name>MenuItem</name></member>
+    <member refid="class_menu_item_1ace4fef81d61df85c799b17027b83f3ab" kind="function"><name>MenuItem</name></member>
+    <member refid="class_menu_item_1abc651e3a5656b7fbb0e72085b8adab0e" kind="function"><name>setItemName</name></member>
+    <member refid="class_menu_item_1a046acac8a4f20c6d3589ac34bb53ea71" kind="function"><name>setRestaurantID</name></member>
+    <member refid="class_menu_item_1ae2ebb751e94c46e5bbe32dc2f8003919" kind="function"><name>setPrice</name></member>
+    <member refid="class_menu_item_1a4d6f0c0ce06292a95521c2f01c360393" kind="function"><name>getItemName</name></member>
+    <member refid="class_menu_item_1acb28f30d43a514d5f4e9598b5c6f3f60" kind="function"><name>getRestaurantID</name></member>
+    <member refid="class_menu_item_1a5b9bbfe9c37ff669a5e3b21c171e28a0" kind="function"><name>getPrice</name></member>
+    <member refid="class_menu_item_1a32972e702a424fc12cf96c561dbc5698" kind="function"><name>operator==</name></member>
+  </compound>
+  <compound refid="class_restaurant" kind="class"><name>Restaurant</name>
+    <member refid="class_restaurant_1a929f5571110acfa9660c2b0956aeeca2" kind="variable"><name>name</name></member>
+    <member refid="class_restaurant_1adc249ef048a3aafc484a61f9db6d078b" kind="variable"><name>id</name></member>
+    <member refid="class_restaurant_1ab58c73aa000089e798d6fad1b2a015f4" kind="variable"><name>distanceFromSaddleback</name></member>
+    <member refid="class_restaurant_1a545e68831e156986a95c28493b6c12ca" kind="variable"><name>menuSize</name></member>
+    <member refid="class_restaurant_1aaef23b51b34ed94e543f58f86375f831" kind="variable"><name>totalDistances</name></member>
+    <member refid="class_restaurant_1a72a63270eef9ecd5972c8cdf226fd40d" kind="variable"><name>menu</name></member>
+    <member refid="class_restaurant_1a11cb1c1168da77b4deab249e16e15823" kind="variable"><name>distances</name></member>
+    <member refid="class_restaurant_1af400ebcbe4ec6f135248fe1606eceb1a" kind="variable"><name>visited</name></member>
+    <member refid="class_restaurant_1a2faa4e686e849cc924a5f1f55a4a925e" kind="variable"><name>totalAmountSpent</name></member>
+    <member refid="class_restaurant_1af72b2ed0971d325dc5d5dbf91e8462b5" kind="function"><name>Restaurant</name></member>
+    <member refid="class_restaurant_1a18bc8aa1ce501a92842a2090e7d378cc" kind="function"><name>Restaurant</name></member>
+    <member refid="class_restaurant_1aec426da0e4c067525fdd1d233c32a5f3" kind="function"><name>setName</name></member>
+    <member refid="class_restaurant_1a156dd173f171f1f170191dadb7153b8f" kind="function"><name>setID</name></member>
+    <member refid="class_restaurant_1a12aea2979807bd2132f16f706b634ad4" kind="function"><name>setDistanceFromSaddleback</name></member>
+    <member refid="class_restaurant_1aa4a36310566791865760329edb61dfef" kind="function"><name>setMenuSize</name></member>
+    <member refid="class_restaurant_1a014e06c350423b40fcfdac1bcbdd6ab1" kind="function"><name>setTotalDistances</name></member>
+    <member refid="class_restaurant_1a13b2e8a16f44e2fc4304e4b8689e1336" kind="function"><name>setVisited</name></member>
+    <member refid="class_restaurant_1a47d4e993832e37a98fd4e3f3201b62c4" kind="function"><name>getName</name></member>
+    <member refid="class_restaurant_1a8777e6d48839e275744145f394bde846" kind="function"><name>getID</name></member>
+    <member refid="class_restaurant_1a328d55dfff742bf89d6b81a01bab35d9" kind="function"><name>getDistanceFromSaddleback</name></member>
+    <member refid="class_restaurant_1a228a01608b506e6a8bf72b7d6f747a7d" kind="function"><name>getMenuSize</name></member>
+    <member refid="class_restaurant_1aefc0ab4b34d2ff5cfc5ab0d9463cf224" kind="function"><name>getTotalDistances</name></member>
+    <member refid="class_restaurant_1a174725e8ae4487dbb649dd9cc017945e" kind="function"><name>getVisited</name></member>
+    <member refid="class_restaurant_1a35210fa764ffb3ec4c9563c3bb12fd68" kind="function"><name>addDistance</name></member>
+    <member refid="class_restaurant_1a5e743b42c3d5277a5c30728e5a6010f0" kind="function"><name>addMenuItem</name></member>
+    <member refid="class_restaurant_1a4b76f9f7171cb961e33bb670c22e91f0" kind="function"><name>getDistances</name></member>
+    <member refid="class_restaurant_1a67da76f6ae80d9c22c8c697ebbb8a684" kind="function"><name>getMenu</name></member>
+    <member refid="class_restaurant_1a084b4300b60a5d76cbdcbe01724ba5a6" kind="function"><name>setTotalAmountSpent</name></member>
+    <member refid="class_restaurant_1a983d7e6327f4f88d9d5aefe4d6beb7c0" kind="function"><name>getTotalAmountSpent</name></member>
+    <member refid="class_restaurant_1ac8b5a5436f9e3952f64abc32dc02a82b" kind="function"><name>operator==</name></member>
+  </compound>
+  <compound refid="class_trip_screen" kind="class"><name>TripScreen</name>
+    <member refid="class_trip_screen_1ae5f95206c8fbcbe9d502c1e1832fd1d4" kind="variable"><name>ui</name></member>
+    <member refid="class_trip_screen_1a56e552f494edf41571f8c22fef060992" kind="variable"><name>isWindowOpen</name></member>
+    <member refid="class_trip_screen_1aea95d142aa57abc4c9ec869b3dcb4a04" kind="variable"><name>restaurantList</name></member>
+    <member refid="class_trip_screen_1ae0e58730e6ac8722db27f0f4ba8b4060" kind="variable"><name>efficientOrder</name></member>
+    <member refid="class_trip_screen_1a50690e4779108cd33ca62f862ddc40f2" kind="variable"><name>startingDistance</name></member>
+    <member refid="class_trip_screen_1a1422b0f885b2076eb34cf15262cd6125" kind="variable"><name>allDistances</name></member>
+    <member refid="class_trip_screen_1a41b87334005d3d3c62191a07423ac0c2" kind="variable"><name>totalMiles</name></member>
+    <member refid="class_trip_screen_1a5255c8d2e37c6f7c25de348327ec9a71" kind="function"><name>TripScreen</name></member>
+    <member refid="class_trip_screen_1a9fc04d395a5ab88c066b43089539150b" kind="function"><name>~TripScreen</name></member>
+    <member refid="class_trip_screen_1a3eef4ff47f5688995cca879683ec5de3" kind="function"><name>setIsWindowOpen</name></member>
+    <member refid="class_trip_screen_1a45812d1d598595225c392c6cf953690d" kind="function"><name>getIsWindowOpen</name></member>
+    <member refid="class_trip_screen_1a8375220d50f17f1722f225223146302b" kind="function"><name>addRestaurant</name></member>
+    <member refid="class_trip_screen_1aca922b35bd83b51faa6bef7b96f05804" kind="function"><name>TripCreator</name></member>
+    <member refid="class_trip_screen_1a61b3c5991e10294ea7de956ffcc36261" kind="function"><name>FindNextRestaurant</name></member>
+    <member refid="class_trip_screen_1a4908a18d119ddda8e05d5492a4244d61" kind="function"><name>LoadIDs</name></member>
+    <member refid="class_trip_screen_1a40e9a4a42eab6f237a1c3ffaabe70e72" kind="function"><name>pushButton</name></member>
+    <member refid="class_trip_screen_1a4bd10ca49117a4c40855ea1c7407c9b8" kind="function"><name>convertIDToRest</name></member>
+    <member refid="class_trip_screen_1ad37000ffd5921c8c177f42acec2da4ba" kind="function"><name>PrintOrder</name></member>
+    <member refid="class_trip_screen_1a8c0672c23f81ef6b1d3cd7c20022c1eb" kind="slot"><name>on_StartButton_clicked</name></member>
+    <member refid="class_trip_screen_1aec3b9e9b361eaad4603217b70de49d8f" kind="slot"><name>on_StartingLocation_activated</name></member>
+    <member refid="class_trip_screen_1a031d1f48b65e1c713706eb069679854b" kind="slot"><name>on_pushButton_clicked</name></member>
+    <member refid="class_trip_screen_1a303db606a299c1d473ac9d427e1dbf93" kind="function"><name>setStartingDistance</name></member>
+  </compound>
+  <compound refid="namespace_ui" kind="namespace"><name>Ui</name>
+  </compound>
+  <compound refid="addmenuitem_8cpp" kind="file"><name>addmenuitem.cpp</name>
+  </compound>
+  <compound refid="addmenuitem_8h" kind="file"><name>addmenuitem.h</name>
+  </compound>
+  <compound refid="admin_8cpp" kind="file"><name>admin.cpp</name>
+  </compound>
+  <compound refid="admin_8h" kind="file"><name>admin.h</name>
+  </compound>
+  <compound refid="changeprice_8cpp" kind="file"><name>changeprice.cpp</name>
+  </compound>
+  <compound refid="changeprice_8h" kind="file"><name>changeprice.h</name>
+  </compound>
+  <compound refid="dbmanager_8cpp" kind="file"><name>dbmanager.cpp</name>
+  </compound>
+  <compound refid="dbmanager_8h" kind="file"><name>dbmanager.h</name>
+  </compound>
+  <compound refid="distance_8cpp" kind="file"><name>distance.cpp</name>
+  </compound>
+  <compound refid="distance_8h" kind="file"><name>distance.h</name>
+  </compound>
+  <compound refid="main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="mainwindow_8cpp" kind="file"><name>mainwindow.cpp</name>
+  </compound>
+  <compound refid="mainwindow_8h" kind="file"><name>mainwindow.h</name>
+  </compound>
+  <compound refid="menuitem_8cpp" kind="file"><name>menuitem.cpp</name>
+  </compound>
+  <compound refid="menuitem_8h" kind="file"><name>menuitem.h</name>
+  </compound>
+  <compound refid="restaurant_8cpp" kind="file"><name>restaurant.cpp</name>
+  </compound>
+  <compound refid="restaurant_8h" kind="file"><name>restaurant.h</name>
+  </compound>
+  <compound refid="tripscreen_8cpp" kind="file"><name>tripscreen.cpp</name>
+  </compound>
+  <compound refid="tripscreen_8h" kind="file"><name>tripscreen.h</name>
+  </compound>
+</doxygenindex>

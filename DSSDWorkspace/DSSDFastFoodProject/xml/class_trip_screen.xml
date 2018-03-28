@@ -1,0 +1,413 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_trip_screen" kind="class" language="C++" prot="public">
+    <compoundname>TripScreen</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">QWidget</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_trip_screen_1ae5f95206c8fbcbe9d502c1e1832fd1d4" prot="private" static="no" mutable="no">
+        <type>Ui::TripScreen *</type>
+        <definition>Ui::TripScreen* TripScreen::ui</definition>
+        <argsstring></argsstring>
+        <name>ui</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripscreen.h" line="39" column="1" bodyfile="tripscreen.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_trip_screen_1a56e552f494edf41571f8c22fef060992" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool TripScreen::isWindowOpen</definition>
+        <argsstring></argsstring>
+        <name>isWindowOpen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripscreen.h" line="40" column="1" bodyfile="tripscreen.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_trip_screen_1aea95d142aa57abc4c9ec869b3dcb4a04" prot="private" static="no" mutable="no">
+        <type>QVector&lt; <ref refid="class_restaurant" kindref="compound">Restaurant</ref> &gt;</type>
+        <definition>QVector&lt;Restaurant&gt; TripScreen::restaurantList</definition>
+        <argsstring></argsstring>
+        <name>restaurantList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripscreen.h" line="41" column="1" bodyfile="tripscreen.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_trip_screen_1ae0e58730e6ac8722db27f0f4ba8b4060" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="class_restaurant" kindref="compound">Restaurant</ref> &gt;</type>
+        <definition>std::vector&lt;Restaurant&gt; TripScreen::efficientOrder</definition>
+        <argsstring></argsstring>
+        <name>efficientOrder</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripscreen.h" line="42" column="1" bodyfile="tripscreen.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_trip_screen_1a50690e4779108cd33ca62f862ddc40f2" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double TripScreen::startingDistance</definition>
+        <argsstring></argsstring>
+        <name>startingDistance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripscreen.h" line="43" column="1" bodyfile="tripscreen.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_trip_screen_1a1422b0f885b2076eb34cf15262cd6125" prot="private" static="no" mutable="no">
+        <type>QVector&lt; double &gt;</type>
+        <definition>QVector&lt;double&gt; TripScreen::allDistances</definition>
+        <argsstring></argsstring>
+        <name>allDistances</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripscreen.h" line="44" column="1" bodyfile="tripscreen.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_trip_screen_1a41b87334005d3d3c62191a07423ac0c2" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double TripScreen::totalMiles</definition>
+        <argsstring></argsstring>
+        <name>totalMiles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripscreen.h" line="46" column="1" bodyfile="tripscreen.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_trip_screen_1a5255c8d2e37c6f7c25de348327ec9a71" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripScreen::TripScreen</definition>
+        <argsstring>(QWidget *parent=0)</argsstring>
+        <name>TripScreen</name>
+        <param>
+          <type>QWidget *</type>
+          <declname>parent</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripscreen.h" line="15" column="1" bodyfile="tripscreen.cpp" bodystart="5" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="class_trip_screen_1a9fc04d395a5ab88c066b43089539150b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripScreen::~TripScreen</definition>
+        <argsstring>()</argsstring>
+        <name>~TripScreen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripscreen.h" line="16" column="1" bodyfile="tripscreen.cpp" bodystart="14" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_trip_screen_1a3eef4ff47f5688995cca879683ec5de3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TripScreen::setIsWindowOpen</definition>
+        <argsstring>(bool open)</argsstring>
+        <name>setIsWindowOpen</name>
+        <param>
+          <type>bool</type>
+          <declname>open</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripscreen.h" line="17" column="1" bodyfile="tripscreen.h" bodystart="17" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_trip_screen_1a45812d1d598595225c392c6cf953690d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TripScreen::getIsWindowOpen</definition>
+        <argsstring>()</argsstring>
+        <name>getIsWindowOpen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripscreen.h" line="18" column="1" bodyfile="tripscreen.h" bodystart="18" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_trip_screen_1a8375220d50f17f1722f225223146302b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TripScreen::addRestaurant</definition>
+        <argsstring>(Restaurant toAdd)</argsstring>
+        <name>addRestaurant</name>
+        <param>
+          <type><ref refid="class_restaurant" kindref="compound">Restaurant</ref></type>
+          <declname>toAdd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripscreen.h" line="19" column="1" bodyfile="tripscreen.cpp" bodystart="19" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_trip_screen_1aca922b35bd83b51faa6bef7b96f05804" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TripScreen::TripCreator</definition>
+        <argsstring>(Restaurant current, int numOfRest, QVector&lt; Restaurant &gt; restaurants, double &amp;totalMiles)</argsstring>
+        <name>TripCreator</name>
+        <param>
+          <type><ref refid="class_restaurant" kindref="compound">Restaurant</ref></type>
+          <declname>current</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>numOfRest</declname>
+        </param>
+        <param>
+          <type>QVector&lt; <ref refid="class_restaurant" kindref="compound">Restaurant</ref> &gt;</type>
+          <declname>restaurants</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>totalMiles</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripscreen.h" line="20" column="1" bodyfile="tripscreen.cpp" bodystart="32" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="class_trip_screen_1a61b3c5991e10294ea7de956ffcc36261" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int TripScreen::FindNextRestaurant</definition>
+        <argsstring>(Restaurant current, double &amp;totalMiles, std::vector&lt; int &gt; IDs)</argsstring>
+        <name>FindNextRestaurant</name>
+        <param>
+          <type><ref refid="class_restaurant" kindref="compound">Restaurant</ref></type>
+          <declname>current</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>totalMiles</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; int &gt;</type>
+          <declname>IDs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripscreen.h" line="24" column="1" bodyfile="tripscreen.cpp" bodystart="58" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="class_trip_screen_1a4908a18d119ddda8e05d5492a4244d61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt; int &gt; TripScreen::LoadIDs</definition>
+        <argsstring>(QVector&lt; Restaurant &gt; list)</argsstring>
+        <name>LoadIDs</name>
+        <param>
+          <type>QVector&lt; <ref refid="class_restaurant" kindref="compound">Restaurant</ref> &gt;</type>
+          <declname>list</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripscreen.h" line="27" column="1" bodyfile="tripscreen.cpp" bodystart="93" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="class_trip_screen_1a40e9a4a42eab6f237a1c3ffaabe70e72" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TripScreen::pushButton</definition>
+        <argsstring>()</argsstring>
+        <name>pushButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripscreen.h" line="28" column="1" bodyfile="tripscreen.cpp" bodystart="108" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="class_trip_screen_1a4bd10ca49117a4c40855ea1c7407c9b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_restaurant" kindref="compound">Restaurant</ref></type>
+        <definition>Restaurant TripScreen::convertIDToRest</definition>
+        <argsstring>(int ID, QVector&lt; Restaurant &gt; list)</argsstring>
+        <name>convertIDToRest</name>
+        <param>
+          <type>int</type>
+          <declname>ID</declname>
+        </param>
+        <param>
+          <type>QVector&lt; <ref refid="class_restaurant" kindref="compound">Restaurant</ref> &gt;</type>
+          <declname>list</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripscreen.h" line="29" column="1" bodyfile="tripscreen.cpp" bodystart="113" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="class_trip_screen_1ad37000ffd5921c8c177f42acec2da4ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TripScreen::PrintOrder</definition>
+        <argsstring>()</argsstring>
+        <name>PrintOrder</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripscreen.h" line="30" column="1" bodyfile="tripscreen.cpp" bodystart="125" bodyend="144"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-slot">
+      <memberdef kind="slot" id="class_trip_screen_1a8c0672c23f81ef6b1d3cd7c20022c1eb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TripScreen::on_StartButton_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_StartButton_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripscreen.h" line="32" column="1" bodyfile="tripscreen.cpp" bodystart="83" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_trip_screen_1aec3b9e9b361eaad4603217b70de49d8f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TripScreen::on_StartingLocation_activated</definition>
+        <argsstring>(const QString &amp;arg1)</argsstring>
+        <name>on_StartingLocation_activated</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>arg1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripscreen.h" line="34" column="1" bodyfile="tripscreen.cpp" bodystart="89" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_trip_screen_1a031d1f48b65e1c713706eb069679854b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TripScreen::on_pushButton_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_pushButton_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripscreen.h" line="36" column="1" bodyfile="tripscreen.cpp" bodystart="103" bodyend="107"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_trip_screen_1a303db606a299c1d473ac9d427e1dbf93" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TripScreen::setStartingDistance</definition>
+        <argsstring>(Restaurant toAdd)</argsstring>
+        <name>setStartingDistance</name>
+        <param>
+          <type><ref refid="class_restaurant" kindref="compound">Restaurant</ref></type>
+          <declname>toAdd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripscreen.h" line="45" column="1" bodyfile="tripscreen.cpp" bodystart="23" bodyend="31"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="25">
+        <label>QWidget</label>
+      </node>
+      <node id="24">
+        <label>TripScreen</label>
+        <link refid="class_trip_screen"/>
+        <childnode refid="25" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="27">
+        <label>QWidget</label>
+      </node>
+      <node id="26">
+        <label>TripScreen</label>
+        <link refid="class_trip_screen"/>
+        <childnode refid="27" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="tripscreen.h" line="11" column="1" bodyfile="tripscreen.h" bodystart="10" bodyend="48"/>
+    <listofallmembers>
+      <member refid="class_trip_screen_1a8375220d50f17f1722f225223146302b" prot="public" virt="non-virtual"><scope>TripScreen</scope><name>addRestaurant</name></member>
+      <member refid="class_trip_screen_1a1422b0f885b2076eb34cf15262cd6125" prot="private" virt="non-virtual"><scope>TripScreen</scope><name>allDistances</name></member>
+      <member refid="class_trip_screen_1a4bd10ca49117a4c40855ea1c7407c9b8" prot="public" virt="non-virtual"><scope>TripScreen</scope><name>convertIDToRest</name></member>
+      <member refid="class_trip_screen_1ae0e58730e6ac8722db27f0f4ba8b4060" prot="private" virt="non-virtual"><scope>TripScreen</scope><name>efficientOrder</name></member>
+      <member refid="class_trip_screen_1a61b3c5991e10294ea7de956ffcc36261" prot="public" virt="non-virtual"><scope>TripScreen</scope><name>FindNextRestaurant</name></member>
+      <member refid="class_trip_screen_1a45812d1d598595225c392c6cf953690d" prot="public" virt="non-virtual"><scope>TripScreen</scope><name>getIsWindowOpen</name></member>
+      <member refid="class_trip_screen_1a56e552f494edf41571f8c22fef060992" prot="private" virt="non-virtual"><scope>TripScreen</scope><name>isWindowOpen</name></member>
+      <member refid="class_trip_screen_1a4908a18d119ddda8e05d5492a4244d61" prot="public" virt="non-virtual"><scope>TripScreen</scope><name>LoadIDs</name></member>
+      <member refid="class_trip_screen_1a031d1f48b65e1c713706eb069679854b" prot="private" virt="non-virtual"><scope>TripScreen</scope><name>on_pushButton_clicked</name></member>
+      <member refid="class_trip_screen_1a8c0672c23f81ef6b1d3cd7c20022c1eb" prot="private" virt="non-virtual"><scope>TripScreen</scope><name>on_StartButton_clicked</name></member>
+      <member refid="class_trip_screen_1aec3b9e9b361eaad4603217b70de49d8f" prot="private" virt="non-virtual"><scope>TripScreen</scope><name>on_StartingLocation_activated</name></member>
+      <member refid="class_trip_screen_1ad37000ffd5921c8c177f42acec2da4ba" prot="public" virt="non-virtual"><scope>TripScreen</scope><name>PrintOrder</name></member>
+      <member refid="class_trip_screen_1a40e9a4a42eab6f237a1c3ffaabe70e72" prot="public" virt="non-virtual"><scope>TripScreen</scope><name>pushButton</name></member>
+      <member refid="class_trip_screen_1aea95d142aa57abc4c9ec869b3dcb4a04" prot="private" virt="non-virtual"><scope>TripScreen</scope><name>restaurantList</name></member>
+      <member refid="class_trip_screen_1a3eef4ff47f5688995cca879683ec5de3" prot="public" virt="non-virtual"><scope>TripScreen</scope><name>setIsWindowOpen</name></member>
+      <member refid="class_trip_screen_1a303db606a299c1d473ac9d427e1dbf93" prot="private" virt="non-virtual"><scope>TripScreen</scope><name>setStartingDistance</name></member>
+      <member refid="class_trip_screen_1a50690e4779108cd33ca62f862ddc40f2" prot="private" virt="non-virtual"><scope>TripScreen</scope><name>startingDistance</name></member>
+      <member refid="class_trip_screen_1a41b87334005d3d3c62191a07423ac0c2" prot="private" virt="non-virtual"><scope>TripScreen</scope><name>totalMiles</name></member>
+      <member refid="class_trip_screen_1aca922b35bd83b51faa6bef7b96f05804" prot="public" virt="non-virtual"><scope>TripScreen</scope><name>TripCreator</name></member>
+      <member refid="class_trip_screen_1a5255c8d2e37c6f7c25de348327ec9a71" prot="public" virt="non-virtual"><scope>TripScreen</scope><name>TripScreen</name></member>
+      <member refid="class_trip_screen_1ae5f95206c8fbcbe9d502c1e1832fd1d4" prot="private" virt="non-virtual"><scope>TripScreen</scope><name>ui</name></member>
+      <member refid="class_trip_screen_1a9fc04d395a5ab88c066b43089539150b" prot="public" virt="non-virtual"><scope>TripScreen</scope><name>~TripScreen</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

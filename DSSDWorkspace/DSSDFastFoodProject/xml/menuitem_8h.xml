@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="menuitem_8h" kind="file" language="C++">
+    <compoundname>menuitem.h</compoundname>
+    <includes local="no">QString</includes>
+    <includedby refid="restaurant_8h" local="yes">restaurant.h</includedby>
+    <includedby refid="menuitem_8cpp" local="yes">menuitem.cpp</includedby>
+    <incdepgraph>
+      <node id="207">
+        <label>menuitem.h</label>
+        <link refid="menuitem_8h"/>
+        <childnode refid="208" relation="include">
+        </childnode>
+      </node>
+      <node id="208">
+        <label>QString</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="211">
+        <label>dbmanager.h</label>
+        <link refid="dbmanager_8h_source"/>
+        <childnode refid="212" relation="include">
+        </childnode>
+        <childnode refid="213" relation="include">
+        </childnode>
+      </node>
+      <node id="212">
+        <label>admin.h</label>
+        <link refid="admin_8h_source"/>
+        <childnode refid="213" relation="include">
+        </childnode>
+      </node>
+      <node id="209">
+        <label>menuitem.h</label>
+        <link refid="menuitem_8h"/>
+        <childnode refid="210" relation="include">
+        </childnode>
+      </node>
+      <node id="214">
+        <label>tripscreen.h</label>
+        <link refid="tripscreen_8h_source"/>
+      </node>
+      <node id="210">
+        <label>restaurant.h</label>
+        <link refid="restaurant_8h_source"/>
+        <childnode refid="211" relation="include">
+        </childnode>
+        <childnode refid="213" relation="include">
+        </childnode>
+        <childnode refid="214" relation="include">
+        </childnode>
+      </node>
+      <node id="213">
+        <label>mainwindow.h</label>
+        <link refid="mainwindow_8h_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_menu_item" prot="public">MenuItem</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>MENUITEM_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MENUITEM_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QString&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="class_menu_item" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_menu_item" kindref="compound">MenuItem</ref></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_menu_item" kindref="compound">MenuItem</ref>();</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_menu_item" kindref="compound">MenuItem</ref>(QString<sp/>itemName,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>restaurantID,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>price);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_menu_item_1abc651e3a5656b7fbb0e72085b8adab0e" kindref="member">setItemName</ref>(QString<sp/>itemName);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_menu_item_1a046acac8a4f20c6d3589ac34bb53ea71" kindref="member">setRestaurantID</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>restaurantID);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_menu_item_1ae2ebb751e94c46e5bbe32dc2f8003919" kindref="member">setPrice</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>price);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>QString<sp/><ref refid="class_menu_item_1a4d6f0c0ce06292a95521c2f01c360393" kindref="member">getItemName</ref>();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_menu_item_1acb28f30d43a514d5f4e9598b5c6f3f60" kindref="member">getRestaurantID</ref>();</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_menu_item_1a5b9bbfe9c37ff669a5e3b21c171e28a0" kindref="member">getPrice</ref>();</highlight></codeline>
+<codeline lineno="52" refid="class_menu_item_1a32972e702a424fc12cf96c561dbc5698" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_menu_item_1a32972e702a424fc12cf96c561dbc5698" kindref="member">operator==</ref>(<ref refid="class_menu_item" kindref="compound">MenuItem</ref><sp/>itemToCompare){</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(this-&gt;<ref refid="class_menu_item_1a4d6f0c0ce06292a95521c2f01c360393" kindref="member">getItemName</ref>()<sp/>==<sp/>itemToCompare.<ref refid="class_menu_item_1a4d6f0c0ce06292a95521c2f01c360393" kindref="member">getItemName</ref>());</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>QString<sp/>itemName;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>restaurantID;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>price;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>MENUITEM_H</highlight></codeline>
+    </programlisting>
+    <location file="menuitem.h"/>
+  </compounddef>
+</doxygen>

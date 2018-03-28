@@ -1,0 +1,242 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_admin" kind="class" language="C++" prot="public">
+    <compoundname>Admin</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">QMainWindow</basecompoundref>
+    <includes refid="admin_8h" local="no">admin.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_admin_1ae819a4bc4e533dac8c19d3263c94c3a9" prot="private" static="no" mutable="no">
+        <type>Ui::Admin *</type>
+        <definition>Ui::Admin* Admin::ui</definition>
+        <argsstring></argsstring>
+        <name>ui</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="admin.h" line="66" column="1" bodyfile="admin.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_admin_1a5e67a0ecb1fc8cd09c0f340b03be4016" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Admin::Admin</definition>
+        <argsstring>(QWidget *parent=0)</argsstring>
+        <name>Admin</name>
+        <param>
+          <type>QWidget *</type>
+          <declname>parent</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="admin.h" line="20" column="1" bodyfile="admin.cpp" bodystart="8" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_admin_1a8fb5fe72fb4e05d50980c13cdf3b779c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Admin::~Admin</definition>
+        <argsstring>()</argsstring>
+        <name>~Admin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="admin.h" line="21" column="1" bodyfile="admin.cpp" bodystart="20" bodyend="23"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-slot">
+      <memberdef kind="slot" id="class_admin_1a473af119650f3e90645187edd2927fc5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Admin::on_pushButton_Logout_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_pushButton_Logout_clicked</name>
+        <briefdescription>
+<para>on_pushButton_Logout_clicked </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="admin.h" line="27" column="1" bodyfile="admin.cpp" bodystart="27" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_admin_1acfda80a4063501587ab663e56f89e497" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Admin::listRestaurants</definition>
+        <argsstring>()</argsstring>
+        <name>listRestaurants</name>
+        <briefdescription>
+<para>listRestaurants </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="admin.h" line="31" column="1" bodyfile="admin.cpp" bodystart="35" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_admin_1ace87bd3f13913c25a9fb7266987e34d0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Admin::on_itemsListWidget_itemActivated</definition>
+        <argsstring>(QListWidgetItem *)</argsstring>
+        <name>on_itemsListWidget_itemActivated</name>
+        <param>
+          <type>QListWidgetItem *</type>
+          <defname>item</defname>
+        </param>
+        <briefdescription>
+<para>on_itemsListWidget_itemActivated </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="admin.h" line="35" column="1" bodyfile="admin.cpp" bodystart="45" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_admin_1a69f77dea33631175f5837edf29eecab2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Admin::on_priceListWidget_itemActivated</definition>
+        <argsstring>(QListWidgetItem *)</argsstring>
+        <name>on_priceListWidget_itemActivated</name>
+        <param>
+          <type>QListWidgetItem *</type>
+          <defname>item</defname>
+        </param>
+        <briefdescription>
+<para>on_priceListWidget_itemActivated </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="admin.h" line="39" column="1" bodyfile="admin.cpp" bodystart="82" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_admin_1a09ffcd13426b29b632b4f9361ff7bd91" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Admin::on_restaurantListWidget_itemActivated</definition>
+        <argsstring>(QListWidgetItem *)</argsstring>
+        <name>on_restaurantListWidget_itemActivated</name>
+        <param>
+          <type>QListWidgetItem *</type>
+          <defname>item</defname>
+        </param>
+        <briefdescription>
+<para>on_restaurantListWidget_itemActivated </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="admin.h" line="43" column="1" bodyfile="admin.cpp" bodystart="61" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_admin_1a29b5e8066637a6bbd6347944be14bb62" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Admin::on_pushButton_RemoveRestaurant_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_pushButton_RemoveRestaurant_clicked</name>
+        <briefdescription>
+<para>on_pushButton_RemoveRestaurant_clicked </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="admin.h" line="47" column="1" bodyfile="admin.cpp" bodystart="99" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_admin_1a9c2c5a3effa30a8d80d80a7b7e3e1c25" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Admin::on_pushButton_RemoveMenuItem_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_pushButton_RemoveMenuItem_clicked</name>
+        <briefdescription>
+<para>on_pushButton_RemoveMenuItem_clicked </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="admin.h" line="51" column="1" bodyfile="admin.cpp" bodystart="119" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_admin_1a6d71a6ae370a3c4cf2f3402ac2de6d4d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Admin::on_pushButton_AddFromFile_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_pushButton_AddFromFile_clicked</name>
+        <briefdescription>
+<para>on_pushButton_AddFromFile_clicked </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="admin.h" line="55" column="1" bodyfile="admin.cpp" bodystart="139" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_admin_1a737215cdb56d3e1b6643b857a59cb384" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Admin::on_pushButton_AddMenuItem_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_pushButton_AddMenuItem_clicked</name>
+        <briefdescription>
+<para>on_pushButton_AddMenuItem_clicked </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="admin.h" line="59" column="1" bodyfile="admin.cpp" bodystart="147" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_admin_1a3b3ede2a6b0c376caf1123bed2b718cd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Admin::on_pushButton_ChangePrice_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_pushButton_ChangePrice_clicked</name>
+        <briefdescription>
+<para>on_pushButton_ChangePrice_clicked </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="admin.h" line="63" column="1" bodyfile="admin.cpp" bodystart="159" bodyend="163"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="class_admin" kindref="compound">Admin</ref> class. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="4">
+        <label>Admin</label>
+        <link refid="class_admin"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>QMainWindow</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="6">
+        <label>Admin</label>
+        <link refid="class_admin"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>QMainWindow</label>
+      </node>
+    </collaborationgraph>
+    <location file="admin.h" line="16" column="1" bodyfile="admin.h" bodystart="15" bodyend="67"/>
+    <listofallmembers>
+      <member refid="class_admin_1a5e67a0ecb1fc8cd09c0f340b03be4016" prot="public" virt="non-virtual"><scope>Admin</scope><name>Admin</name></member>
+      <member refid="class_admin_1acfda80a4063501587ab663e56f89e497" prot="private" virt="non-virtual"><scope>Admin</scope><name>listRestaurants</name></member>
+      <member refid="class_admin_1ace87bd3f13913c25a9fb7266987e34d0" prot="private" virt="non-virtual"><scope>Admin</scope><name>on_itemsListWidget_itemActivated</name></member>
+      <member refid="class_admin_1a69f77dea33631175f5837edf29eecab2" prot="private" virt="non-virtual"><scope>Admin</scope><name>on_priceListWidget_itemActivated</name></member>
+      <member refid="class_admin_1a6d71a6ae370a3c4cf2f3402ac2de6d4d" prot="private" virt="non-virtual"><scope>Admin</scope><name>on_pushButton_AddFromFile_clicked</name></member>
+      <member refid="class_admin_1a737215cdb56d3e1b6643b857a59cb384" prot="private" virt="non-virtual"><scope>Admin</scope><name>on_pushButton_AddMenuItem_clicked</name></member>
+      <member refid="class_admin_1a3b3ede2a6b0c376caf1123bed2b718cd" prot="private" virt="non-virtual"><scope>Admin</scope><name>on_pushButton_ChangePrice_clicked</name></member>
+      <member refid="class_admin_1a473af119650f3e90645187edd2927fc5" prot="private" virt="non-virtual"><scope>Admin</scope><name>on_pushButton_Logout_clicked</name></member>
+      <member refid="class_admin_1a9c2c5a3effa30a8d80d80a7b7e3e1c25" prot="private" virt="non-virtual"><scope>Admin</scope><name>on_pushButton_RemoveMenuItem_clicked</name></member>
+      <member refid="class_admin_1a29b5e8066637a6bbd6347944be14bb62" prot="private" virt="non-virtual"><scope>Admin</scope><name>on_pushButton_RemoveRestaurant_clicked</name></member>
+      <member refid="class_admin_1a09ffcd13426b29b632b4f9361ff7bd91" prot="private" virt="non-virtual"><scope>Admin</scope><name>on_restaurantListWidget_itemActivated</name></member>
+      <member refid="class_admin_1ae819a4bc4e533dac8c19d3263c94c3a9" prot="private" virt="non-virtual"><scope>Admin</scope><name>ui</name></member>
+      <member refid="class_admin_1a8fb5fe72fb4e05d50980c13cdf3b779c" prot="public" virt="non-virtual"><scope>Admin</scope><name>~Admin</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,101 @@
+\hypertarget{class_d_b_manager}{}\section{D\+B\+Manager Class Reference}
+\label{class_d_b_manager}\index{D\+B\+Manager@{D\+B\+Manager}}
+
+
+The \hyperlink{class_d_b_manager}{D\+B\+Manager} class.  
+
+
+
+
+{\ttfamily \#include $<$dbmanager.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_d_b_manager_a2d29cb558fdbf54d17b180088bd8651e}{upload\+File\+To\+Database} (const Q\+String \&file\+Path)
+\begin{DoxyCompactList}\small\item\em upload\+File\+To\+Database \end{DoxyCompactList}\item 
+void \hyperlink{class_d_b_manager_a914d5a2d66ddff2b0a39c545966540e9}{database\+To\+Restaurants} ()
+\begin{DoxyCompactList}\small\item\em database\+To\+Restaurants \end{DoxyCompactList}\item 
+std\+::vector$<$ \hyperlink{class_restaurant}{Restaurant} $>$ \hyperlink{class_d_b_manager_ab726a1be7b797085723623f5497946e6}{get\+Restaurants} ()
+\begin{DoxyCompactList}\small\item\em get\+Restaurants \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_d_b_manager_aa90cd2919d5e288ec5656e4d0abfdbe4}\label{class_d_b_manager_aa90cd2919d5e288ec5656e4d0abfdbe4}} 
+void {\bfseries test\+DB} ()
+\item 
+void \hyperlink{class_d_b_manager_ac2f9bedac3778197de1301775ef8d42f}{Delete\+From\+Db} (Q\+String name)
+\begin{DoxyCompactList}\small\item\em Delete\+From\+Db. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_d_b_manager_ad386a91c5c54a9e34e793b35ec0957c8}\label{class_d_b_manager_ad386a91c5c54a9e34e793b35ec0957c8}} 
+static \hyperlink{class_d_b_manager}{D\+B\+Manager} $\ast$ {\bfseries get\+Instance} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_d_b_manager}{D\+B\+Manager} class. 
+
+\begin{DoxyAuthor}{Author}
+Sean O\textquotesingle{}Hearn
+\end{DoxyAuthor}
+Manages the database by allowing the manipulation of data within the database. Uses singleton desgin pattern. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_d_b_manager_a914d5a2d66ddff2b0a39c545966540e9}\label{class_d_b_manager_a914d5a2d66ddff2b0a39c545966540e9}} 
+\index{D\+B\+Manager@{D\+B\+Manager}!database\+To\+Restaurants@{database\+To\+Restaurants}}
+\index{database\+To\+Restaurants@{database\+To\+Restaurants}!D\+B\+Manager@{D\+B\+Manager}}
+\subsubsection{\texorpdfstring{database\+To\+Restaurants()}{databaseToRestaurants()}}
+{\footnotesize\ttfamily void D\+B\+Manager\+::database\+To\+Restaurants (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+database\+To\+Restaurants 
+
+Uses the database to populate our vector filled with \hyperlink{class_restaurant}{Restaurant} objects \mbox{\Hypertarget{class_d_b_manager_ac2f9bedac3778197de1301775ef8d42f}\label{class_d_b_manager_ac2f9bedac3778197de1301775ef8d42f}} 
+\index{D\+B\+Manager@{D\+B\+Manager}!Delete\+From\+Db@{Delete\+From\+Db}}
+\index{Delete\+From\+Db@{Delete\+From\+Db}!D\+B\+Manager@{D\+B\+Manager}}
+\subsubsection{\texorpdfstring{Delete\+From\+Db()}{DeleteFromDb()}}
+{\footnotesize\ttfamily void D\+B\+Manager\+::\+Delete\+From\+Db (\begin{DoxyParamCaption}\item[{Q\+String}]{name }\end{DoxyParamCaption})}
+
+
+
+Delete\+From\+Db. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_d_b_manager_ab726a1be7b797085723623f5497946e6}\label{class_d_b_manager_ab726a1be7b797085723623f5497946e6}} 
+\index{D\+B\+Manager@{D\+B\+Manager}!get\+Restaurants@{get\+Restaurants}}
+\index{get\+Restaurants@{get\+Restaurants}!D\+B\+Manager@{D\+B\+Manager}}
+\subsubsection{\texorpdfstring{get\+Restaurants()}{getRestaurants()}}
+{\footnotesize\ttfamily std\+::vector$<$ \hyperlink{class_restaurant}{Restaurant} $>$ D\+B\+Manager\+::get\+Restaurants (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get\+Restaurants 
+
+\begin{DoxyReturn}{Returns}
+restaurants 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_b_manager_a2d29cb558fdbf54d17b180088bd8651e}\label{class_d_b_manager_a2d29cb558fdbf54d17b180088bd8651e}} 
+\index{D\+B\+Manager@{D\+B\+Manager}!upload\+File\+To\+Database@{upload\+File\+To\+Database}}
+\index{upload\+File\+To\+Database@{upload\+File\+To\+Database}!D\+B\+Manager@{D\+B\+Manager}}
+\subsubsection{\texorpdfstring{upload\+File\+To\+Database()}{uploadFileToDatabase()}}
+{\footnotesize\ttfamily void D\+B\+Manager\+::upload\+File\+To\+Database (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{file\+Path }\end{DoxyParamCaption})}
+
+
+
+upload\+File\+To\+Database 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+dbmanager.\+h\item 
+dbmanager.\+cpp\end{DoxyCompactItemize}

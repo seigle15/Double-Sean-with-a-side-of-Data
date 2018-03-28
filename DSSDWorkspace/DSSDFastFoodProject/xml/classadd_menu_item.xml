@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classadd_menu_item" kind="class" language="C++" prot="public">
+    <compoundname>addMenuItem</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">QDialog</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classadd_menu_item_1ac283568497860e3413e71b7a386e596d" prot="private" static="no" mutable="no">
+        <type>Ui::addMenuItem *</type>
+        <definition>Ui::addMenuItem* addMenuItem::ui</definition>
+        <argsstring></argsstring>
+        <name>ui</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="addmenuitem.h" line="22" column="1" bodyfile="addmenuitem.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classadd_menu_item_1a516e0cb12135a23a4378d1f0c69b3166" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>addMenuItem::addMenuItem</definition>
+        <argsstring>(QWidget *parent=0)</argsstring>
+        <name>addMenuItem</name>
+        <param>
+          <type>QWidget *</type>
+          <declname>parent</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="addmenuitem.h" line="15" column="1" bodyfile="addmenuitem.cpp" bodystart="6" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classadd_menu_item_1a8f92de964eddbc9e54f006687ac37f9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>addMenuItem::~addMenuItem</definition>
+        <argsstring>()</argsstring>
+        <name>~addMenuItem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="addmenuitem.h" line="16" column="1" bodyfile="addmenuitem.cpp" bodystart="13" bodyend="16"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-slot">
+      <memberdef kind="slot" id="classadd_menu_item_1a5f6df977020bfb44e910577d646ba6b2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void addMenuItem::on_pushButton_clicked</definition>
+        <argsstring>()</argsstring>
+        <name>on_pushButton_clicked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="addmenuitem.h" line="19" column="1" bodyfile="addmenuitem.cpp" bodystart="18" bodyend="28"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="0">
+        <label>addMenuItem</label>
+        <link refid="classadd_menu_item"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>QDialog</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>addMenuItem</label>
+        <link refid="classadd_menu_item"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>QDialog</label>
+      </node>
+    </collaborationgraph>
+    <location file="addmenuitem.h" line="11" column="1" bodyfile="addmenuitem.h" bodystart="10" bodyend="23"/>
+    <listofallmembers>
+      <member refid="classadd_menu_item_1a516e0cb12135a23a4378d1f0c69b3166" prot="public" virt="non-virtual"><scope>addMenuItem</scope><name>addMenuItem</name></member>
+      <member refid="classadd_menu_item_1a5f6df977020bfb44e910577d646ba6b2" prot="private" virt="non-virtual"><scope>addMenuItem</scope><name>on_pushButton_clicked</name></member>
+      <member refid="classadd_menu_item_1ac283568497860e3413e71b7a386e596d" prot="private" virt="non-virtual"><scope>addMenuItem</scope><name>ui</name></member>
+      <member refid="classadd_menu_item_1a8f92de964eddbc9e54f006687ac37f9b" prot="public" virt="non-virtual"><scope>addMenuItem</scope><name>~addMenuItem</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

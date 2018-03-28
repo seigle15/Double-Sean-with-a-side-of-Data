@@ -1,0 +1,588 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_restaurant" kind="class" language="C++" prot="public">
+    <compoundname>Restaurant</compoundname>
+    <includes refid="restaurant_8h" local="no">restaurant.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_restaurant_1a929f5571110acfa9660c2b0956aeeca2" prot="private" static="no" mutable="no">
+        <type>QString</type>
+        <definition>QString Restaurant::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="restaurant.h" line="117" column="1" bodyfile="restaurant.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_restaurant_1adc249ef048a3aafc484a61f9db6d078b" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Restaurant::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="restaurant.h" line="118" column="1" bodyfile="restaurant.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_restaurant_1ab58c73aa000089e798d6fad1b2a015f4" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Restaurant::distanceFromSaddleback</definition>
+        <argsstring></argsstring>
+        <name>distanceFromSaddleback</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="restaurant.h" line="119" column="1" bodyfile="restaurant.h" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_restaurant_1a545e68831e156986a95c28493b6c12ca" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Restaurant::menuSize</definition>
+        <argsstring></argsstring>
+        <name>menuSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="restaurant.h" line="120" column="1" bodyfile="restaurant.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_restaurant_1aaef23b51b34ed94e543f58f86375f831" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Restaurant::totalDistances</definition>
+        <argsstring></argsstring>
+        <name>totalDistances</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="restaurant.h" line="121" column="1" bodyfile="restaurant.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_restaurant_1a72a63270eef9ecd5972c8cdf226fd40d" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="class_menu_item" kindref="compound">MenuItem</ref> &gt;</type>
+        <definition>std::vector&lt;MenuItem&gt; Restaurant::menu</definition>
+        <argsstring></argsstring>
+        <name>menu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="restaurant.h" line="122" column="1" bodyfile="restaurant.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_restaurant_1a11cb1c1168da77b4deab249e16e15823" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="class_distance" kindref="compound">Distance</ref> &gt;</type>
+        <definition>std::vector&lt;Distance&gt; Restaurant::distances</definition>
+        <argsstring></argsstring>
+        <name>distances</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="restaurant.h" line="123" column="1" bodyfile="restaurant.h" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_restaurant_1af400ebcbe4ec6f135248fe1606eceb1a" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Restaurant::visited</definition>
+        <argsstring></argsstring>
+        <name>visited</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="restaurant.h" line="124" column="1" bodyfile="restaurant.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_restaurant_1a2faa4e686e849cc924a5f1f55a4a925e" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Restaurant::totalAmountSpent</definition>
+        <argsstring></argsstring>
+        <name>totalAmountSpent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="restaurant.h" line="125" column="1" bodyfile="restaurant.h" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_restaurant_1af72b2ed0971d325dc5d5dbf91e8462b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Restaurant::Restaurant</definition>
+        <argsstring>()</argsstring>
+        <name>Restaurant</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="restaurant.h" line="19" column="1" bodyfile="restaurant.cpp" bodystart="3" bodyend="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_restaurant_1a18bc8aa1ce501a92842a2090e7d378cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Restaurant::Restaurant</definition>
+        <argsstring>(QString name, int id, double distanceFromSaddleback, int menuSize, int totalDistances)</argsstring>
+        <name>Restaurant</name>
+        <param>
+          <type>QString</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>distanceFromSaddleback</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>menuSize</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>totalDistances</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="restaurant.h" line="20" column="1" bodyfile="restaurant.cpp" bodystart="10" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_restaurant_1aec426da0e4c067525fdd1d233c32a5f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Restaurant::setName</definition>
+        <argsstring>(QString name)</argsstring>
+        <name>setName</name>
+        <param>
+          <type>QString</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>setName </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="restaurant.h" line="25" column="1" bodyfile="restaurant.cpp" bodystart="17" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_restaurant_1a156dd173f171f1f170191dadb7153b8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Restaurant::setID</definition>
+        <argsstring>(int id)</argsstring>
+        <name>setID</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>setID </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="restaurant.h" line="30" column="1" bodyfile="restaurant.cpp" bodystart="22" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_restaurant_1a12aea2979807bd2132f16f706b634ad4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Restaurant::setDistanceFromSaddleback</definition>
+        <argsstring>(double distanceFromSaddleback)</argsstring>
+        <name>setDistanceFromSaddleback</name>
+        <param>
+          <type>double</type>
+          <declname>distanceFromSaddleback</declname>
+        </param>
+        <briefdescription>
+<para>setDistanceFromSaddleback </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>distanceFromSaddleback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="restaurant.h" line="35" column="1" bodyfile="restaurant.cpp" bodystart="27" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_restaurant_1aa4a36310566791865760329edb61dfef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Restaurant::setMenuSize</definition>
+        <argsstring>(int menuSize)</argsstring>
+        <name>setMenuSize</name>
+        <param>
+          <type>int</type>
+          <declname>menuSize</declname>
+        </param>
+        <briefdescription>
+<para>setMenuSize </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>menuSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="restaurant.h" line="40" column="1" bodyfile="restaurant.cpp" bodystart="32" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_restaurant_1a014e06c350423b40fcfdac1bcbdd6ab1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Restaurant::setTotalDistances</definition>
+        <argsstring>(int totalDistances)</argsstring>
+        <name>setTotalDistances</name>
+        <param>
+          <type>int</type>
+          <declname>totalDistances</declname>
+        </param>
+        <briefdescription>
+<para>setTotalDistances </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>totalDistances</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="restaurant.h" line="45" column="1" bodyfile="restaurant.cpp" bodystart="37" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_restaurant_1a13b2e8a16f44e2fc4304e4b8689e1336" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Restaurant::setVisited</definition>
+        <argsstring>(bool visited)</argsstring>
+        <name>setVisited</name>
+        <param>
+          <type>bool</type>
+          <declname>visited</declname>
+        </param>
+        <briefdescription>
+<para>setVisited </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>visited</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="restaurant.h" line="50" column="1" bodyfile="restaurant.h" bodystart="50" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="class_restaurant_1a47d4e993832e37a98fd4e3f3201b62c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>QString</type>
+        <definition>QString Restaurant::getName</definition>
+        <argsstring>()</argsstring>
+        <name>getName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="restaurant.h" line="51" column="1" bodyfile="restaurant.cpp" bodystart="42" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_restaurant_1a8777e6d48839e275744145f394bde846" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Restaurant::getID</definition>
+        <argsstring>()</argsstring>
+        <name>getID</name>
+        <briefdescription>
+<para>getID </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>ID </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="restaurant.h" line="56" column="1" bodyfile="restaurant.cpp" bodystart="47" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="class_restaurant_1a328d55dfff742bf89d6b81a01bab35d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Restaurant::getDistanceFromSaddleback</definition>
+        <argsstring>()</argsstring>
+        <name>getDistanceFromSaddleback</name>
+        <briefdescription>
+<para>getDistanceFromSaddleback </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>distanceFromSaddleback </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="restaurant.h" line="61" column="1" bodyfile="restaurant.cpp" bodystart="52" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="class_restaurant_1a228a01608b506e6a8bf72b7d6f747a7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Restaurant::getMenuSize</definition>
+        <argsstring>()</argsstring>
+        <name>getMenuSize</name>
+        <briefdescription>
+<para>getMenuSize </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>menuSize </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="restaurant.h" line="66" column="1" bodyfile="restaurant.cpp" bodystart="57" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="class_restaurant_1aefc0ab4b34d2ff5cfc5ab0d9463cf224" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Restaurant::getTotalDistances</definition>
+        <argsstring>()</argsstring>
+        <name>getTotalDistances</name>
+        <briefdescription>
+<para>getTotalDistances </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>totalDistances </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="restaurant.h" line="71" column="1" bodyfile="restaurant.cpp" bodystart="62" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="class_restaurant_1a174725e8ae4487dbb649dd9cc017945e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Restaurant::getVisited</definition>
+        <argsstring>()</argsstring>
+        <name>getVisited</name>
+        <briefdescription>
+<para>getVisited </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="restaurant.h" line="76" column="1" bodyfile="restaurant.h" bodystart="76" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="class_restaurant_1a35210fa764ffb3ec4c9563c3bb12fd68" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Restaurant::addDistance</definition>
+        <argsstring>(Distance distance)</argsstring>
+        <name>addDistance</name>
+        <param>
+          <type><ref refid="class_distance" kindref="compound">Distance</ref></type>
+          <declname>distance</declname>
+        </param>
+        <briefdescription>
+<para>addDistance </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>distance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="restaurant.h" line="81" column="1" bodyfile="restaurant.cpp" bodystart="67" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="class_restaurant_1a5e743b42c3d5277a5c30728e5a6010f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Restaurant::addMenuItem</definition>
+        <argsstring>(MenuItem menuItem)</argsstring>
+        <name>addMenuItem</name>
+        <param>
+          <type><ref refid="class_menu_item" kindref="compound">MenuItem</ref></type>
+          <declname>menuItem</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="classadd_menu_item" kindref="compound">addMenuItem</ref> </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>menuItem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="restaurant.h" line="86" column="1" bodyfile="restaurant.cpp" bodystart="72" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="class_restaurant_1a4b76f9f7171cb961e33bb670c22e91f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="class_distance" kindref="compound">Distance</ref> &gt;</type>
+        <definition>std::vector&lt; Distance &gt; Restaurant::getDistances</definition>
+        <argsstring>()</argsstring>
+        <name>getDistances</name>
+        <briefdescription>
+<para>getDistances </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>distances </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="restaurant.h" line="91" column="1" bodyfile="restaurant.cpp" bodystart="77" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="class_restaurant_1a67da76f6ae80d9c22c8c697ebbb8a684" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="class_menu_item" kindref="compound">MenuItem</ref> &gt;</type>
+        <definition>std::vector&lt; MenuItem &gt; Restaurant::getMenu</definition>
+        <argsstring>()</argsstring>
+        <name>getMenu</name>
+        <briefdescription>
+<para>getMenu </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>menu </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="restaurant.h" line="96" column="1" bodyfile="restaurant.cpp" bodystart="82" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="class_restaurant_1a084b4300b60a5d76cbdcbe01724ba5a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Restaurant::setTotalAmountSpent</definition>
+        <argsstring>(double amt)</argsstring>
+        <name>setTotalAmountSpent</name>
+        <param>
+          <type>double</type>
+          <declname>amt</declname>
+        </param>
+        <briefdescription>
+<para>setTotalAmountSpent </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>amt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="restaurant.h" line="101" column="1" bodyfile="restaurant.cpp" bodystart="87" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="class_restaurant_1a983d7e6327f4f88d9d5aefe4d6beb7c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Restaurant::getTotalAmountSpent</definition>
+        <argsstring>()</argsstring>
+        <name>getTotalAmountSpent</name>
+        <briefdescription>
+<para>getTotalAmountSpent </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>totalAmountSpent </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="restaurant.h" line="106" column="1" bodyfile="restaurant.cpp" bodystart="92" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="class_restaurant_1ac8b5a5436f9e3952f64abc32dc02a82b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Restaurant::operator==</definition>
+        <argsstring>(Restaurant restaurantToCompare)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type><ref refid="class_restaurant" kindref="compound">Restaurant</ref></type>
+          <declname>restaurantToCompare</declname>
+        </param>
+        <briefdescription>
+<para>operator == </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>restaurantToCompare</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool value </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="restaurant.h" line="112" column="1" bodyfile="restaurant.h" bodystart="112" bodyend="114"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="class_restaurant" kindref="compound">Restaurant</ref> class. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Sean O&apos;Hearn Container for restaurant objects </para></simplesect>
+</para>    </detaileddescription>
+    <location file="restaurant.h" line="17" column="1" bodyfile="restaurant.h" bodystart="16" bodyend="126"/>
+    <listofallmembers>
+      <member refid="class_restaurant_1a35210fa764ffb3ec4c9563c3bb12fd68" prot="public" virt="non-virtual"><scope>Restaurant</scope><name>addDistance</name></member>
+      <member refid="class_restaurant_1a5e743b42c3d5277a5c30728e5a6010f0" prot="public" virt="non-virtual"><scope>Restaurant</scope><name>addMenuItem</name></member>
+      <member refid="class_restaurant_1ab58c73aa000089e798d6fad1b2a015f4" prot="private" virt="non-virtual"><scope>Restaurant</scope><name>distanceFromSaddleback</name></member>
+      <member refid="class_restaurant_1a11cb1c1168da77b4deab249e16e15823" prot="private" virt="non-virtual"><scope>Restaurant</scope><name>distances</name></member>
+      <member refid="class_restaurant_1a328d55dfff742bf89d6b81a01bab35d9" prot="public" virt="non-virtual"><scope>Restaurant</scope><name>getDistanceFromSaddleback</name></member>
+      <member refid="class_restaurant_1a4b76f9f7171cb961e33bb670c22e91f0" prot="public" virt="non-virtual"><scope>Restaurant</scope><name>getDistances</name></member>
+      <member refid="class_restaurant_1a8777e6d48839e275744145f394bde846" prot="public" virt="non-virtual"><scope>Restaurant</scope><name>getID</name></member>
+      <member refid="class_restaurant_1a67da76f6ae80d9c22c8c697ebbb8a684" prot="public" virt="non-virtual"><scope>Restaurant</scope><name>getMenu</name></member>
+      <member refid="class_restaurant_1a228a01608b506e6a8bf72b7d6f747a7d" prot="public" virt="non-virtual"><scope>Restaurant</scope><name>getMenuSize</name></member>
+      <member refid="class_restaurant_1a47d4e993832e37a98fd4e3f3201b62c4" prot="public" virt="non-virtual"><scope>Restaurant</scope><name>getName</name></member>
+      <member refid="class_restaurant_1a983d7e6327f4f88d9d5aefe4d6beb7c0" prot="public" virt="non-virtual"><scope>Restaurant</scope><name>getTotalAmountSpent</name></member>
+      <member refid="class_restaurant_1aefc0ab4b34d2ff5cfc5ab0d9463cf224" prot="public" virt="non-virtual"><scope>Restaurant</scope><name>getTotalDistances</name></member>
+      <member refid="class_restaurant_1a174725e8ae4487dbb649dd9cc017945e" prot="public" virt="non-virtual"><scope>Restaurant</scope><name>getVisited</name></member>
+      <member refid="class_restaurant_1adc249ef048a3aafc484a61f9db6d078b" prot="private" virt="non-virtual"><scope>Restaurant</scope><name>id</name></member>
+      <member refid="class_restaurant_1a72a63270eef9ecd5972c8cdf226fd40d" prot="private" virt="non-virtual"><scope>Restaurant</scope><name>menu</name></member>
+      <member refid="class_restaurant_1a545e68831e156986a95c28493b6c12ca" prot="private" virt="non-virtual"><scope>Restaurant</scope><name>menuSize</name></member>
+      <member refid="class_restaurant_1a929f5571110acfa9660c2b0956aeeca2" prot="private" virt="non-virtual"><scope>Restaurant</scope><name>name</name></member>
+      <member refid="class_restaurant_1ac8b5a5436f9e3952f64abc32dc02a82b" prot="public" virt="non-virtual"><scope>Restaurant</scope><name>operator==</name></member>
+      <member refid="class_restaurant_1af72b2ed0971d325dc5d5dbf91e8462b5" prot="public" virt="non-virtual"><scope>Restaurant</scope><name>Restaurant</name></member>
+      <member refid="class_restaurant_1a18bc8aa1ce501a92842a2090e7d378cc" prot="public" virt="non-virtual"><scope>Restaurant</scope><name>Restaurant</name></member>
+      <member refid="class_restaurant_1a12aea2979807bd2132f16f706b634ad4" prot="public" virt="non-virtual"><scope>Restaurant</scope><name>setDistanceFromSaddleback</name></member>
+      <member refid="class_restaurant_1a156dd173f171f1f170191dadb7153b8f" prot="public" virt="non-virtual"><scope>Restaurant</scope><name>setID</name></member>
+      <member refid="class_restaurant_1aa4a36310566791865760329edb61dfef" prot="public" virt="non-virtual"><scope>Restaurant</scope><name>setMenuSize</name></member>
+      <member refid="class_restaurant_1aec426da0e4c067525fdd1d233c32a5f3" prot="public" virt="non-virtual"><scope>Restaurant</scope><name>setName</name></member>
+      <member refid="class_restaurant_1a084b4300b60a5d76cbdcbe01724ba5a6" prot="public" virt="non-virtual"><scope>Restaurant</scope><name>setTotalAmountSpent</name></member>
+      <member refid="class_restaurant_1a014e06c350423b40fcfdac1bcbdd6ab1" prot="public" virt="non-virtual"><scope>Restaurant</scope><name>setTotalDistances</name></member>
+      <member refid="class_restaurant_1a13b2e8a16f44e2fc4304e4b8689e1336" prot="public" virt="non-virtual"><scope>Restaurant</scope><name>setVisited</name></member>
+      <member refid="class_restaurant_1a2faa4e686e849cc924a5f1f55a4a925e" prot="private" virt="non-virtual"><scope>Restaurant</scope><name>totalAmountSpent</name></member>
+      <member refid="class_restaurant_1aaef23b51b34ed94e543f58f86375f831" prot="private" virt="non-virtual"><scope>Restaurant</scope><name>totalDistances</name></member>
+      <member refid="class_restaurant_1af400ebcbe4ec6f135248fe1606eceb1a" prot="private" virt="non-virtual"><scope>Restaurant</scope><name>visited</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

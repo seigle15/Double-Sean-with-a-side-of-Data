@@ -1,0 +1,330 @@
+\hypertarget{class_restaurant}{}\section{Restaurant Class Reference}
+\label{class_restaurant}\index{Restaurant@{Restaurant}}
+
+
+The \hyperlink{class_restaurant}{Restaurant} class.  
+
+
+
+
+{\ttfamily \#include $<$restaurant.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_restaurant_a18bc8aa1ce501a92842a2090e7d378cc}\label{class_restaurant_a18bc8aa1ce501a92842a2090e7d378cc}} 
+{\bfseries Restaurant} (Q\+String name, int id, double distance\+From\+Saddleback, int menu\+Size, int total\+Distances)
+\item 
+void \hyperlink{class_restaurant_aec426da0e4c067525fdd1d233c32a5f3}{set\+Name} (Q\+String name)
+\begin{DoxyCompactList}\small\item\em set\+Name \end{DoxyCompactList}\item 
+void \hyperlink{class_restaurant_a156dd173f171f1f170191dadb7153b8f}{set\+ID} (int id)
+\begin{DoxyCompactList}\small\item\em set\+ID \end{DoxyCompactList}\item 
+void \hyperlink{class_restaurant_a12aea2979807bd2132f16f706b634ad4}{set\+Distance\+From\+Saddleback} (double distance\+From\+Saddleback)
+\begin{DoxyCompactList}\small\item\em set\+Distance\+From\+Saddleback \end{DoxyCompactList}\item 
+void \hyperlink{class_restaurant_aa4a36310566791865760329edb61dfef}{set\+Menu\+Size} (int menu\+Size)
+\begin{DoxyCompactList}\small\item\em set\+Menu\+Size \end{DoxyCompactList}\item 
+void \hyperlink{class_restaurant_a014e06c350423b40fcfdac1bcbdd6ab1}{set\+Total\+Distances} (int total\+Distances)
+\begin{DoxyCompactList}\small\item\em set\+Total\+Distances \end{DoxyCompactList}\item 
+void \hyperlink{class_restaurant_a13b2e8a16f44e2fc4304e4b8689e1336}{set\+Visited} (bool visited)
+\begin{DoxyCompactList}\small\item\em set\+Visited \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_restaurant_a47d4e993832e37a98fd4e3f3201b62c4}\label{class_restaurant_a47d4e993832e37a98fd4e3f3201b62c4}} 
+Q\+String {\bfseries get\+Name} ()
+\item 
+int \hyperlink{class_restaurant_a8777e6d48839e275744145f394bde846}{get\+ID} ()
+\begin{DoxyCompactList}\small\item\em get\+ID \end{DoxyCompactList}\item 
+double \hyperlink{class_restaurant_a328d55dfff742bf89d6b81a01bab35d9}{get\+Distance\+From\+Saddleback} ()
+\begin{DoxyCompactList}\small\item\em get\+Distance\+From\+Saddleback \end{DoxyCompactList}\item 
+int \hyperlink{class_restaurant_a228a01608b506e6a8bf72b7d6f747a7d}{get\+Menu\+Size} ()
+\begin{DoxyCompactList}\small\item\em get\+Menu\+Size \end{DoxyCompactList}\item 
+int \hyperlink{class_restaurant_aefc0ab4b34d2ff5cfc5ab0d9463cf224}{get\+Total\+Distances} ()
+\begin{DoxyCompactList}\small\item\em get\+Total\+Distances \end{DoxyCompactList}\item 
+bool \hyperlink{class_restaurant_a174725e8ae4487dbb649dd9cc017945e}{get\+Visited} ()
+\begin{DoxyCompactList}\small\item\em get\+Visited \end{DoxyCompactList}\item 
+void \hyperlink{class_restaurant_a35210fa764ffb3ec4c9563c3bb12fd68}{add\+Distance} (\hyperlink{class_distance}{Distance} distance)
+\begin{DoxyCompactList}\small\item\em add\+Distance \end{DoxyCompactList}\item 
+void \hyperlink{class_restaurant_a5e743b42c3d5277a5c30728e5a6010f0}{add\+Menu\+Item} (\hyperlink{class_menu_item}{Menu\+Item} menu\+Item)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classadd_menu_item}{add\+Menu\+Item} \end{DoxyCompactList}\item 
+std\+::vector$<$ \hyperlink{class_distance}{Distance} $>$ \hyperlink{class_restaurant_a4b76f9f7171cb961e33bb670c22e91f0}{get\+Distances} ()
+\begin{DoxyCompactList}\small\item\em get\+Distances \end{DoxyCompactList}\item 
+std\+::vector$<$ \hyperlink{class_menu_item}{Menu\+Item} $>$ \hyperlink{class_restaurant_a67da76f6ae80d9c22c8c697ebbb8a684}{get\+Menu} ()
+\begin{DoxyCompactList}\small\item\em get\+Menu \end{DoxyCompactList}\item 
+void \hyperlink{class_restaurant_a084b4300b60a5d76cbdcbe01724ba5a6}{set\+Total\+Amount\+Spent} (double amt)
+\begin{DoxyCompactList}\small\item\em set\+Total\+Amount\+Spent \end{DoxyCompactList}\item 
+double \hyperlink{class_restaurant_a983d7e6327f4f88d9d5aefe4d6beb7c0}{get\+Total\+Amount\+Spent} ()
+\begin{DoxyCompactList}\small\item\em get\+Total\+Amount\+Spent \end{DoxyCompactList}\item 
+bool \hyperlink{class_restaurant_ac8b5a5436f9e3952f64abc32dc02a82b}{operator==} (\hyperlink{class_restaurant}{Restaurant} restaurant\+To\+Compare)
+\begin{DoxyCompactList}\small\item\em operator == \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_restaurant}{Restaurant} class. 
+
+\begin{DoxyAuthor}{Author}
+Sean O\textquotesingle{}Hearn Container for restaurant objects 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_restaurant_a35210fa764ffb3ec4c9563c3bb12fd68}\label{class_restaurant_a35210fa764ffb3ec4c9563c3bb12fd68}} 
+\index{Restaurant@{Restaurant}!add\+Distance@{add\+Distance}}
+\index{add\+Distance@{add\+Distance}!Restaurant@{Restaurant}}
+\subsubsection{\texorpdfstring{add\+Distance()}{addDistance()}}
+{\footnotesize\ttfamily void Restaurant\+::add\+Distance (\begin{DoxyParamCaption}\item[{\hyperlink{class_distance}{Distance}}]{distance }\end{DoxyParamCaption})}
+
+
+
+add\+Distance 
+
+
+\begin{DoxyParams}{Parameters}
+{\em distance} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_restaurant_a5e743b42c3d5277a5c30728e5a6010f0}\label{class_restaurant_a5e743b42c3d5277a5c30728e5a6010f0}} 
+\index{Restaurant@{Restaurant}!add\+Menu\+Item@{add\+Menu\+Item}}
+\index{add\+Menu\+Item@{add\+Menu\+Item}!Restaurant@{Restaurant}}
+\subsubsection{\texorpdfstring{add\+Menu\+Item()}{addMenuItem()}}
+{\footnotesize\ttfamily void Restaurant\+::add\+Menu\+Item (\begin{DoxyParamCaption}\item[{\hyperlink{class_menu_item}{Menu\+Item}}]{menu\+Item }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{classadd_menu_item}{add\+Menu\+Item} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em menu\+Item} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_restaurant_a328d55dfff742bf89d6b81a01bab35d9}\label{class_restaurant_a328d55dfff742bf89d6b81a01bab35d9}} 
+\index{Restaurant@{Restaurant}!get\+Distance\+From\+Saddleback@{get\+Distance\+From\+Saddleback}}
+\index{get\+Distance\+From\+Saddleback@{get\+Distance\+From\+Saddleback}!Restaurant@{Restaurant}}
+\subsubsection{\texorpdfstring{get\+Distance\+From\+Saddleback()}{getDistanceFromSaddleback()}}
+{\footnotesize\ttfamily double Restaurant\+::get\+Distance\+From\+Saddleback (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get\+Distance\+From\+Saddleback 
+
+\begin{DoxyReturn}{Returns}
+distance\+From\+Saddleback 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_restaurant_a4b76f9f7171cb961e33bb670c22e91f0}\label{class_restaurant_a4b76f9f7171cb961e33bb670c22e91f0}} 
+\index{Restaurant@{Restaurant}!get\+Distances@{get\+Distances}}
+\index{get\+Distances@{get\+Distances}!Restaurant@{Restaurant}}
+\subsubsection{\texorpdfstring{get\+Distances()}{getDistances()}}
+{\footnotesize\ttfamily std\+::vector$<$ \hyperlink{class_distance}{Distance} $>$ Restaurant\+::get\+Distances (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get\+Distances 
+
+\begin{DoxyReturn}{Returns}
+distances 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_restaurant_a8777e6d48839e275744145f394bde846}\label{class_restaurant_a8777e6d48839e275744145f394bde846}} 
+\index{Restaurant@{Restaurant}!get\+ID@{get\+ID}}
+\index{get\+ID@{get\+ID}!Restaurant@{Restaurant}}
+\subsubsection{\texorpdfstring{get\+I\+D()}{getID()}}
+{\footnotesize\ttfamily int Restaurant\+::get\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get\+ID 
+
+\begin{DoxyReturn}{Returns}
+ID 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_restaurant_a67da76f6ae80d9c22c8c697ebbb8a684}\label{class_restaurant_a67da76f6ae80d9c22c8c697ebbb8a684}} 
+\index{Restaurant@{Restaurant}!get\+Menu@{get\+Menu}}
+\index{get\+Menu@{get\+Menu}!Restaurant@{Restaurant}}
+\subsubsection{\texorpdfstring{get\+Menu()}{getMenu()}}
+{\footnotesize\ttfamily std\+::vector$<$ \hyperlink{class_menu_item}{Menu\+Item} $>$ Restaurant\+::get\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get\+Menu 
+
+\begin{DoxyReturn}{Returns}
+menu 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_restaurant_a228a01608b506e6a8bf72b7d6f747a7d}\label{class_restaurant_a228a01608b506e6a8bf72b7d6f747a7d}} 
+\index{Restaurant@{Restaurant}!get\+Menu\+Size@{get\+Menu\+Size}}
+\index{get\+Menu\+Size@{get\+Menu\+Size}!Restaurant@{Restaurant}}
+\subsubsection{\texorpdfstring{get\+Menu\+Size()}{getMenuSize()}}
+{\footnotesize\ttfamily int Restaurant\+::get\+Menu\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get\+Menu\+Size 
+
+\begin{DoxyReturn}{Returns}
+menu\+Size 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_restaurant_a983d7e6327f4f88d9d5aefe4d6beb7c0}\label{class_restaurant_a983d7e6327f4f88d9d5aefe4d6beb7c0}} 
+\index{Restaurant@{Restaurant}!get\+Total\+Amount\+Spent@{get\+Total\+Amount\+Spent}}
+\index{get\+Total\+Amount\+Spent@{get\+Total\+Amount\+Spent}!Restaurant@{Restaurant}}
+\subsubsection{\texorpdfstring{get\+Total\+Amount\+Spent()}{getTotalAmountSpent()}}
+{\footnotesize\ttfamily double Restaurant\+::get\+Total\+Amount\+Spent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get\+Total\+Amount\+Spent 
+
+\begin{DoxyReturn}{Returns}
+total\+Amount\+Spent 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_restaurant_aefc0ab4b34d2ff5cfc5ab0d9463cf224}\label{class_restaurant_aefc0ab4b34d2ff5cfc5ab0d9463cf224}} 
+\index{Restaurant@{Restaurant}!get\+Total\+Distances@{get\+Total\+Distances}}
+\index{get\+Total\+Distances@{get\+Total\+Distances}!Restaurant@{Restaurant}}
+\subsubsection{\texorpdfstring{get\+Total\+Distances()}{getTotalDistances()}}
+{\footnotesize\ttfamily int Restaurant\+::get\+Total\+Distances (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get\+Total\+Distances 
+
+\begin{DoxyReturn}{Returns}
+total\+Distances 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_restaurant_a174725e8ae4487dbb649dd9cc017945e}\label{class_restaurant_a174725e8ae4487dbb649dd9cc017945e}} 
+\index{Restaurant@{Restaurant}!get\+Visited@{get\+Visited}}
+\index{get\+Visited@{get\+Visited}!Restaurant@{Restaurant}}
+\subsubsection{\texorpdfstring{get\+Visited()}{getVisited()}}
+{\footnotesize\ttfamily bool Restaurant\+::get\+Visited (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Visited 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_restaurant_ac8b5a5436f9e3952f64abc32dc02a82b}\label{class_restaurant_ac8b5a5436f9e3952f64abc32dc02a82b}} 
+\index{Restaurant@{Restaurant}!operator==@{operator==}}
+\index{operator==@{operator==}!Restaurant@{Restaurant}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Restaurant\+::operator== (\begin{DoxyParamCaption}\item[{\hyperlink{class_restaurant}{Restaurant}}]{restaurant\+To\+Compare }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+operator == 
+
+
+\begin{DoxyParams}{Parameters}
+{\em restaurant\+To\+Compare} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_restaurant_a12aea2979807bd2132f16f706b634ad4}\label{class_restaurant_a12aea2979807bd2132f16f706b634ad4}} 
+\index{Restaurant@{Restaurant}!set\+Distance\+From\+Saddleback@{set\+Distance\+From\+Saddleback}}
+\index{set\+Distance\+From\+Saddleback@{set\+Distance\+From\+Saddleback}!Restaurant@{Restaurant}}
+\subsubsection{\texorpdfstring{set\+Distance\+From\+Saddleback()}{setDistanceFromSaddleback()}}
+{\footnotesize\ttfamily void Restaurant\+::set\+Distance\+From\+Saddleback (\begin{DoxyParamCaption}\item[{double}]{distance\+From\+Saddleback }\end{DoxyParamCaption})}
+
+
+
+set\+Distance\+From\+Saddleback 
+
+
+\begin{DoxyParams}{Parameters}
+{\em distance\+From\+Saddleback} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_restaurant_a156dd173f171f1f170191dadb7153b8f}\label{class_restaurant_a156dd173f171f1f170191dadb7153b8f}} 
+\index{Restaurant@{Restaurant}!set\+ID@{set\+ID}}
+\index{set\+ID@{set\+ID}!Restaurant@{Restaurant}}
+\subsubsection{\texorpdfstring{set\+I\+D()}{setID()}}
+{\footnotesize\ttfamily void Restaurant\+::set\+ID (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+set\+ID 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_restaurant_aa4a36310566791865760329edb61dfef}\label{class_restaurant_aa4a36310566791865760329edb61dfef}} 
+\index{Restaurant@{Restaurant}!set\+Menu\+Size@{set\+Menu\+Size}}
+\index{set\+Menu\+Size@{set\+Menu\+Size}!Restaurant@{Restaurant}}
+\subsubsection{\texorpdfstring{set\+Menu\+Size()}{setMenuSize()}}
+{\footnotesize\ttfamily void Restaurant\+::set\+Menu\+Size (\begin{DoxyParamCaption}\item[{int}]{menu\+Size }\end{DoxyParamCaption})}
+
+
+
+set\+Menu\+Size 
+
+
+\begin{DoxyParams}{Parameters}
+{\em menu\+Size} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_restaurant_aec426da0e4c067525fdd1d233c32a5f3}\label{class_restaurant_aec426da0e4c067525fdd1d233c32a5f3}} 
+\index{Restaurant@{Restaurant}!set\+Name@{set\+Name}}
+\index{set\+Name@{set\+Name}!Restaurant@{Restaurant}}
+\subsubsection{\texorpdfstring{set\+Name()}{setName()}}
+{\footnotesize\ttfamily void Restaurant\+::set\+Name (\begin{DoxyParamCaption}\item[{Q\+String}]{name }\end{DoxyParamCaption})}
+
+
+
+set\+Name 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_restaurant_a084b4300b60a5d76cbdcbe01724ba5a6}\label{class_restaurant_a084b4300b60a5d76cbdcbe01724ba5a6}} 
+\index{Restaurant@{Restaurant}!set\+Total\+Amount\+Spent@{set\+Total\+Amount\+Spent}}
+\index{set\+Total\+Amount\+Spent@{set\+Total\+Amount\+Spent}!Restaurant@{Restaurant}}
+\subsubsection{\texorpdfstring{set\+Total\+Amount\+Spent()}{setTotalAmountSpent()}}
+{\footnotesize\ttfamily void Restaurant\+::set\+Total\+Amount\+Spent (\begin{DoxyParamCaption}\item[{double}]{amt }\end{DoxyParamCaption})}
+
+
+
+set\+Total\+Amount\+Spent 
+
+
+\begin{DoxyParams}{Parameters}
+{\em amt} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_restaurant_a014e06c350423b40fcfdac1bcbdd6ab1}\label{class_restaurant_a014e06c350423b40fcfdac1bcbdd6ab1}} 
+\index{Restaurant@{Restaurant}!set\+Total\+Distances@{set\+Total\+Distances}}
+\index{set\+Total\+Distances@{set\+Total\+Distances}!Restaurant@{Restaurant}}
+\subsubsection{\texorpdfstring{set\+Total\+Distances()}{setTotalDistances()}}
+{\footnotesize\ttfamily void Restaurant\+::set\+Total\+Distances (\begin{DoxyParamCaption}\item[{int}]{total\+Distances }\end{DoxyParamCaption})}
+
+
+
+set\+Total\+Distances 
+
+
+\begin{DoxyParams}{Parameters}
+{\em total\+Distances} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_restaurant_a13b2e8a16f44e2fc4304e4b8689e1336}\label{class_restaurant_a13b2e8a16f44e2fc4304e4b8689e1336}} 
+\index{Restaurant@{Restaurant}!set\+Visited@{set\+Visited}}
+\index{set\+Visited@{set\+Visited}!Restaurant@{Restaurant}}
+\subsubsection{\texorpdfstring{set\+Visited()}{setVisited()}}
+{\footnotesize\ttfamily void Restaurant\+::set\+Visited (\begin{DoxyParamCaption}\item[{bool}]{visited }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+set\+Visited 
+
+
+\begin{DoxyParams}{Parameters}
+{\em visited} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+restaurant.\+h\item 
+restaurant.\+cpp\end{DoxyCompactItemize}

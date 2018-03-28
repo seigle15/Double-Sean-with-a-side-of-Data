@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="restaurant_8h" kind="file" language="C++">
+    <compoundname>restaurant.h</compoundname>
+    <includes local="no">QString</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">string</includes>
+    <includes refid="distance_8h" local="yes">distance.h</includes>
+    <includes refid="menuitem_8h" local="yes">menuitem.h</includes>
+    <includedby refid="addmenuitem_8cpp" local="yes">addmenuitem.cpp</includedby>
+    <includedby refid="dbmanager_8h" local="yes">dbmanager.h</includedby>
+    <includedby refid="mainwindow_8h" local="yes">mainwindow.h</includedby>
+    <includedby refid="changeprice_8cpp" local="yes">changeprice.cpp</includedby>
+    <includedby refid="main_8cpp" local="yes">main.cpp</includedby>
+    <includedby refid="restaurant_8cpp" local="yes">restaurant.cpp</includedby>
+    <includedby refid="tripscreen_8h" local="yes">tripscreen.h</includedby>
+    <incdepgraph>
+      <node id="226">
+        <label>string</label>
+      </node>
+      <node id="227">
+        <label>distance.h</label>
+        <link refid="distance_8h_source"/>
+      </node>
+      <node id="225">
+        <label>vector</label>
+      </node>
+      <node id="228">
+        <label>menuitem.h</label>
+        <link refid="menuitem_8h_source"/>
+        <childnode refid="224" relation="include">
+        </childnode>
+      </node>
+      <node id="224">
+        <label>QString</label>
+      </node>
+      <node id="223">
+        <label>restaurant.h</label>
+        <link refid="restaurant_8h"/>
+        <childnode refid="224" relation="include">
+        </childnode>
+        <childnode refid="225" relation="include">
+        </childnode>
+        <childnode refid="226" relation="include">
+        </childnode>
+        <childnode refid="227" relation="include">
+        </childnode>
+        <childnode refid="228" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="230">
+        <label>dbmanager.h</label>
+        <link refid="dbmanager_8h_source"/>
+        <childnode refid="231" relation="include">
+        </childnode>
+        <childnode refid="232" relation="include">
+        </childnode>
+      </node>
+      <node id="231">
+        <label>admin.h</label>
+        <link refid="admin_8h_source"/>
+        <childnode refid="232" relation="include">
+        </childnode>
+      </node>
+      <node id="233">
+        <label>tripscreen.h</label>
+        <link refid="tripscreen_8h_source"/>
+      </node>
+      <node id="229">
+        <label>restaurant.h</label>
+        <link refid="restaurant_8h"/>
+        <childnode refid="230" relation="include">
+        </childnode>
+        <childnode refid="232" relation="include">
+        </childnode>
+        <childnode refid="233" relation="include">
+        </childnode>
+      </node>
+      <node id="232">
+        <label>mainwindow.h</label>
+        <link refid="mainwindow_8h_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_restaurant" prot="public">Restaurant</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>RESTAURANT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RESTAURANT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QString&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;distance.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;menuitem.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="class_restaurant" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_restaurant" kindref="compound">Restaurant</ref></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_restaurant" kindref="compound">Restaurant</ref>();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_restaurant" kindref="compound">Restaurant</ref>(QString<sp/>name,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>distanceFromSaddleback,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>menuSize,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>totalDistances);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_restaurant_1aec426da0e4c067525fdd1d233c32a5f3" kindref="member">setName</ref>(QString<sp/>name);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_restaurant_1a156dd173f171f1f170191dadb7153b8f" kindref="member">setID</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_restaurant_1a12aea2979807bd2132f16f706b634ad4" kindref="member">setDistanceFromSaddleback</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>distanceFromSaddleback);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_restaurant_1aa4a36310566791865760329edb61dfef" kindref="member">setMenuSize</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>menuSize);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_restaurant_1a014e06c350423b40fcfdac1bcbdd6ab1" kindref="member">setTotalDistances</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>totalDistances);</highlight></codeline>
+<codeline lineno="50" refid="class_restaurant_1a13b2e8a16f44e2fc4304e4b8689e1336" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_restaurant_1a13b2e8a16f44e2fc4304e4b8689e1336" kindref="member">setVisited</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>visited){this-&gt;visited<sp/>=<sp/>visited;}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>QString<sp/>getName();</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_restaurant_1a8777e6d48839e275744145f394bde846" kindref="member">getID</ref>();</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_restaurant_1a328d55dfff742bf89d6b81a01bab35d9" kindref="member">getDistanceFromSaddleback</ref>();</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_restaurant_1a228a01608b506e6a8bf72b7d6f747a7d" kindref="member">getMenuSize</ref>();</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_restaurant_1aefc0ab4b34d2ff5cfc5ab0d9463cf224" kindref="member">getTotalDistances</ref>();</highlight></codeline>
+<codeline lineno="76" refid="class_restaurant_1a174725e8ae4487dbb649dd9cc017945e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_restaurant_1a174725e8ae4487dbb649dd9cc017945e" kindref="member">getVisited</ref>(){</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;visited;}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_restaurant_1a35210fa764ffb3ec4c9563c3bb12fd68" kindref="member">addDistance</ref>(<ref refid="class_distance" kindref="compound">Distance</ref><sp/>distance);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_restaurant_1a5e743b42c3d5277a5c30728e5a6010f0" kindref="member">addMenuItem</ref>(<ref refid="class_menu_item" kindref="compound">MenuItem</ref><sp/>menuItem);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;Distance&gt;<sp/><ref refid="class_restaurant_1a4b76f9f7171cb961e33bb670c22e91f0" kindref="member">getDistances</ref>();</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;MenuItem&gt;<sp/><ref refid="class_restaurant_1a67da76f6ae80d9c22c8c697ebbb8a684" kindref="member">getMenu</ref>();</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_restaurant_1a084b4300b60a5d76cbdcbe01724ba5a6" kindref="member">setTotalAmountSpent</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>amt);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_restaurant_1a983d7e6327f4f88d9d5aefe4d6beb7c0" kindref="member">getTotalAmountSpent</ref>();</highlight></codeline>
+<codeline lineno="112" refid="class_restaurant_1ac8b5a5436f9e3952f64abc32dc02a82b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_restaurant_1ac8b5a5436f9e3952f64abc32dc02a82b" kindref="member">operator==</ref>(<ref refid="class_restaurant" kindref="compound">Restaurant</ref><sp/>restaurantToCompare){</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(this-&gt;<ref refid="class_restaurant_1a8777e6d48839e275744145f394bde846" kindref="member">getID</ref>()<sp/>==<sp/>restaurantToCompare.<ref refid="class_restaurant_1a8777e6d48839e275744145f394bde846" kindref="member">getID</ref>());</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>QString<sp/>name;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>id;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>distanceFromSaddleback;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>menuSize;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>totalDistances;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;MenuItem&gt;<sp/>menu;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;Distance&gt;<sp/>distances;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>visited;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>totalAmountSpent;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>RESTAURANT_H</highlight></codeline>
+    </programlisting>
+    <location file="restaurant.h"/>
+  </compounddef>
+</doxygen>
