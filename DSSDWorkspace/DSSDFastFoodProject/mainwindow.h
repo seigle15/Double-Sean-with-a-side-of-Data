@@ -6,8 +6,9 @@
 #include "admin.h"
 #include "dbmanager.h"
 #include "restaurant.h"
+
 /**
- * @brief
+ * @brief MainWindow
  * This is the baseline UI
  */
 

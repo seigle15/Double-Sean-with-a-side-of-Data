@@ -9,6 +9,9 @@ namespace Ui {
 class Admin;
 }
 
+/**
+ * @brief The Admin class
+ */
 class Admin : public QMainWindow
 {
     Q_OBJECT

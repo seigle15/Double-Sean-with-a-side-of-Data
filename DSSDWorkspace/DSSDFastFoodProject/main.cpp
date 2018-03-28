@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
     */
 
 //    !!Run Once!!
-//    DBManager::getInstance()->uploadFileToDatabase(":/res/CS1D Spring 2018 Fast Food Project.txt");
+    DBManager::getInstance()->uploadFileToDatabase(":/res/CS1D Spring 2018 Fast Food Project.txt");
 //    DBManager::getInstance()->uploadFileToDatabase(":/res/CS1D Spring 2018 New Fast Food Project.txt");
 
     DBManager::getInstance()->databaseToRestaurants();  // this line of code fills our class objects with the data from our database to be worked with in our project
